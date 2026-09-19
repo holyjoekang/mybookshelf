@@ -20,6 +20,10 @@ from book_info import OUT as INFO, slug
 BOOKS = Path("data/books.json")
 CATEGORIES = Path("data/categories.json")
 MEMORY = Path("data/memory_books.json")  # 블로그 이전 학창 시절 독서를 기억으로 복원한 목록
+# 책 id 대장(제목 -> 번호). 앱은 사용자가 고친 내용을 이 번호("b"+번호)에 저장하므로,
+# 책이 늘거나 제목이 바로잡혀 정렬 순서가 바뀌어도 번호는 그대로 가야 한다.
+# 새 책은 끝 번호를 받고, 빠진 책의 번호는 다시 쓰지 않는다. 제목을 고칠 때는 이 대장의 키도 함께 고친다.
+IDS = Path("data/book_ids.json")
 TEMPLATE = Path("app/index.template.html")
 OUT = Path("app/index.html")
 
@@ -45,6 +49,25 @@ def book_info(title: str) -> dict:
             im.convert("RGB").save(buf, "JPEG", quality=72, optimize=True)
         entry["cv"] = "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
     return {k: v for k, v in entry.items() if v}
+
+
+def assign_ids(books: list[dict], ids: dict[str, int]) -> list[str]:
+    """책마다 대장의 번호를 "i"로 붙인다. 대장에 없는 책만 끝 번호를 새로 받고 대장에 적힌다.
+
+    대장이 비어 있으면 지금 순서가 곧 번호다(예전 배열 순번 id와 같아진다). 새로 번호를 받은 제목을 돌려준다.
+    """
+    titles = [b["t"] for b in books]
+    if len(set(titles)) != len(titles):
+        raise SystemExit(f"제목이 겹치는 책이 있어 id를 매길 수 없습니다: {sorted({t for t in titles if titles.count(t) > 1})}")
+    next_id = max(ids.values(), default=-1) + 1
+    added = []
+    for b in books:
+        if b["t"] not in ids:
+            ids[b["t"]] = next_id
+            added.append(b["t"])
+            next_id += 1
+        b["i"] = ids[b["t"]]
+    return added
 
 
 def main() -> None:
@@ -108,8 +131,12 @@ def main() -> None:
         compact.append(entry)
         added_memory += 1
 
-    # 텍스트로 추가한 책은 추가한 순서대로 맨 끝에. 그래야 기존 책의 id가 밀리지 않는다.
+    # 텍스트로 추가한 책은 추가한 순서대로 맨 끝에.
     compact += typed
+
+    ids = json.loads(IDS.read_text(encoding="utf-8")) if IDS.exists() else {}
+    new_ids = assign_ids(compact, ids)
+    IDS.write_text(json.dumps(ids, ensure_ascii=False, indent=1), encoding="utf-8")
 
     payload = json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__BOOKS__*/[]", payload)
@@ -122,6 +149,8 @@ def main() -> None:
     no_author = sum(1 for b in compact if not b["a"])
     print(f"책 {len(compact)}권 (연도 있음 {dated}, 기억으로 복원 {added_memory}, 텍스트로 추가 {len(typed)})")
     print(f"표지 {with_cover}권 · 소개 {sum(1 for b in compact if b.get('ds'))}권 · 저자 미상 {no_author}권")
+    if new_ids:
+        print(f"새 id {len(new_ids)}개: {', '.join(new_ids[:8])}{' …' if len(new_ids) > 8 else ''}")
     print(f"데이터 {len(payload) // 1024}KB / 전체 {OUT.stat().st_size // 1024}KB -> {OUT}")
 
 

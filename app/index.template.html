@@ -513,8 +513,9 @@
     return { g: 2, o: 0, label: "집 책장", era: true };
   }
   function catalog() {
+    // id는 빌드가 매긴 고정 번호(b.i). 사용자가 고친 내용이 이 id에 저장되므로 책이 늘어도 바뀌면 안 된다.
     var out = BOOKS.map(function (b, i) {
-      return { id: "b" + i, t: b.t, a: b.a, c: b.c, y: b.y, s: b.s, r: b.r, n: b.n,
+      return { id: "b" + (b.i != null ? b.i : i), t: b.t, a: b.a, c: b.c, y: b.y, s: b.s, r: b.r, n: b.n,
                cv: b.cv || null, pb: b.pb || null, period: b.p || null, mine: b.s === "m",
                memo: b.m || null, kind: b.k || null, ds: b.ds || null };
     });
@@ -1477,6 +1478,7 @@
   function refit(force) {
     var real = viewSize().real;
     resize();
+    if (!layout) return;          // 글꼴을 기다리는 동안(서가를 세우기 전) 화면 크기가 먼저 바뀔 수 있다
     if (!fitted || force) { resetView(); if (real) fitted = true; }
     else clampGoal();
   }

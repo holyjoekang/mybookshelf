@@ -91,6 +91,26 @@ class Offline(Temp):
 
 
 @unittest.skipUnless(os.environ.get("KAKAO_REST_API_KEY"), "KAKAO_REST_API_KEY 없음")
+class Ids(unittest.TestCase):
+    """앱은 사용자가 고친 내용을 id에 저장하므로, 책이 늘거나 순서가 바뀌어도 기존 id는 그대로여야 한다."""
+
+    def test_first_build_numbers_in_order(self):
+        books = [{"t": "가"}, {"t": "나"}]
+        self.assertEqual(build_app.assign_ids(books, ids := {}), ["가", "나"])
+        self.assertEqual([b["i"] for b in books], [0, 1])
+        self.assertEqual(ids, {"가": 0, "나": 1})
+
+    def test_new_book_in_the_middle_keeps_old_ids(self):
+        ids = {"가": 0, "다": 1, "빠진 책": 2}
+        books = [{"t": "가"}, {"t": "나"}, {"t": "다"}]      # 제목순으로 '나'가 사이에 끼었다
+        self.assertEqual(build_app.assign_ids(books, ids), ["나"])
+        self.assertEqual([b["i"] for b in books], [0, 3, 1])  # 빠진 책의 2번은 다시 쓰지 않는다
+
+    def test_duplicate_titles_stop_the_build(self):
+        with self.assertRaises(SystemExit):
+            build_app.assign_ids([{"t": "가"}, {"t": "가"}], {})
+
+
 class Live(Temp):
     def test_real_book(self):
         print("\n  " + bi.add("협상의 법칙 / 허브 코헨", os.environ["KAKAO_REST_API_KEY"]))

@@ -2441,6 +2441,74 @@
       "needsReview": false
     },
     {
+      "title": "1000일 내 글씨 성경",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063241",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "10년 후 미래",
+      "author": "대니얼 앨트먼",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "153 감사노트",
+      "author": "이찬수",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "1조 클럽 도전하는 중견 기업을 위한 삼성 SCM 노하우",
+      "author": "서병교",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063255",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "2008 글로벌 금융위기",
       "author": "최혁",
       "sources": [
@@ -2458,7 +2526,7 @@
       "needsReview": true
     },
     {
-      "title": "3% 시크릿",
+      "title": "3% 시그널",
       "author": "제이슨 켈리",
       "sources": [
         "photo"
@@ -2469,6 +2537,23 @@
           "photo": "20260918_063216",
           "confidence": "high",
           "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "Accounting for Decision Making and Control",
+      "author": "Jerold L. Zimmerman",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "textbook"
         }
       ],
       "firstReadDate": null,
@@ -2509,6 +2594,108 @@
       "needsReview": false
     },
     {
+      "title": "Corporate Finance",
+      "author": "Jonathan Berk",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "Corporate Finance: Asia Global Edition",
+      "author": "Stephen A. Ross",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "Derivatives: Principles and Practice",
+      "author": "Rangarajan K. Sundaram",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "Holy Bible: New American Standard Bible",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063241",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "Pricing Strategies",
+      "author": "Robert M. Schindler",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "The Pocket Interpreter: Chinese",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "medium",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
       "title": "VALUE 밸류",
       "author": "팀 콜러",
       "sources": [
@@ -2526,8 +2713,93 @@
       "needsReview": true
     },
     {
-      "title": "가정 교육",
+      "title": "品鉴普洱",
       "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "李嘉诚谈商录",
+      "author": "李嘉诚",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "汉语口语习惯用语365",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "美国语文",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "가난한 아빠, 세계 명문대 학부모 되기",
+      "author": "이강렬",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "가정교육",
+      "author": "샬롯 메이슨",
       "sources": [
         "photo"
       ],
@@ -2535,33 +2807,118 @@
       "photos": [
         {
           "photo": "20260918_063317",
-          "confidence": "low",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
     },
     {
-      "title": "구원론",
-      "author": "오정현",
+      "title": "경영예술",
+      "author": "김효근",
       "sources": [
         "photo"
       ],
       "reviews": [],
       "photos": [
         {
-          "photo": "20260918_063158",
-          "confidence": "medium",
+          "photo": "20260918_063249",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
+    },
+    {
+      "title": "경영은 관계다",
+      "author": "이병구",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "경영전략 실천 매뉴얼",
+      "author": "이승주",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "경영학 두뇌",
+      "author": "김병도",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "경제학자의 생각법",
+      "author": "하노 벡",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "굿 비즈니스 플러스",
+      "author": "박철",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "그때 그렇게 말해서 미안해",
-      "author": null,
+      "author": "박민영",
       "sources": [
         "photo"
       ],
@@ -2577,6 +2934,40 @@
       "needsReview": true
     },
     {
+      "title": "그리고 아무도 없었다",
+      "author": "애거서 크리스티",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "그리스도로 살아나다",
+      "author": "오정현",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "그릿",
       "author": "앤절라 더크워스",
       "sources": [
@@ -2586,6 +2977,57 @@
       "photos": [
         {
           "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "기독교 사회적 기업가",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "기독교적 세계관",
+      "author": "양승훈",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "기쁨으로 찬양",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063241",
           "confidence": "high",
           "type": "book"
         }
@@ -2628,8 +3070,42 @@
       "needsReview": false
     },
     {
+      "title": "길이 아닌 곳으로 가라",
+      "author": "메리베스 본드",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "꼬마정원",
+      "author": "크리스티나 비외르크",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063241",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "꿈꾸는 엄마가 기적을 만든다",
-      "author": null,
+      "author": "황경애",
       "sources": [
         "photo"
       ],
@@ -2646,7 +3122,7 @@
     },
     {
       "title": "꿈은 스스로 길을 만든다",
-      "author": null,
+      "author": "최성찬",
       "sources": [
         "photo"
       ],
@@ -2679,8 +3155,8 @@
       "needsReview": false
     },
     {
-      "title": "넛지",
-      "author": "리처드 탈러",
+      "title": "내 영혼을 부요케 하는 생명의 말씀 (구약성경대학)",
+      "author": null,
       "sources": [
         "photo"
       ],
@@ -2688,12 +3164,97 @@
       "photos": [
         {
           "photo": "20260918_063226",
-          "confidence": "low",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "내 영혼을 부요케 하는 생명의 말씀 (신약성경대학)",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "내일의 부 1: 알파편",
+      "author": "김장섭",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
+    },
+    {
+      "title": "내일의 부 2: 오메가편",
+      "author": "김장섭",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "늦잠",
+      "author": "이서준",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "다윗: 현실에 뿌리박은 영성",
+      "author": "유진 피터슨",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "다윗의 영광",
@@ -2713,6 +3274,40 @@
       "needsReview": true
     },
     {
+      "title": "닭을 죽이지 마라",
+      "author": "케빈 왕",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "대한민국임시정부와 기독교",
+      "author": "오일환",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "도전 무한지식",
       "author": "정재승",
       "sources": [
@@ -2728,6 +3323,74 @@
       ],
       "firstReadDate": null,
       "needsReview": true
+    },
+    {
+      "title": "도전 무한지식 2",
+      "author": "정재승",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "도전 무한지식 3",
+      "author": "정재승",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "따뜻한 심리학",
+      "author": "김진국",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "레거시를 위한 묵상",
+      "author": "김대순",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "리스크와 보험",
@@ -2747,8 +3410,8 @@
       "needsReview": false
     },
     {
-      "title": "마음, 감성의 눈을 떠라",
-      "author": "최영희",
+      "title": "마흔, 감성의 눈을 떠라",
+      "author": "최종학",
       "sources": [
         "photo"
       ],
@@ -2756,12 +3419,12 @@
       "photos": [
         {
           "photo": "20260918_063216",
-          "confidence": "medium",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
     },
     {
       "title": "마흔, 논어를 읽어야 할 시간",
@@ -2815,6 +3478,40 @@
       "needsReview": false
     },
     {
+      "title": "명철한 것, 이기적인 것, 흔들린 것",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "명쾌하고 감동 있는 교리 이야기",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "모모",
       "author": "미하엘 엔데",
       "sources": [
@@ -2841,6 +3538,23 @@
       "photos": [
         {
           "photo": "20260918_063201",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "미국영어 그대로 5",
+      "author": "폴 시걸",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
           "confidence": "high",
           "type": "textbook"
         }
@@ -2883,8 +3597,42 @@
       "needsReview": false
     },
     {
+      "title": "반도체 전쟁",
+      "author": "남윤선",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "베이징 특파원 중국 경제를 말하다",
+      "author": "홍순도",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "보살핌의 발견",
-      "author": "사사키 호노",
+      "author": "사사키 호노오",
       "sources": [
         "photo"
       ],
@@ -2898,6 +3646,23 @@
       ],
       "firstReadDate": null,
       "needsReview": true
+    },
+    {
+      "title": "부엔 까미노",
+      "author": "장 이브 그레그와르",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063255",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "불황의 경제학",
@@ -2918,7 +3683,7 @@
     },
     {
       "title": "비즈니스 블록체인",
-      "author": null,
+      "author": "윌리엄 무가야",
       "sources": [
         "photo"
       ],
@@ -2934,6 +3699,40 @@
       "needsReview": true
     },
     {
+      "title": "사랑하는 손자, 손녀들에게 전하는 할아버지 이야기",
+      "author": "김인",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "삶이 너에게 해답을 가져다줄 것이다",
+      "author": "김용택",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "서비스 운영관리",
       "author": "김수욱",
       "sources": [
@@ -2945,6 +3744,40 @@
           "photo": "20260918_063209",
           "confidence": "high",
           "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "서울대 텝스관리위원회 공식 최신기출 1200제 1",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "성경 밖 성경 이야기",
+      "author": "유재덕",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
         }
       ],
       "firstReadDate": null,
@@ -2977,6 +3810,23 @@
       "photos": [
         {
           "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "속 터지는 엄마, 억울해하는 아들",
+      "author": "에머슨 에거리치",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
           "confidence": "high",
           "type": "book"
         }
@@ -3036,6 +3886,23 @@
       "needsReview": false
     },
     {
+      "title": "신약의 파노라마",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
       "title": "애플 인 차이나",
       "author": "패트릭 맥기",
       "sources": [
@@ -3053,25 +3920,8 @@
       "needsReview": false
     },
     {
-      "title": "앵무새 죽이기",
-      "author": "하퍼 리",
-      "sources": [
-        "photo"
-      ],
-      "reviews": [],
-      "photos": [
-        {
-          "photo": "20260918_063158",
-          "confidence": "medium",
-          "type": "book"
-        }
-      ],
-      "firstReadDate": null,
-      "needsReview": true
-    },
-    {
       "title": "어떤 사람이 최고의 자리에 오르는가",
-      "author": null,
+      "author": "존 네핑저",
       "sources": [
         "photo"
       ],
@@ -3104,6 +3954,23 @@
       "needsReview": false
     },
     {
+      "title": "여호와의 보증",
+      "author": "황의민",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "연금술사",
       "author": "파울로 코엘료",
       "sources": [
@@ -3113,6 +3980,74 @@
       "photos": [
         {
           "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "연연",
+      "author": "박영환",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "열정의 비전메이커",
+      "author": "오정현",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "온전론",
+      "author": "오정현",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "온전한 믿음을 추구함",
+      "author": "A.W. 토저",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
           "confidence": "high",
           "type": "book"
         }
@@ -3147,6 +4082,23 @@
       "photos": [
         {
           "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "워렌 버핏처럼 투자심리 읽는 법",
+      "author": "제임스 몬티어",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
           "confidence": "high",
           "type": "book"
         }
@@ -3206,6 +4158,74 @@
       "needsReview": true
     },
     {
+      "title": "이야기로 아주 쉽게 배우는 삼각함수",
+      "author": "더글러스 다우닝",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "이유 있는 반항아가 이유 있는 전도자로",
+      "author": "프랭클린 그레이엄",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "인공지능 투자가 퀀트",
+      "author": "권용진",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "일의 신학",
+      "author": "폴 스티븐스",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "일터 신학",
       "author": null,
       "sources": [
@@ -3221,6 +4241,40 @@
       ],
       "firstReadDate": null,
       "needsReview": true
+    },
+    {
+      "title": "일터, 하나님의 디자인",
+      "author": "송동호",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "있는 자리 흩트리기",
+      "author": "김동연",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "잘되는 나",
@@ -3240,6 +4294,40 @@
       "needsReview": true
     },
     {
+      "title": "잠든 사이 월급 버는 미국 배당주 투자",
+      "author": "소수몽키",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "장금이의 장맛",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
       "title": "장영희의 영미시 산책 생일",
       "author": "장영희",
       "sources": [
@@ -3257,21 +4345,38 @@
       "needsReview": false
     },
     {
-      "title": "정재승과 진중권의 크로스",
-      "author": "정재승",
+      "title": "재취업전직지원서비스 효과적 모델",
+      "author": "김영기",
       "sources": [
         "photo"
       ],
       "reviews": [],
       "photos": [
         {
-          "photo": "20260918_063231",
-          "confidence": "low",
+          "photo": "20260918_063216",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
+    },
+    {
+      "title": "정서적으로 건강한 제자",
+      "author": "피터 스카지로",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "정재승의 과학 콘서트",
@@ -3283,6 +4388,23 @@
       "photos": [
         {
           "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "조직설계 방법론",
+      "author": "제이 갤브레이스",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
           "confidence": "high",
           "type": "book"
         }
@@ -3317,6 +4439,23 @@
       "photos": [
         {
           "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "집에서 만드는 호텔요리",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063241",
           "confidence": "high",
           "type": "book"
         }
@@ -3360,7 +4499,7 @@
     },
     {
       "title": "콘텐츠 머니타이제이션",
-      "author": "김용환",
+      "author": "김용태",
       "sources": [
         "photo"
       ],
@@ -3374,6 +4513,23 @@
       ],
       "firstReadDate": null,
       "needsReview": true
+    },
+    {
+      "title": "통찰과 예견",
+      "author": "오정현",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "투자에 대한 생각",
@@ -3461,7 +4617,7 @@
       "needsReview": false
     },
     {
-      "title": "팀 켈러의 인생 질문",
+      "title": "팀 켈러의 일과 영성",
       "author": "팀 켈러",
       "sources": [
         "photo"
@@ -3470,16 +4626,67 @@
       "photos": [
         {
           "photo": "20260918_063158",
-          "confidence": "medium",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
+    },
+    {
+      "title": "파워 드라이버 샷",
+      "author": "나이토 유지",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
     },
     {
       "title": "퍼펙트 체인지",
       "author": "송재용",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "평신도를 깨운다",
+      "author": "옥한흠",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "프랑스 여자는 늙지 않는다",
+      "author": "미레유 길리아노",
       "sources": [
         "photo"
       ],
@@ -3512,8 +4719,8 @@
       "needsReview": false
     },
     {
-      "title": "피터 드러커의 마지막 통찰",
-      "author": "피터 드러커",
+      "title": "피터 드러커 미공개 강의노트",
+      "author": "윌리엄 코헨",
       "sources": [
         "photo"
       ],
@@ -3521,12 +4728,12 @@
       "photos": [
         {
           "photo": "20260918_063206",
-          "confidence": "medium",
+          "confidence": "high",
           "type": "book"
         }
       ],
       "firstReadDate": null,
-      "needsReview": true
+      "needsReview": false
     },
     {
       "title": "하드씽",
@@ -3632,7 +4839,7 @@
     },
     {
       "title": "헤밍웨이를 따라 파리를 걷다",
-      "author": null,
+      "author": "김윤주",
       "sources": [
         "photo"
       ],
