@@ -52,6 +52,75 @@
   a { color: var(--accent); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
+  /* ---------- 첫 화면 ---------- */
+  .home {
+    position: fixed; inset: 0; z-index: 40; overflow-y: auto; overscroll-behavior: contain;
+    background: var(--bg); transition: opacity .3s ease;
+  }
+  @supports (backdrop-filter: blur(4px)) {
+    /* 뒤에서 세워지는 서가가 흐릿하게 비친다 */
+    .home { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(16px) saturate(.85); }
+  }
+  .home.leaving { opacity: 0; }
+  .home-inner { max-width: 1040px; margin: 0 auto; padding: 34px 24px 44px; }
+
+  /* 인사말: 왼쪽 그림, 오른쪽 글 */
+  .home-hero { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 34px; align-items: center; }
+  .home-art { position: relative; margin: 0; }
+  .home-art img { display: block; width: 100%; height: auto; border-radius: 3px; box-shadow: var(--shadow); }
+  .home-eyebrow { margin: 0 0 14px; font-family: var(--font-mono); font-size: 10px; letter-spacing: .28em; color: var(--muted); text-transform: uppercase; }
+  .home-title { margin: 0; font-family: var(--font-display); font-size: clamp(26px, 3.8vw, 40px); font-weight: 700; line-height: 1.22; letter-spacing: -.01em; text-wrap: balance; }
+  .home-sub { margin: 9px 0 0; font-family: var(--font-display); font-size: clamp(15px, 1.9vw, 18px); color: var(--muted); }
+  .home-rule { height: 1px; margin: 18px 0 16px; background: linear-gradient(to right, var(--brass), var(--line) 38%, transparent); }
+  .home-lead { margin: 0; font-size: 14px; line-height: 1.8; max-width: 56ch; }
+  .home-lead span { display: block; margin-top: 7px; font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+
+  /* 들어가기 */
+  .home-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+  .home-actions .btn { padding: 11px 18px; font-size: 15px; font-family: var(--font-display); font-weight: 700; border-radius: 2px; }
+  .home-actions .btn small { display: block; font-family: var(--font-mono); font-size: 9.5px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; opacity: .72; margin-top: 3px; }
+
+  /* 장서 현황 */
+  .home-facts {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 30px 0 0; padding: 18px 6px;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center;
+  }
+  .home-facts div + div { border-left: 1px solid var(--line); }
+  .home-facts svg { color: var(--brass); opacity: .85; margin-bottom: 5px; }
+  .home-facts dt { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .home-facts dd { margin: 4px 0 0; font-family: var(--font-display); font-size: 24px; font-weight: 700; line-height: 1.1; }
+  .home-facts dd i { font-style: normal; font-family: var(--font-body); font-size: 12px; font-weight: 400; }
+  .home-facts dd small { display: block; font-family: var(--font-body); font-size: 11px; font-weight: 400; color: var(--muted); margin-top: 3px; }
+
+  /* 배경 · 목적 · 이용 안내 */
+  .home-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 26px 0 30px; }
+  .home-cols h2 { margin: 0 0 9px; font-size: 13.5px; font-weight: 700; font-family: var(--font-display); }
+  .home-cols h2 span { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .14em; color: var(--muted); margin-left: 6px; text-transform: uppercase; }
+  .home-cols p { margin: 0 0 8px; font-size: 13px; line-height: 1.78; }
+  .home-cols p[lang="en"] { color: var(--muted); font-size: 12px; line-height: 1.7; }
+
+  /* 도서관 디자인 고르기 */
+  .home-libs { display: grid; grid-template-columns: minmax(0, 250px) minmax(0, 1fr); gap: 26px; align-items: start; padding-top: 24px; border-top: 1px solid var(--line); }
+  .home-libs h2 { margin: 0 0 3px; font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+  .home-libs h2 span { display: block; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; margin-top: 3px; }
+  .home-libs p { margin: 10px 0 0; font-size: 12px; line-height: 1.72; color: var(--muted); }
+  .home-libs b { color: var(--ink); font-weight: 500; }
+  .lib-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .lib-card { padding: 0; border: 1px solid var(--line); border-radius: 2px; background: var(--surface); text-align: center; overflow: hidden; }
+  .lib-card:hover { border-color: var(--brass); }
+  .lib-card[aria-current="true"] { border-color: var(--brass); box-shadow: inset 0 0 0 1px var(--brass); }
+  .lib-card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  .lib-card b { display: block; font-family: var(--font-display); font-size: 11.5px; font-weight: 700; line-height: 1.3; padding: 6px 4px 0; }
+  .lib-card small { display: block; font-size: 10px; color: var(--muted); padding: 1px 4px 7px; }
+  .lib-card em { display: block; font-style: normal; font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .1em; color: var(--brass); text-transform: uppercase; }
+
+  .home-foot { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); text-align: center; }
+  .home-foot p { margin: 0; font-family: var(--font-display); font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+  .home-foot p::before { content: "∞"; display: block; color: var(--brass); font-size: 15px; margin-bottom: 6px; }
+
+  .brand h1 button { font: inherit; color: inherit; padding: 0; letter-spacing: inherit; }
+  .brand h1 button:hover { color: var(--accent); }
+
   /* ---------- 상단 바 ---------- */
   .topbar {
     flex: none; display: flex; align-items: center; gap: 12px;
@@ -131,7 +200,7 @@
   .icon-btn[aria-expanded="true"] { background: var(--surface-2); }
   .search-toggle { display: none; }
 
-  /* ---------- 왼쪽 메뉴: 보는 방식 · 배경 · 서고 ---------- */
+  /* ---------- 왼쪽 메뉴: 보는 방식 · 서고 · 설정 ---------- */
   .shell { flex: 1; display: flex; min-height: 0; position: relative; }
   .side {
     flex: none; width: 236px; display: flex; flex-direction: column; gap: 18px;
@@ -166,6 +235,8 @@
   .side-legend i { width: 7px; height: 15px; flex: none; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); }
   .side-legend .hint { margin: 6px 0 0 4px; font-size: 10.5px; line-height: 1.6; color: var(--muted); }
   .side-add { display: none; }
+
+  .side-item .gear { flex: none; width: 18px; height: 18px; display: grid; place-content: center; color: var(--muted); }
 
   /* ---------- 상세 패널 ---------- */
   .panel {
@@ -256,6 +327,38 @@
   .modal-box p.sub { margin: 0 0 18px; font-size: 12.5px; color: var(--muted); line-height: 1.6; }
   .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 18px; }
 
+  /* ---------- 설정 창 ---------- */
+  .set-box { position: relative; width: min(580px, 100%); }
+  .set-box .close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; display: grid; place-content: center; color: var(--muted); border-radius: 2px; }
+  .set-box .close:hover { background: var(--surface-2); color: var(--ink); }
+  .set-box h2 { padding-right: 34px; }
+  .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin: 2px 0 16px; }
+  .tabs button { padding: 8px 12px; font-size: 13px; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; }
+  .tabs button:hover { color: var(--ink); }
+  .tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--brass); }
+  .set-head { font-family: var(--font-display); font-size: 16px; font-weight: 700; }
+  .set-note { margin: 3px 0 13px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .libs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .lib { display: flex; gap: 10px; align-items: flex-start; text-align: left; padding: 10px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); }
+  .lib:hover { border-color: var(--brass); }
+  .lib[aria-checked="true"] { border-color: var(--brass); background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--brass); }
+  .lib .sw { flex: none; width: 44px; height: 54px; border-radius: 2px; border: 1px solid var(--line); object-fit: cover; background: linear-gradient(150deg, var(--t1) 0 55%, var(--t2) 55% 100%); }
+  .lib .txt { min-width: 0; }
+  .lib b { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 700; line-height: 1.35; }
+  .lib .c { display: block; font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+  .lib .f { display: block; font-size: 11.5px; margin-top: 3px; }
+  .lib .d { display: block; font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 3px; }
+  .opt { margin-bottom: 15px; }
+  .opt-h { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; margin-bottom: 5px; }
+  .opt-n { margin: 0 0 7px; font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+  .choices { display: flex; flex-wrap: wrap; gap: 6px; }
+  .choices button { flex: 1 1 96px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); text-align: left; color: var(--muted); }
+  .choices button b { display: block; font-size: 12.5px; font-weight: 500; color: var(--ink); }
+  .choices button small { display: block; font-size: 10.5px; }
+  .choices button:hover { border-color: var(--brass); }
+  .choices button[aria-checked="true"] { background: var(--ink); border-color: var(--ink); }
+  .choices button[aria-checked="true"] b, .choices button[aria-checked="true"] small { color: var(--surface); }
+
   /* ---------- 휴대폰 ---------- */
   @media (max-width: 760px) {
     body { font-size: 15px; }
@@ -309,29 +412,108 @@
     .panel .btn, .modal .btn { padding: 9px 14px; font-size: 13.5px; }
     .field input, .field select { font-size: 16px; padding: 9px 10px; }
 
+    .home-inner { padding: 20px 16px max(30px, env(safe-area-inset-bottom)); }
+    .home-hero { grid-template-columns: 1fr; gap: 18px; }
+    .home-art { max-width: 300px; margin: 0 auto; }
+    .home-facts { grid-template-columns: 1fr 1fr; gap: 16px 0; padding: 16px 0; }
+    .home-facts div:nth-child(odd) { border-left: none; }
+    .home-facts div:nth-child(3), .home-facts div:nth-child(4) { border-top: 1px solid var(--line); padding-top: 14px; }
+    .home-cols { grid-template-columns: 1fr; gap: 20px; }
+    .home-libs { grid-template-columns: 1fr; gap: 16px; }
+    .lib-grid { grid-template-columns: repeat(3, 1fr); }
+    .home-actions { flex-direction: column; }
+    .home-actions .btn { width: 100%; text-align: center; }
+
     .sheet { padding: 16px 12px max(40px, env(safe-area-inset-bottom)); }
     .cards { grid-template-columns: 1fr; gap: 7px; }
     .strip { gap: 9px; }
     .tile, .cover { width: 100px; }
     .cover { height: 148px; }
+    .libs { grid-template-columns: 1fr; }
+    .tabs { overflow-x: auto; scrollbar-width: none; }
+    .choices button { flex: 1 1 120px; padding: 9px 11px; }
     .modal { align-items: end; padding: 0; }
     .modal-box { width: 100%; max-height: 88dvh; border-radius: 10px 10px 0 0; padding-bottom: max(22px, env(safe-area-inset-bottom)); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .panel, .cover { transition: none; }
+    .panel, .cover, .home { transition: none; }
     .loading .bar i { animation: none; }
   }
 </style>
+
+<section class="home" id="home" aria-labelledby="home-title">
+  <div class="home-inner">
+    <div class="home-hero">
+      <figure class="home-art">
+        <img src="__IMG_reader__" alt="책을 읽고 있는 서재 주인과 강아지" width="480" height="656">
+      </figure>
+      <div>
+        <p class="home-eyebrow">나의 서재 · A Private Library · Est. 2003</p>
+        <h1 class="home-title" id="home-title">Welcome to the Joe Kang&rsquo;s Private Library</h1>
+        <p class="home-sub">Joe Kang의 개인 서재에 오신 것을 환영합니다</p>
+        <div class="home-rule"></div>
+        <p class="home-lead">블로그에 남긴 독후감과 집 책장에 꽂혀 있는 책을 한자리에 모아 세운 서가입니다. 표지를 눌러 그 책의 기록을 읽고, 서고 사이를 걸어 다닐 수 있습니다.
+          <span>A reading life gathered into one place: the notes written on a blog and the books still standing at home, shelved side by side in a room you can walk through.</span></p>
+        <div class="home-actions">
+          <button class="btn btn-primary" id="home-enter">도서관 들어가기<small>Enter the library</small></button>
+          <button class="btn" id="home-list">책 목록 먼저 보기<small>Browse the catalogue</small></button>
+        </div>
+      </div>
+    </div>
+
+    <dl class="home-facts" id="home-facts"></dl>
+
+    <div class="home-cols">
+      <section>
+        <h2>배경 <span>Background</span></h2>
+        <p>이 서재는 두 가지 기록에서 나왔습니다. 2003년 겨울부터 블로그에 남긴 독후감, 그리고 집 책장을 찍은 사진입니다. 둘 중 한 곳에라도 남아 있는 책은 모두 이곳에 한 자리를 얻었습니다.</p>
+        <p lang="en">The collection comes from two records: reading notes posted on a personal blog since the winter of 2003, and photographs of the bookshelves at home. Every book found in either one has been given a place here.</p>
+      </section>
+      <section>
+        <h2>목적 <span>Purpose</span></h2>
+        <p>읽은 삶은 흩어지기 쉽습니다. 기록은 웹 여기저기에 남고, 책은 집을 떠납니다. 무엇을 언제 읽었고 무엇이 남았는지 한눈에 보려고 이 서고를 세웠습니다.</p>
+        <p lang="en">Reading scatters easily — notes drift across the web, books leave the house. This library keeps them together, so that what was read, when it was read, and what it left behind can be seen at a glance.</p>
+      </section>
+      <section>
+        <h2>이용 안내 <span>Visiting</span></h2>
+        <p>들어가시면 열람실입니다. 서고는 분류별로 나뉘어 있고, 표지를 누르면 그 책의 기록이 열립니다. 제목과 저자는 위쪽 검색창에서 찾고, 학창 시절에 읽은 책은 직접 꽂아 넣을 수 있습니다.</p>
+        <p lang="en">Step inside and you are in the reading room. Shelves are grouped by subject, a cover opens that book&rsquo;s record, the search box finds a title or an author, and books remembered from school days can be shelved by hand.</p>
+      </section>
+    </div>
+
+    <div class="home-libs">
+      <figure class="home-art">
+        <img src="__IMG_room__" alt="열람실에서 책을 읽는 모습" width="470" height="551" loading="lazy">
+      </figure>
+      <div>
+        <h2>다양한 도서관 디자인 <span>Six Beautiful Libraries</span></h2>
+        <p>서재는 <b>런던 도서관</b>의 모습으로 열립니다. 들어가신 뒤 왼쪽 메뉴의 <b>설정 › 도서관 디자인 선택</b>에서 언제든 바꿀 수 있고, 서고를 나누는 기준과 책을 꽂는 순서, 조명도 같은 곳에서 고릅니다. 아래에서 곧바로 고르고 들어가셔도 됩니다.
+          <br><span lang="en">The library opens in the London Library design; five more are waiting inside under Settings › Choose a beautiful library. Pick one below to enter straight away.</span></p>
+        <div class="lib-grid" id="home-libs" style="margin-top:14px"></div>
+      </div>
+    </div>
+
+    <footer class="home-foot">
+      <p>언제나 열려 있습니다 · Open at all hours</p>
+    </footer>
+  </div>
+</section>
 
 <header class="topbar" id="topbar">
   <button class="icon-btn" id="menu-btn" aria-controls="side" aria-expanded="true" aria-label="메뉴 열고 닫기">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
   </button>
   <div class="brand">
-    <h1>나의 서재</h1>
+    <h1><button id="brand-home" aria-label="첫 화면으로">나의 서재</button></h1>
     <span class="count" id="count"></span>
   </div>
   <div class="spacer"></div>
+  <button class="icon-btn" id="settings-btn" aria-haspopup="dialog" aria-label="설정">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <circle cx="12" cy="12" r="3.1"></circle>
+      <path d="M12 3.4v2.3M12 18.3v2.3M20.6 12h-2.3M5.7 12H3.4M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7M18.1 18.1l-1.7-1.7M7.6 7.6 5.9 5.9"></path>
+    </svg>
+  </button>
   <button class="icon-btn search-toggle" id="search-btn" aria-expanded="false" aria-label="검색">
     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
   </button>
@@ -363,8 +545,17 @@
     <div class="side-sec rooms" id="rooms"></div>
   </section>
   <section class="side-sec">
-    <div class="side-label">배경</div>
-    <div class="side-sec" id="themes" role="group" aria-label="배경"></div>
+    <div class="side-label">설정</div>
+    <button class="side-item" data-open-set="design">
+      <span class="sw" id="cur-sw"></span>
+      <span class="nm">도서관 디자인 선택<small id="cur-lib">런던 도서관</small></span>
+    </button>
+    <button class="side-item" data-open-set="layout">
+      <span class="gear" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.1"></circle><path d="M12 3.4v2.3M12 18.3v2.3M20.6 12h-2.3M5.7 12H3.4M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7M18.1 18.1l-1.7-1.7M7.6 7.6 5.9 5.9"></path></svg>
+      </span>
+      <span class="nm">배치와 방식<small id="cur-layout">한 줄 서가 · 분류별</small></span>
+    </button>
   </section>
   <button class="btn side-add" id="side-add">학창 시절 책 추가</button>
   <section class="side-sec side-legend" aria-label="책갈피 색">
@@ -423,6 +614,34 @@
   </div>
 </div>
 
+<div class="modal" id="settings" hidden>
+  <div class="modal-box set-box" role="dialog" aria-modal="true" aria-labelledby="set-title">
+    <button class="close" id="set-close" aria-label="닫기">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+    <h2 id="set-title">설정</h2>
+    <p class="sub">서재의 모습과 책을 놓는 방식을 고릅니다. 고른 것은 이 기기에 저장됩니다.</p>
+    <div class="tabs" role="tablist" aria-label="설정 갈래">
+      <button role="tab" id="tab-design" data-page="design" aria-selected="true" aria-controls="page-design">도서관 디자인 선택</button>
+      <button role="tab" id="tab-layout" data-page="layout" aria-selected="false" aria-controls="page-layout">배치와 방식</button>
+    </div>
+    <section class="set-page" id="page-design" role="tabpanel" aria-labelledby="tab-design">
+      <div class="set-head">아름다운 도서관 선택</div>
+      <p class="set-note">세계에서 가장 아름답다고 꼽히는 도서관들입니다. 고르면 서가와 바닥 · 천장 · 조명이 모두 그 도서관을 따라 바뀝니다.</p>
+      <div class="libs" id="libs" role="radiogroup" aria-label="아름다운 도서관"></div>
+    </section>
+    <section class="set-page" id="page-layout" role="tabpanel" aria-labelledby="tab-layout" hidden>
+      <div class="set-head">도서관 배치와 방식</div>
+      <p class="set-note">책을 어떤 기준으로 모아 어떤 차례로 꽂을지, 서가를 얼마나 크게 세우고 얼마나 밝힐지 정합니다.</p>
+      <div id="opts"></div>
+    </section>
+    <div class="modal-actions">
+      <button class="btn" id="set-reset">기본값으로</button>
+      <button class="btn btn-primary" id="set-done">닫기</button>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function () {
@@ -447,7 +666,18 @@
   };
   var CAT_NAMES = Object.keys(CATS);
 
-  var reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* ---------------- 설정: 도서관 디자인 · 배치와 방식 ----------------
+     고른 값은 이 기기에 남는다. 책 데이터(store)와는 따로 둔다. */
+  var SET_KEY = "naui-seojae-settings-v1";
+  var SET_DEF = { theme: "london", mode: "2d", group: "cat", order: "auto", size: "m", light: "normal", speed: "normal", calm: "off" };
+  var cfg = Object.assign({}, SET_DEF);
+  try {
+    var savedCfg = JSON.parse(localStorage.getItem(SET_KEY) || "{}") || {};
+    Object.keys(SET_DEF).forEach(function (k) { if (savedCfg[k] != null) cfg[k] = savedCfg[k]; });
+  } catch (e) {}
+  function saveCfg() { try { localStorage.setItem(SET_KEY, JSON.stringify(cfg)); } catch (e) {} }
+
+  var reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches || cfg.calm === "on";
 
   function hash(str) {
     var h = 2166136261;
@@ -552,8 +782,44 @@
   /* 책갈피 색: 이 책이 지금 어떤 상태로 남아 있는지를 나타낸다. */
   var RIBBON = { b: 0x8A3330, p: 0x7E7A66, bp: 0xC9A04A, m: 0x4A6B8A, i: 0x4F7A55 };
 
-  // 처음 열면 늘 2D · 런던 도서관 · 소설·문학 서고에서 시작한다.
-  var state = { books: [], meshes: [], selected: null, query: "", view: "shelf", bounds: null, markers: [], mode: "2d", cat: "소설·문학" };
+  /* 서고(방) 하나에 무엇을 모을지: 분류 · 읽은 시기 · 남은 방식 */
+  var STATES = {
+    b: ["기록만 남은 책", "#8A3330"], p: ["집에 있는 책", "#7E7A66"], bp: ["기록과 실물 둘 다", "#C9A04A"],
+    m: ["기억으로 넣은 책", "#4A6B8A"], i: ["직접 추가한 책", "#4F7A55"]
+  };
+  var STATE_ORDER = Object.keys(STATES).map(function (s) { return STATES[s][0]; });
+  var ERA_COLS = ["#6B4A2F", "#4E5F6B", "#5F4D76", "#42624F", "#8C5C2C", "#33586B", "#7E2F3C", "#585B52"];
+  var GROUPS = {
+    cat: {
+      label: "분류", of: function (b) { return b.c; },
+      sort: function (keys, by) { return keys.sort(function (a, b) { return by[b].length - by[a].length || CAT_NAMES.indexOf(a) - CAT_NAMES.indexOf(b); }); },
+      color: function (k) { return (CATS[k] || CATS["그 밖의 책"])[0]; }
+    },
+    era: {
+      label: "읽은 시기", of: function (b) { return b.grp.era ? b.label : b.label + "년"; },
+      sort: function (keys) { return keys; },              // catalog()가 이미 시기순으로 정렬해 두었다
+      color: function (k) { return ERA_COLS[Math.floor(hash(k) * ERA_COLS.length)]; }
+    },
+    state: {
+      label: "남은 방식", of: function (b) { return (STATES[b.s] || STATES.b)[0]; },
+      sort: function (keys) { return keys.sort(function (a, b) { return STATE_ORDER.indexOf(a) - STATE_ORDER.indexOf(b); }); },
+      color: function (k) {
+        var s = Object.keys(STATES).filter(function (x) { return STATES[x][0] === k; })[0];
+        return s ? STATES[s][1] : "#5A564D";
+      }
+    }
+  };
+  // 한 서고 안에서 책이 놓이는 차례. auto는 catalog()가 매긴 시기·제목 순 그대로.
+  var ORDERS = {
+    auto: null,
+    title: function (a, b) { return a.t.localeCompare(b.t, "ko"); },
+    author: function (a, b) { return (a.a || "\uD79E").localeCompare(b.a || "\uD79E", "ko") || a.t.localeCompare(b.t, "ko"); },
+    year: function (a, b) { return (b.y || 0) - (a.y || 0) || a.t.localeCompare(b.t, "ko"); },
+    chars: function (a, b) { return (b.chars || 0) - (a.chars || 0) || a.t.localeCompare(b.t, "ko"); }
+  };
+
+  // 처음 열면 설정에 저장된 도서관 · 보는 방식으로, 소설·문학 서고에서 시작한다.
+  var state = { books: [], meshes: [], selected: null, query: "", view: "shelf", bounds: null, markers: [], mode: cfg.mode, cat: "소설·문학" };
   var phoneMQ = matchMedia("(max-width: 760px)");
   function isPhone() { return phoneMQ.matches; }
 
@@ -666,7 +932,9 @@
      그리고 구조(위층 갤러리 · 천장 · 사다리 · 책상 · 조명 종류 · 야외 풍경)를 정한다. */
   var THEMES = {
     london: {
-      name: "런던 도서관", desc: "마호가니 서가와 위층 갤러리", swatch: ["#6b3a24", "#c9a04a"],
+      name: "런던 도서관", desc: "마호가니 서가와 위층 갤러리", country: "영국", flag: "🇬🇧", tag: "🏛️ 마호가니·갤러리",
+      img: "__IMG_lib_london__",
+      swatch: ["#6b3a24", "#c9a04a"],
       gallery: true, ceil: "coffered", lamps: "pendant", carpet: "runner", floor: "parquet", ladder: true, desk: true, door: true,
       bg: "#1a130e", fog: [70, 380],
       grain: ["#6b3a24", "20,8,4", "150,80,45"], wood: 0xb07a58, woodDark: 0x7a4a33, back: 0x4a2a1c, wall: 0x2f3b30,
@@ -675,48 +943,65 @@
       sign: { bg: "#15110d", line: "rgba(201,160,74,.7)", ink: ["#f6dc92", "#d4a84a", "#9d7428"], sub: "#b9ae96", font: '700 {s}px "Gowun Batang", serif', plate: ["#d9b865", "#9c7630", "#2b1d08"] },
       light: { amb: [0xffe9cc, 0.27], hemi: [0xffe2b8, 0x2a1810, 0.22], sun: [0xd6e4ff, 0.28], key: [0xfff0d8, 0.2], lamp: [0xffc27a, 0.55, 0.35] }
     },
-    apple: {
-      name: "애플 스토어", desc: "밝은 원목 테이블과 하얀 벽", swatch: ["#f5f5f7", "#cdb593"],
-      gallery: false, ceil: "panels", lamps: "panel", carpet: null, floor: "stone", ladder: false, desk: true, door: true,
-      bg: "#eceef1", fog: [160, 720],
-      grain: ["#d9c29f", "140,105,70", "255,245,230"], wood: 0xffffff, woodDark: 0xeee4d4, back: 0xf4f4f6, wall: 0xf7f7f9,
-      trim: [0xc4c8cc, 0xffffff, 0x202020], rail: 0xd0d4d8, floorTint: 0xffffff, shade: 0xe8e8ed, glow: 0xffffff, halo: "255,255,255",
-      spines: [[210, 12, 86], [0, 0, 93], [200, 18, 74], [30, 22, 82], [0, 0, 72], [160, 14, 80]],
-      sign: { bg: "#fbfbfd", line: "rgba(0,0,0,.08)", ink: ["#1d1d1f", "#1d1d1f", "#1d1d1f"], sub: "#6e6e73", font: '600 {s}px "Noto Sans KR", sans-serif', plate: ["#ffffff", "#e8e8ed", "#1d1d1f"] },
-      light: { amb: [0xffffff, 0.62], hemi: [0xffffff, 0xd8d8d8, 0.35], sun: [0xffffff, 0.25], key: [0xffffff, 0.35], lamp: [0xffffff, 0.22, 0.18] }
+    admont: {
+      name: "아드몬트 수도원", desc: "흰 회벽과 금장, 프레스코 천장", country: "오스트리아", flag: "🇦🇹", tag: "🎨 바로크·프레스코",
+      img: "__IMG_lib_admont__",
+      swatch: ["#ddd2b8", "#c9a244"],
+      gallery: true, ceil: "fresco", lamps: "chandelier", carpet: null, floor: "marbleWhite", ladder: true, desk: true, door: true,
+      bg: "#cbbfa6", fog: [110, 620],
+      grain: ["#ded3bb", "150,128,90", "246,238,222"], wood: 0xdfd5bd, woodDark: 0xc3b696, back: 0xd4c9ae, wall: 0xdcd2b8,
+      trim: [0xc9a244, 0xffe9a8, 0x5a3f0c], rail: 0xc8ba9c, floorTint: 0xd8cdb4, shade: 0xc9a244, glow: 0xffe9b8, halo: "255,226,170",
+      spines: [[38, 26, 74], [30, 20, 66], [44, 30, 70], [20, 18, 60], [0, 0, 82], [40, 16, 56]],
+      sign: { bg: "#f8f2e4", line: "rgba(180,145,60,.5)", ink: ["#c49a3c", "#e8c874", "#8a6417"], sub: "#8a7a5c", font: '700 {s}px "Gowun Batang", serif', plate: ["#f0e2bd", "#cfae6a", "#5a4210"] },
+      light: { amb: [0xffeed6, 0.3], hemi: [0xffeeda, 0x9c8e74, 0.24], sun: [0xffe8c8, 0.2], key: [0xfff4e0, 0.14], lamp: [0xffdca0, 0.46, 0.3] }
     },
-    vegas: {
-      name: "라스베가스", desc: "검은 옻칠 서가, 금장과 네온", swatch: ["#0b0710", "#ff2fa8"],
-      gallery: true, ceil: "vegas", lamps: "chandelier", carpet: "vegas", floor: "marble", ladder: false, desk: false, door: true,
-      neon: [0xff2fa8, 0x29e6ff],
-      bg: "#0b0710", fog: [60, 340],
-      grain: ["#221419", "0,0,0", "120,50,80"], wood: 0x5a3446, woodDark: 0x2a1822, back: 0x160c12, wall: 0x1c0f1c,
-      trim: [0xe6b848, 0xfff0b0, 0x4a3208], rail: 0xe6b848, floorTint: 0xffffff, shade: 0x8a1030, glow: 0xfff0c0, halo: "255,210,120",
-      spines: [[330, 70, 35], [0, 75, 35], [45, 80, 45], [280, 55, 30], [0, 0, 8], [190, 80, 40]],
-      sign: { bg: "#08040a", line: "rgba(41,230,255,.9)", ink: ["#ff6cc4", "#ff2fa8", "#ff2fa8"], sub: "#29e6ff", font: '700 {s}px "Gowun Batang", serif', plate: ["#f2c95a", "#a67a1e", "#140a02"], glow: "#ff2fa8" },
-      light: { amb: [0xffd0f0, 0.25], hemi: [0xff9ad5, 0x100010, 0.25], sun: [0x9ad8ff, 0.15], key: [0xffe0b0, 0.25], lamp: [0xffc27a, 0.7, 0.5] }
+    trinity: {
+      name: "트리니티 칼리지", desc: "참나무 통천장이 덮은 고서의 롱룸", country: "아일랜드", flag: "🇮🇪", tag: "📚 고서·목재·역사",
+      img: "__IMG_lib_trinity__",
+      swatch: ["#4a2c17", "#c08a3e"],
+      gallery: true, ceil: "barrel", lamps: "pendant", carpet: null, floor: "plank", ladder: true, desk: true, door: true,
+      bg: "#150d06", fog: [70, 420],
+      grain: ["#5b3620", "18,8,3", "150,95,50"], wood: 0x9a6338, woodDark: 0x5d3820, back: 0x35200f, wall: 0x3b2a1b,
+      trim: [0xa8842f, 0xf0d79a, 0x241703], rail: 0x2a2018, floorTint: 0xa07a4e, shade: 0x2e5540, glow: 0xffd9a0, halo: "255,208,150",
+      spines: [[26, 38, 26], [16, 36, 20], [38, 32, 30], [6, 32, 22], [30, 22, 34], [24, 16, 15]],
+      sign: { bg: "#1c1208", line: "rgba(200,160,86,.6)", ink: ["#f4e2b6", "#d9bb79", "#a8863c"], sub: "#c3b191", font: '700 {s}px "Gowun Batang", serif', plate: ["#8a6a3a", "#54371a", "#f3e3c0"] },
+      light: { amb: [0xffe6c4, 0.3], hemi: [0xffdca8, 0x241408, 0.26], sun: [0xd8e6ff, 0.22], key: [0xffe2b4, 0.22], lamp: [0xffb877, 0.6, 0.4] }
     },
-    beach: {
-      name: "해변가", desc: "흰 나무 서가, 모래와 바다", swatch: ["#4aa3df", "#f1e3c2"],
-      gallery: false, ceil: null, lamps: null, carpet: null, floor: "sand", ladder: false, desk: false, door: false,
-      outdoor: { sky: ["#3f97d6", "#bfe0f3", "#f6e7c8"], sun: [0.3, 0.35, -1], water: 0x2f86b8, trees: "palm" },
-      bg: "#cfe8f5", fog: [260, 1400],
-      grain: ["#e9e2d4", "150,130,100", "255,255,255"], wood: 0xffffff, woodDark: 0xe0d8c8, back: 0xece6da, wall: 0xf1ece2,
-      trim: [0xc8a878, 0xfff4d8, 0x2a2010], rail: 0xffffff, floorTint: 0xd2c4a6, shade: 0x2f86b8, glow: 0xfff4d0, halo: "255,240,200",
-      spines: [[195, 55, 55], [15, 70, 65], [45, 60, 75], [0, 0, 95], [210, 45, 35], [170, 40, 60]],
-      sign: { bg: "#f6f1e7", line: "rgba(47,95,138,.55)", ink: ["#1f3b5c", "#1f3b5c", "#1f3b5c"], sub: "#5a7a95", font: '700 {s}px "Gowun Batang", serif', plate: ["#ffffff", "#e6ddcc", "#1f3b5c"] },
-      light: { amb: [0xffffff, 0.46], hemi: [0xcfe8ff, 0xd8c8a8, 0.4], sun: [0xfff2d6, 0.62], key: [0xffffff, 0.1], lamp: [0xffffff, 0, 0] }
+    portugal: {
+      name: "왕립 포르투갈 독서실", desc: "조각 목재와 스테인드글라스 천창", country: "브라질", flag: "🇧🇷", tag: "👑 화려함·스테인드글라스",
+      img: "__IMG_lib_portugal__",
+      swatch: ["#5a2d18", "#c8a13c"],
+      gallery: true, ceil: "stained", lamps: "chandelier", carpet: "royal", floor: "mosaic", ladder: true, desk: false, door: true,
+      bg: "#190f07", fog: [60, 380],
+      grain: ["#4a2a16", "16,6,2", "170,110,55"], wood: 0x8a5530, woodDark: 0x4e2c16, back: 0x2e1a0e, wall: 0x3d2718,
+      trim: [0xd8ab43, 0xffe9a8, 0x3a2705], rail: 0x8a6a22, floorTint: 0xb08a5c, shade: 0x7a1b28, glow: 0xffe0a8, halo: "255,214,150",
+      spines: [[350, 45, 28], [145, 38, 22], [38, 52, 34], [18, 44, 26], [280, 25, 24], [45, 40, 42]],
+      sign: { bg: "#241305", line: "rgba(214,171,67,.75)", ink: ["#ffe9a8", "#d8ab43", "#9c7218"], sub: "#c9b189", font: '700 {s}px "Gowun Batang", serif', plate: ["#d8ab43", "#8c6516", "#20120a"] },
+      light: { amb: [0xffe4d0, 0.34], hemi: [0xffd9b0, 0x1a0e06, 0.3], sun: [0xfff0d0, 0.3], key: [0xffe8c0, 0.25], lamp: [0xffc98a, 0.62, 0.42] }
     },
-    mountain: {
-      name: "산속", desc: "통나무 서가, 소나무 숲과 설산", swatch: ["#4f6b3a", "#a87a52"],
-      gallery: false, ceil: null, lamps: null, carpet: "plaid", floor: "flagstone", ladder: true, desk: true, door: false,
-      outdoor: { sky: ["#5f93c8", "#cfdcea", "#e6e2d8"], sun: [-0.5, 0.45, -1], ground: 0x4a6636, trees: "pine", peaks: true },
-      bg: "#cfdcea", fog: [220, 1300],
-      grain: ["#5a3b22", "25,12,4", "150,100,60"], wood: 0xb58a60, woodDark: 0x72502f, back: 0x46301c, wall: 0x5a4a3a,
-      trim: [0x3a3a3a, 0x999999, 0x0a0a0a], rail: 0x2c2c2c, floorTint: 0xb8b2a8, shade: 0xb87a2a, glow: 0xffcf8a, halo: "255,200,130",
-      spines: [[140, 35, 25], [25, 50, 30], [10, 55, 30], [40, 35, 60], [200, 20, 30], [0, 0, 20]],
-      sign: { bg: "#3a2616", line: "rgba(210,170,110,.7)", ink: ["#f3e3c0", "#e0c890", "#c9a864"], sub: "#d8c7a4", font: '700 {s}px "Gowun Batang", serif', plate: ["#8a6a3a", "#5a4222", "#f3e3c0"] },
-      light: { amb: [0xfff0e0, 0.45], hemi: [0xcfe0ff, 0x3a4a2a, 0.45], sun: [0xfff0d0, 0.7], key: [0xffe8c8, 0.15], lamp: [0xffc27a, 0.3, 0.2] }
+    strahov: {
+      name: "스트라호프 수도원", desc: "호두나무 서가와 철학의 방 천장화", country: "체코", flag: "🇨🇿", tag: "🕯️ 바로크·수도원",
+      img: "__IMG_lib_strahov__",
+      swatch: ["#6b4526", "#c9a24a"],
+      gallery: true, ceil: "frescoOak", lamps: "chandelier", carpet: null, floor: "checker", ladder: true, desk: true, door: true,
+      bg: "#1d1408", fog: [75, 430],
+      grain: ["#6a4527", "24,12,4", "170,120,70"], wood: 0xa9764a, woodDark: 0x66422a, back: 0x3d2716, wall: 0x6a5b3f,
+      trim: [0xc9a24a, 0xffe8b0, 0x33220a], rail: 0x3a2e1c, floorTint: 0xc0b49a, shade: 0x8a6a2a, glow: 0xffe0b0, halo: "255,220,165",
+      spines: [[32, 34, 32], [22, 30, 26], [42, 36, 40], [12, 28, 24], [38, 20, 52], [28, 14, 18]],
+      sign: { bg: "#241a0c", line: "rgba(201,162,74,.65)", ink: ["#f6e6bc", "#d9b662", "#9d7a2c"], sub: "#c2b08a", font: '700 {s}px "Gowun Batang", serif', plate: ["#c9a24a", "#7a5c22", "#241a0c"] },
+      light: { amb: [0xfff0d8, 0.42], hemi: [0xffe8c8, 0x2e2412, 0.34], sun: [0xfff4e2, 0.3], key: [0xffeccc, 0.25], lamp: [0xffd49a, 0.5, 0.34] }
+    },
+    stuttgart: {
+      name: "슈투트가르트 시립도서관", desc: "빛우물을 둘러싼 새하얀 계단식 서가", country: "독일", flag: "🇩🇪", tag: "🏛️ 현대건축·미니멀리즘",
+      img: "__IMG_lib_stuttgart__",
+      swatch: ["#d8dce1", "#9ea4ac"],
+      gallery: true, ceil: "skylight", lamps: "panel", carpet: null, floor: "resin", ladder: false, desk: true, door: true,
+      bg: "#bfc5cb", fog: [150, 700],
+      grain: ["#dfe2e6", "160,168,178", "246,248,250"], wood: 0xd8dce1, woodDark: 0xc4c9d0, back: 0xd0d4d9, wall: 0xdce0e4,
+      trim: [0xb4b9bf, 0xeef1f4, 0x151515], rail: 0xa9aeb5, floorTint: 0xd2d6db, shade: 0xc6cbd1, glow: 0xe8eef4, halo: "226,234,242",
+      spines: [[210, 10, 62], [0, 0, 78], [200, 14, 50], [30, 12, 70], [0, 0, 42], [160, 10, 58]],
+      sign: { bg: "#fbfbfc", line: "rgba(0,0,0,.09)", ink: ["#1b1d20", "#1b1d20", "#1b1d20"], sub: "#70747a", font: '600 {s}px "Noto Sans KR", sans-serif', plate: ["#ffffff", "#e6e8ea", "#1b1d20"] },
+      light: { amb: [0xeef2f7, 0.36], hemi: [0xf2f5f8, 0xb2b8c0, 0.26], sun: [0xdfe9f5, 0.18], key: [0xf6f9fc, 0.14], lamp: [0xeef4fb, 0.34, 0.24] }
     }
   };
   var T = THEMES.london;
@@ -734,34 +1019,51 @@
         g.strokeStyle = "rgba(0,0,0,.35)"; g.lineWidth = 1.5; g.strokeRect(x, r * 32, 128, 32);
       }
     },
-    stone: function (g, w) {               // 큰 밝은 석재 타일
+    marbleWhite: function (g, w) {        // 아드몬트: 흰 대리석 큰 판, 옅은 결
       for (var y = 0; y < w; y += 128) for (var x = 0; x < w; x += 128) {
-        g.fillStyle = "hsl(40,6%," + (86 + Math.random() * 4) + "%)"; g.fillRect(x, y, 128, 128);
-        g.strokeStyle = "rgba(0,0,0,.08)"; g.lineWidth = 2; g.strokeRect(x, y, 128, 128);
+        g.fillStyle = "hsl(42,20%," + (74 + Math.random() * 6) + "%)"; g.fillRect(x, y, 128, 128);
+        g.strokeStyle = "rgba(110,92,58,.2)"; g.lineWidth = 1;
+        for (var v = 0; v < 3; v++) { g.beginPath(); g.moveTo(x + Math.random() * 128, y); g.bezierCurveTo(x + Math.random() * 128, y + 45, x + Math.random() * 128, y + 90, x + Math.random() * 128, y + 128); g.stroke(); }
+        g.strokeStyle = "rgba(120,100,60,.2)"; g.lineWidth = 2; g.strokeRect(x, y, 128, 128);
       }
     },
-    marble: function (g, w) {              // 검정 · 흰 대리석 체크와 금줄
-      for (var y = 0; y < w; y += 128) for (var x = 0; x < w; x += 128) {
-        var dark = ((x + y) / 128) % 2;
-        g.fillStyle = dark ? "#121014" : "#e9e6e0"; g.fillRect(x, y, 128, 128);
-        g.strokeStyle = dark ? "rgba(255,255,255,.06)" : "rgba(0,0,0,.08)"; g.lineWidth = 1;
-        for (var v = 0; v < 4; v++) { g.beginPath(); g.moveTo(x + Math.random() * 128, y); g.bezierCurveTo(x + Math.random() * 128, y + 40, x + Math.random() * 128, y + 90, x + Math.random() * 128, y + 128); g.stroke(); }
+    plank: function (g, w) {              // 트리니티: 오래 밟은 참나무 널마루
+      for (var y = 0; y < w; y += 42) {
+        var off = (y / 42 % 2) * 90;
+        for (var x = -off; x < w; x += 180) {
+          g.fillStyle = "hsl(" + (26 + Math.random() * 8) + ",34%," + (19 + Math.random() * 9) + "%)";
+          g.fillRect(x, y, 180, 42);
+          g.strokeStyle = "rgba(0,0,0,.45)"; g.lineWidth = 1.5; g.strokeRect(x, y, 180, 42);
+          g.strokeStyle = "rgba(255,220,170,.06)"; g.lineWidth = 1;
+          for (var s = 0; s < 3; s++) { var yy = y + 6 + Math.random() * 30; g.beginPath(); g.moveTo(x, yy); g.bezierCurveTo(x + 60, yy + 3, x + 120, yy - 3, x + 180, yy); g.stroke(); }
+        }
       }
-      g.strokeStyle = "#c9a04a"; g.lineWidth = 3;
-      for (var k = 0; k <= w; k += 128) { g.beginPath(); g.moveTo(k, 0); g.lineTo(k, w); g.moveTo(0, k); g.lineTo(w, k); g.stroke(); }
     },
-    sand: function (g, w) {
-      g.fillStyle = "#e8d6ae"; g.fillRect(0, 0, w, w);
-      for (var i = 0; i < 9000; i++) { g.fillStyle = "rgba(" + (Math.random() < 0.5 ? "150,120,80" : "255,250,235") + "," + (Math.random() * 0.25).toFixed(2) + ")"; g.fillRect(Math.random() * w, Math.random() * w, 2, 2); }
-      g.strokeStyle = "rgba(180,150,100,.18)"; g.lineWidth = 3;
-      for (var r = 0; r < 12; r++) { var yy = Math.random() * w; g.beginPath(); g.moveTo(0, yy); g.bezierCurveTo(w / 3, yy + 20, 2 * w / 3, yy - 20, w, yy); g.stroke(); }
+    mosaic: function (g, w) {             // 포르투갈 독서실: 짙고 옅은 나무를 엇갈려 짠 쪽매무늬
+      var t = 64;
+      for (var y = 0; y < w; y += t) for (var x = 0; x < w; x += t) {
+        var alt = ((x + y) / t) % 2;
+        g.fillStyle = alt ? "hsl(24,40%,21%)" : "hsl(32,34%,37%)"; g.fillRect(x, y, t, t);
+        g.strokeStyle = "rgba(0,0,0,.4)"; g.lineWidth = 1;
+        for (var k = 0; k < t; k += 16) {
+          g.beginPath();
+          if (alt) { g.moveTo(x, y + k); g.lineTo(x + t, y + k); } else { g.moveTo(x + k, y); g.lineTo(x + k, y + t); }
+          g.stroke();
+        }
+        g.strokeStyle = "rgba(201,160,74,.22)"; g.strokeRect(x + 1, y + 1, t - 2, t - 2);
+      }
     },
-    flagstone: function (g, w) {           // 불규칙한 판석
-      g.fillStyle = "#3b3a36"; g.fillRect(0, 0, w, w);
-      for (var y = 0; y < w; y += 64) for (var x = -(Math.random() * 40); x < w; x += 70 + Math.random() * 60) {
-        var ww = 60 + Math.random() * 50, hh = 56 + Math.random() * 6;
-        g.fillStyle = "hsl(" + (30 + Math.random() * 20) + ",8%," + (42 + Math.random() * 14) + "%)";
-        g.beginPath(); g.moveTo(x + 6, y + 4); g.lineTo(x + ww - 4, y + 3 + Math.random() * 4); g.lineTo(x + ww - 6, y + hh); g.lineTo(x + 3, y + hh - Math.random() * 4); g.closePath(); g.fill();
+    checker: function (g, w) {            // 스트라호프: 베이지·갈색 석재 바둑판
+      for (var y = 0; y < w; y += 96) for (var x = 0; x < w; x += 96) {
+        g.fillStyle = ((x + y) / 96) % 2 ? "hsl(32,18%,33%)" : "hsl(40,24%,71%)"; g.fillRect(x, y, 96, 96);
+        g.strokeStyle = "rgba(0,0,0,.18)"; g.lineWidth = 1.5; g.strokeRect(x, y, 96, 96);
+      }
+    },
+    resin: function (g, w) {              // 슈투트가르트: 이음매 없는 흰 바닥, 아주 옅은 얼룩
+      g.fillStyle = "#dcdfe3"; g.fillRect(0, 0, w, w);
+      for (var i = 0; i < 700; i++) {
+        g.fillStyle = "rgba(146,154,164," + (Math.random() * 0.09).toFixed(3) + ")";
+        g.beginPath(); g.arc(Math.random() * w, Math.random() * w, 6 + Math.random() * 26, 0, 6.283); g.fill();
       }
     }
   };
@@ -772,18 +1074,13 @@
       g.fillStyle = "#c79a4a"; g.fillRect(14, 0, 6, h); g.fillRect(w - 20, 0, 6, h);
       g.fillStyle = "#3c0d0d"; g.fillRect(0, 0, 12, h); g.fillRect(w - 12, 0, 12, h);
     },
-    vegas: function (g, w, h) {            // 붉은 카펫 위 금색 마름모
-      g.fillStyle = "#6a0a1e"; g.fillRect(0, 0, w, h);
-      g.strokeStyle = "#e6b848"; g.lineWidth = 2;
-      for (var y = 0; y < h; y += 64) { g.beginPath(); g.moveTo(w / 2, y); g.lineTo(w - 40, y + 32); g.lineTo(w / 2, y + 64); g.lineTo(40, y + 32); g.closePath(); g.stroke(); }
-      g.fillStyle = "#e6b848"; g.fillRect(8, 0, 6, h); g.fillRect(w - 14, 0, 6, h);
-    },
-    plaid: function (g, w, h) {            // 산장 체크무늬 러그
-      g.fillStyle = "#2e4a2a"; g.fillRect(0, 0, w, h);
-      g.fillStyle = "rgba(150,30,30,.55)"; for (var x = 0; x < w; x += 64) g.fillRect(x + 20, 0, 22, h);
-      for (var y = 0; y < h; y += 64) g.fillRect(0, y + 20, w, 22);
-      g.fillStyle = "rgba(230,200,120,.5)"; for (var x2 = 0; x2 < w; x2 += 64) g.fillRect(x2 + 30, 0, 3, h);
-      for (var y2 = 0; y2 < h; y2 += 64) g.fillRect(0, y2 + 30, w, 3);
+    royal: function (g, w, h) {           // 포르투갈 독서실: 진홍 융단에 금색 고리무늬
+      g.fillStyle = "#6e1420"; g.fillRect(0, 0, w, h);
+      g.fillStyle = "#8d1c2a"; for (var y = 0; y < h; y += 48) g.fillRect(30, y + 10, w - 60, 28);
+      g.strokeStyle = "#c9a04a"; g.lineWidth = 3;
+      for (var y2 = 0; y2 < h; y2 += 48) { g.beginPath(); g.arc(w / 2, y2 + 24, 17, 0, 6.283); g.stroke(); }
+      g.fillStyle = "#c9a04a"; g.fillRect(11, 0, 5, h); g.fillRect(w - 16, 0, 5, h);
+      g.fillStyle = "#4a0c14"; g.fillRect(0, 0, 9, h); g.fillRect(w - 9, 0, 9, h);
     }
   };
   var CEILS = {
@@ -792,15 +1089,53 @@
       g.fillStyle = "#3d2417"; g.fillRect(22, 22, w - 44, w - 44);
       g.strokeStyle = "rgba(201,160,74,.55)"; g.lineWidth = 3; g.strokeRect(34, 34, w - 68, w - 68);
     },
-    panels: function (g, w) {              // 하얀 천장에 빛 패널
-      g.fillStyle = "#f1f1f3"; g.fillRect(0, 0, w, w);
-      g.fillStyle = "#ffffff"; g.fillRect(40, 40, w - 80, w - 80);
-      g.strokeStyle = "rgba(0,0,0,.05)"; g.lineWidth = 2; g.strokeRect(40, 40, w - 80, w - 80);
+    fresco: function (g, w) {             // 아드몬트: 금테를 두른 하늘빛 천장화
+      g.fillStyle = "#ded3b8"; g.fillRect(0, 0, w, w);
+      g.strokeStyle = "rgba(160,124,46,.75)"; g.lineWidth = 5; g.strokeRect(13, 13, w - 26, w - 26);
+      var gr = g.createRadialGradient(w / 2, w / 2, 8, w / 2, w / 2, w / 2 - 24);
+      gr.addColorStop(0, "#a8c0d8"); gr.addColorStop(0.55, "#ccbf9e"); gr.addColorStop(1, "#d9cdae");
+      g.fillStyle = gr; g.beginPath(); g.arc(w / 2, w / 2, w / 2 - 26, 0, 6.283); g.fill();
+      g.strokeStyle = "rgba(190,150,60,.6)"; g.lineWidth = 3;
+      g.beginPath(); g.arc(w / 2, w / 2, w / 2 - 26, 0, 6.283); g.stroke();
+      g.fillStyle = "rgba(120,92,40,.2)";
+      for (var k = 0; k < 8; k++) {
+        var a = k / 8 * 6.283;
+        g.beginPath(); g.arc(w / 2 + Math.cos(a) * (w / 2 - 50), w / 2 + Math.sin(a) * (w / 2 - 50), 9, 0, 6.283); g.fill();
+      }
     },
-    vegas: function (g, w) {
-      g.fillStyle = "#0e0810"; g.fillRect(0, 0, w, w);
-      g.strokeStyle = "#e6b848"; g.lineWidth = 4; g.strokeRect(12, 12, w - 24, w - 24);
-      g.lineWidth = 1.5; g.strokeRect(40, 40, w - 80, w - 80);
+    frescoOak: function (g, w) {          // 스트라호프: 호두나무 테 안의 천장화
+      g.fillStyle = "#4a331c"; g.fillRect(0, 0, w, w);
+      g.strokeStyle = "rgba(201,162,74,.8)"; g.lineWidth = 6; g.strokeRect(12, 12, w - 24, w - 24);
+      var gr = g.createRadialGradient(w / 2, w / 2, 6, w / 2, w / 2, w / 2 - 22);
+      gr.addColorStop(0, "#e9d9ae"); gr.addColorStop(0.5, "#c8a877"); gr.addColorStop(1, "#8a6a42");
+      g.fillStyle = gr; g.beginPath(); g.ellipse(w / 2, w / 2, w / 2 - 28, w / 2 - 40, 0, 0, 6.283); g.fill();
+      g.strokeStyle = "rgba(201,162,74,.7)"; g.lineWidth = 3;
+      g.beginPath(); g.ellipse(w / 2, w / 2, w / 2 - 28, w / 2 - 40, 0, 0, 6.283); g.stroke();
+    },
+    barrel: function (g, w) {             // 트리니티: 참나무 통천장의 늑재
+      g.fillStyle = "#3a2615"; g.fillRect(0, 0, w, w);
+      for (var x = 0; x < w; x += 64) {
+        g.fillStyle = "#4a3320"; g.fillRect(x + 7, 0, 45, w);
+        g.strokeStyle = "rgba(0,0,0,.5)"; g.lineWidth = 2; g.strokeRect(x + 7, 0, 45, w);
+      }
+      g.fillStyle = "rgba(255,220,170,.06)"; g.fillRect(0, 0, w, 9);
+    },
+    stained: function (g, w) {            // 포르투갈 독서실: 천창의 스테인드글라스
+      var cols = ["#c8543a", "#2f6ea8", "#3f8a5a", "#d9a63c", "#7a4a86"];
+      g.fillStyle = "#2a1a10"; g.fillRect(0, 0, w, w);
+      for (var y = 0; y < w; y += 32) for (var x = 0; x < w; x += 32) {
+        g.fillStyle = cols[Math.floor(Math.random() * cols.length)];
+        g.globalAlpha = 0.72 + Math.random() * 0.28; g.fillRect(x + 2, y + 2, 28, 28); g.globalAlpha = 1;
+      }
+      g.strokeStyle = "rgba(20,12,6,.9)"; g.lineWidth = 4;
+      for (var k = 0; k <= w; k += 32) { g.beginPath(); g.moveTo(k, 0); g.lineTo(k, w); g.moveTo(0, k); g.lineTo(w, k); g.stroke(); }
+    },
+    skylight: function (g, w) {           // 슈투트가르트: 흰 격자와 빛우물
+      g.fillStyle = "#dde1e5"; g.fillRect(0, 0, w, w);
+      g.fillStyle = "#eaedf0"; g.fillRect(26, 26, w - 52, w - 52);
+      g.strokeStyle = "rgba(0,0,0,.1)"; g.lineWidth = 2; g.strokeRect(26, 26, w - 52, w - 52);
+      g.strokeStyle = "rgba(0,0,0,.07)"; g.lineWidth = 1;
+      for (var k = 58; k < w - 26; k += 32) { g.beginPath(); g.moveTo(k, 26); g.lineTo(k, w - 26); g.moveTo(26, k); g.lineTo(w - 26, k); g.stroke(); }
     }
   };
   var lights = { amb: scene.children.filter(function (o) { return o.isAmbientLight; })[0], hemi: scene.children.filter(function (o) { return o.isHemisphereLight; })[0] };
@@ -831,15 +1166,21 @@
     M.neon = T.neon ? T.neon.map(function (c) { return new THREE.MeshBasicMaterial({ color: c }); }) : null;
     LEATHER = T.spines;
     numCache = {};
-    var L = T.light;
-    lights.amb.color.setHex(L.amb[0]); lights.amb.intensity = L.amb[1];
-    lights.hemi.color.setHex(L.hemi[0]); lights.hemi.groundColor.setHex(L.hemi[1]); lights.hemi.intensity = L.hemi[2];
-    sky.color.setHex(L.sun[0]); sky.intensity = L.sun[1];
-    sky.position.set(T.outdoor ? T.outdoor.sun[0] * 300 : 0, T.outdoor ? T.outdoor.sun[1] * 300 : 30, T.outdoor ? T.outdoor.sun[2] * 300 : -300);
-    key.color.setHex(L.key[0]); key.intensity = L.key[1];
-    lampA.color.setHex(L.lamp[0]); lampA.intensity = L.lamp[1];
-    lampB.color.setHex(L.lamp[0]); lampB.intensity = L.lamp[2];
+    applyLights();
     applySceneColors();
+  }
+  // 조명 밝기 설정(어둑 · 보통 · 밝게)을 테마가 정한 밝기에 곱한다
+  var LIGHT_MUL = { dim: 0.68, normal: 1, bright: 1.45 };
+  function lightMul() { return LIGHT_MUL[cfg.light] || 1; }
+  function applyLights() {
+    var L = T.light, m = lightMul();
+    lights.amb.color.setHex(L.amb[0]); lights.amb.intensity = L.amb[1] * m;
+    lights.hemi.color.setHex(L.hemi[0]); lights.hemi.groundColor.setHex(L.hemi[1]); lights.hemi.intensity = L.hemi[2] * m;
+    sky.color.setHex(L.sun[0]); sky.intensity = L.sun[1] * m;
+    sky.position.set(T.outdoor ? T.outdoor.sun[0] * 300 : 0, T.outdoor ? T.outdoor.sun[1] * 300 : 30, T.outdoor ? T.outdoor.sun[2] * 300 : -300);
+    key.color.setHex(L.key[0]); key.intensity = L.key[1] * m;
+    lampA.color.setHex(L.lamp[0]); lampA.intensity = L.lamp[1] * m;
+    lampB.color.setHex(L.lamp[0]); lampB.intensity = L.lamp[2] * m;
   }
   function themeId() { return Object.keys(THEMES).filter(function (k) { return THEMES[k] === T; })[0]; }
 
@@ -915,6 +1256,7 @@
 
   /* 서가 한 칸: 3단 × 5권(1~15번), 서점 매대처럼 표지가 앞을 보게 세운다.
      칸은 자기 좌표계(x: 왼쪽→오른쪽, +z: 복도 쪽)로 만들고, 복도 왼쪽·오른쪽 벽에 돌려 세운다. */
+  var SIZES = { s: [4, 2], m: [5, 3], l: [6, 4] };  // 설정의 칸 크기: 가로 칸 수 × 세로 단 수
   var COLS = 5, ROWS = 3, PER_BAY = COLS * ROWS;
   var CW = 4.6, CH = 6.7, CT = 0.5;              // 표지 너비 · 높이 · 두께
   var SLOT = 6.3, POST = 1.4, ROW_H = 9.8, BOARD = 0.7, DEPTH = 8, HEAD = 3.4, PLINTH = 1.8;
@@ -922,7 +1264,17 @@
   var BAY_W = COLS * SLOT + 0.6, PITCH = BAY_W + POST;
   var FRONT = DEPTH / 2, FLOOR = -ROWS * ROW_H - PLINTH;
   var G0 = HEAD + 1.3, U0 = G0 + 0.5, UH = 15, CEIL = U0 + UH + 3.2;
-  var EYE = -11;                                   // 눈높이
+  var EYE = FLOOR + 20.2;                          // 눈높이(바닥에서 잰다)
+  // 칸 크기가 바뀌면 칸 너비 · 바닥 높이 · 눈높이가 따라 바뀐다. 서가를 다시 세우기 전에 부른다.
+  function applyShelfSize(id) {
+    var s = SIZES[id] || SIZES.m;
+    COLS = s[0]; ROWS = s[1]; PER_BAY = COLS * ROWS;
+    BAY_W = COLS * SLOT + 0.6; PITCH = BAY_W + POST;
+    FLOOR = -ROWS * ROW_H - PLINTH;
+    EYE = FLOOR + 20.2;
+    MID_Y = (G0 + FLOOR) / 2;
+    numCache = {};
+  }
   var coverGeo = new THREE.BoxGeometry(CW, CH, CT);
   var ribbonGeo = new THREE.PlaneGeometry(0.42, 1.4);
   var SHARED = [coverGeo, ribbonGeo];
@@ -1343,7 +1695,7 @@
     lshade.rotation.z = Math.PI / 2;                                             // 반원통 갓을 눕혀 둥근 쪽이 위로
     lshade.position.set(dx + 2, dy + 2.6, dz - 0.6); r0.group.add(lshade);
     glowAt(r0.group, dx + 2, dy + 2.0, dz - 0.3, 4);
-    var deskLight = new THREE.PointLight(0xffd08a, 0.9, 22); deskLight.position.set(dx + 2, dy + 1.8, dz - 0.3); r0.group.add(deskLight);
+    var deskLight = new THREE.PointLight(0xffd08a, 0.9 * lightMul(), 22); deskLight.position.set(dx + 2, dy + 1.8, dz - 0.3); r0.group.add(deskLight);
     blocks.push({ x0: dx - 8, x1: dx + 8, z0: dz - 4, z1: dz + 4 });
     return segs;
   }
@@ -1356,14 +1708,17 @@
       var x0 = x;
       // 분류가 시작되는 자리: 세로 금박 표지판을 단 기둥
       box(PLAQUE, G0 - FLOOR, DEPTH + 1.6, x + PLAQUE / 2, (G0 + FLOOR) / 2, -FRONT + 0.2, M.woodDark, strip);
-      var sign = plateMesh(PLAQUE - 1.6, 24, function (g, cw, ch, gold) {
-        var chars = c.cat.replace(/·/g, "・").split(""), size = Math.min(cw * 0.62, (ch - 260) / chars.length);
+      // 표지판은 기둥 안에 들어가야 한다. 칸 크기를 줄이면 서가가 낮아지므로 높이를 같이 줄인다.
+      var signH = Math.min(24, (G0 - FLOOR) * 0.72), signY = (G0 + FLOOR) / 2 - 1;
+      var sign = plateMesh(PLAQUE - 1.6, signH, function (g, cw, ch, gold) {
+        var pad = ch * 0.17, chars = c.cat.replace(/·/g, "・").split("");
+        var size = Math.min(cw * 0.62, (ch - pad * 2) / chars.length);
         g.fillStyle = gold; g.font = signFont(size);
-        chars.forEach(function (chr, i) { g.fillText(chr, cw / 2, 90 + size * (i + 0.5)); });
+        chars.forEach(function (chr, i) { g.fillText(chr, cw / 2, pad * 0.7 + size * (i + 0.5)); });
         g.shadowBlur = 0; g.fillStyle = T.sign.sub; g.font = '500 ' + Math.round(cw * 0.2) + 'px "IBM Plex Mono", monospace';
-        g.fillText(c.count + "권", cw / 2, ch - 80);
+        g.fillText(c.count + "권", cw / 2, ch - pad * 0.5);
       });
-      sign.position.set(x + PLAQUE / 2, -13, 1.05);
+      sign.position.set(x + PLAQUE / 2, signY, 1.05);
       strip.add(sign);
       x += PLAQUE;
       c.bays.forEach(function (bay, i) {
@@ -1383,9 +1738,15 @@
 
   function rebuild() {
     var books = catalog();
-    var byCat = {};
-    books.forEach(function (b) { (byCat[b.c] = byCat[b.c] || []).push(b); });
-    var cats = Object.keys(byCat).sort(function (a, b) { return byCat[b].length - byCat[a].length || CAT_NAMES.indexOf(a) - CAT_NAMES.indexOf(b); });
+    var G = GROUPS[cfg.group] || GROUPS.cat, cmp = ORDERS[cfg.order];
+    var byCat = {}, keys = [];
+    books.forEach(function (b) {
+      var k = G.of(b);
+      if (!byCat[k]) { byCat[k] = []; keys.push(k); }
+      byCat[k].push(b);
+    });
+    var cats = G.sort(keys, byCat);
+    if (cmp) cats.forEach(function (k) { byCat[k].sort(cmp); });
     // 칸 번호("서가 NN")는 서고 순서대로 이어서 붙인다
     var list = [], next = 0;
     cats.forEach(function (c) {
@@ -1399,7 +1760,7 @@
     clearGroup(world);
     floorMeshes = []; blocks = []; walkRects = []; rooms = [];
     state.books = books; state.meshes = [];
-    state.markers = list.map(function (c) { return { label: c.cat, count: c.count, bays: c.bays.length }; });
+    state.markers = list.map(function (c) { return { label: c.cat, count: c.count, bays: c.bays.length, col: G.color(c.cat) }; });
     layout = { mode: state.mode, segs: state.mode === "2d" ? buildStrip(list) : buildSuite(list) };
     buildEnv(layout.segs[0].x0, layout.segs[layout.segs.length - 1].x1, -DEPTH, state.mode === "2d" ? 80 : ROOM_D + DEPTH);
 
@@ -1450,7 +1811,7 @@
     var vh = 2 * Math.tan((fov || FOV) * Math.PI / 360) * z;
     return { w: vh * camera.aspect, h: vh };
   }
-  var MID_Y = (G0 + FLOOR) / 2;                                // 서가 한가운데 높이
+  var MID_Y = (G0 + FLOOR) / 2;                                // 서가 한가운데 높이(칸 크기가 바뀌면 다시 잡는다)
   // 서가 높이가 다 들어오게 물러선다. 세로로 긴 휴대폰 화면에선 서가 한 칸의 너비도 다 들어오게 더 물러선다.
   function fit2d() {
     var t = Math.tan(FOV * Math.PI / 360);
@@ -1708,7 +2069,7 @@
   var held = {};
   var KEYS = { ArrowUp: "fwd", KeyW: "fwd", ArrowDown: "back", KeyS: "back", ArrowLeft: "left", ArrowRight: "right", KeyA: "sl", KeyD: "sr", Equal: "zin", NumpadAdd: "zin", Minus: "zout", NumpadSubtract: "zout" };
   document.addEventListener("keydown", function (ev) {
-    if (/INPUT|SELECT|TEXTAREA/.test(ev.target.tagName) || state.view !== "shelf" || !KEYS[ev.code]) return;
+    if (/INPUT|SELECT|TEXTAREA/.test(ev.target.tagName) || state.view !== "shelf" || !KEYS[ev.code] || homeOpen()) return;
     held[KEYS[ev.code]] = true; ev.preventDefault();
   });
   document.addEventListener("keyup", function (ev) { if (KEYS[ev.code]) delete held[KEYS[ev.code]]; });
@@ -1719,10 +2080,12 @@
     btn.addEventListener("pointerdown", function (ev) { held[k] = true; try { btn.setPointerCapture(ev.pointerId); } catch (e) {} });
     ["pointerup", "pointercancel", "pointerleave"].forEach(function (t) { btn.addEventListener(t, function () { delete held[k]; }); });
   });
+  var SPEEDS = { slow: 0.6, normal: 1, fast: 1.7 };
   function applyHeld() {
-    var step = 0.7, any = false, flat = state.mode === "2d";
-    if (held.fwd) { walk(flat ? 2 : step); any = true; }
-    if (held.back) { walk(flat ? -2 : -step); any = true; }
+    var sp = SPEEDS[cfg.speed] || 1;
+    var step = 0.7 * sp, any = false, flat = state.mode === "2d";
+    if (held.fwd) { walk(flat ? 2 * sp : step); any = true; }
+    if (held.back) { walk(flat ? -2 * sp : -step); any = true; }
     if (held.sl || (flat && held.left)) { walk(0, flat ? -1 : -step); any = true; }
     if (held.sr || (flat && held.right)) { walk(0, flat ? 1 : step); any = true; }
     if (!flat && held.left) { goal.yaw += 0.028 * view.fov / FOV; any = true; }
@@ -1733,7 +2096,7 @@
     if (markerT > 0) { markerT = Math.max(0, markerT - 0.025); marker.material.opacity = markerT * 0.9; marker.scale.setScalar(1 + (1 - markerT) * 1.2); }
   }
 
-  /* ---------------- 왼쪽 메뉴: 2D/3D · 서고 · 배경 ---------------- */
+  /* ---------------- 왼쪽 메뉴: 2D/3D · 서고 · 설정 ---------------- */
   var shell = document.getElementById("shell");
   var menuBtn = document.getElementById("menu-btn");
   var roomsEl = document.getElementById("rooms");
@@ -1751,6 +2114,7 @@
   function setMode(m, init) {
     var changed = m !== state.mode;
     state.mode = m;
+    if (cfg.mode !== m) { cfg.mode = m; saveCfg(); }
     document.querySelectorAll("[data-mode]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.mode === m)); });
     document.getElementById("hint").innerHTML = coarse
       ? (m === "2d"
@@ -1769,6 +2133,7 @@
     select(null);
     if (changed) { hereIdx = -1; rebuild(); }
     resetView();
+    renderSetSummary();
   }
   document.querySelectorAll("[data-mode]").forEach(function (b) {
     b.addEventListener("click", function () { if (state.view !== "shelf") setView("shelf"); setMode(b.dataset.mode); });
@@ -1785,31 +2150,109 @@
   }
   function renderRooms() {
     roomsEl.innerHTML = state.markers.map(function (m, k) {
-      var col = CATS[m.label] || CATS["그 밖의 책"];
-      return '<button class="side-item' + (k === hereIdx ? " here" : "") + '" data-cat="' + esc(m.label) + '" style="--c1:' + col[0] + '"' +
+      return '<button class="side-item' + (k === hereIdx ? " here" : "") + '" data-cat="' + esc(m.label) + '" style="--c1:' + (m.col || "#5A564D") + '"' +
         (k === hereIdx ? ' aria-current="true"' : "") + '><span class="bar"></span><span class="nm">' + esc(m.label) +
         '</span><span class="ct">' + m.count + "</span></button>";
     }).join("");
   }
-  var themesEl = document.getElementById("themes");
-  function renderThemes() {
-    var cur = themeId();
-    themesEl.innerHTML = Object.keys(THEMES).map(function (id) {
+  /* ---------------- 설정 창 ----------------
+     도서관 디자인(테마)과, 서고를 나누고 세우는 방식을 고른다. 고른 값은 cfg에 저장된다. */
+  var OPTIONS = [
+    { key: "mode", label: "보는 방식", note: "한 줄로 펼쳐 훑어보거나, 방마다 걸어 들어갑니다.",
+      opts: [["2d", "한 줄 서가", "정면에서 보기"], ["3d", "걷는 열람실", "방을 걸어 다니기"]] },
+    { key: "group", label: "서고를 나누는 기준", note: "서고(방) 하나에 어떤 책을 모을지 정합니다.",
+      opts: [["cat", "분류", "경영 · 소설 · 신앙 …"], ["era", "읽은 시기", "학창 시절과 해마다"], ["state", "남은 방식", "기록 · 실물 · 기억"]] },
+    { key: "order", label: "칸에 꽂는 순서", note: "한 서고 안에서 책이 놓이는 차례입니다.",
+      opts: [["auto", "기본", "시기순"], ["title", "제목", "가나다순"], ["author", "저자", "가나다순"], ["year", "최근", "읽은 해 순"], ["chars", "기록", "독후감 긴 순"]] },
+    { key: "size", label: "서가 한 칸의 크기", note: "한 칸에 몇 권을 꽂을지. 크게 할수록 서고가 짧고 높아집니다.",
+      opts: [["s", "작게", "4 × 2 · 8권"], ["m", "보통", "5 × 3 · 15권"], ["l", "크게", "6 × 4 · 24권"]] },
+    { key: "light", label: "조명 밝기",
+      opts: [["dim", "어둑하게", ""], ["normal", "보통", ""], ["bright", "밝게", ""]] },
+    { key: "speed", label: "걷는 속도", note: "화살표와 걷기 단추로 움직이는 빠르기입니다.",
+      opts: [["slow", "느리게", ""], ["normal", "보통", ""], ["fast", "빠르게", ""]] },
+    { key: "calm", label: "움직임", note: "어지러우면 카메라가 미끄러지듯 움직이는 것을 끕니다.",
+      opts: [["off", "부드럽게", ""], ["on", "움직임 줄이기", ""]] }
+  ];
+  var setModal = document.getElementById("settings");
+  var libsEl = document.getElementById("libs"), optsEl = document.getElementById("opts");
+
+  function renderLibs() {
+    libsEl.innerHTML = Object.keys(THEMES).map(function (id) {
       var th = THEMES[id];
-      return '<button class="side-item" data-theme="' + id + '" aria-pressed="' + (id === cur) + '" style="--t1:' + th.swatch[0] + ';--t2:' + th.swatch[1] + '">' +
-        '<span class="sw"></span><span class="nm">' + esc(th.name) + "<small>" + esc(th.desc) + "</small></span></button>";
+      return '<button class="lib" role="radio" aria-checked="' + (id === cfg.theme) + '" data-lib="' + id + '"' +
+        ' style="--t1:' + th.swatch[0] + ';--t2:' + th.swatch[1] + '"><img class="sw" src="' + th.img + '" alt=""><span class="txt">' +
+        "<b>" + esc(th.name) + "</b>" +
+        '<span class="c">' + esc(th.flag + " " + th.country) + "</span>" +
+        '<span class="f">' + esc(th.tag) + "</span>" +
+        '<span class="d">' + esc(th.desc) + "</span></span></button>";
     }).join("");
   }
-  // 배경을 누르면 지금 서 있는 자리에서 바로 바뀐다
-  themesEl.addEventListener("click", function (ev) {
-    var b = ev.target.closest("[data-theme]");
-    if (!b || b.dataset.theme === themeId()) return;
+  function renderOpts() {
+    optsEl.innerHTML = OPTIONS.map(function (o) {
+      return '<div class="opt"><div class="opt-h">' + esc(o.label) + "</div>" +
+        (o.note ? '<p class="opt-n">' + esc(o.note) + "</p>" : "") +
+        '<div class="choices" role="radiogroup" aria-label="' + esc(o.label) + '">' +
+        o.opts.map(function (c) {
+          return '<button role="radio" aria-checked="' + (cfg[o.key] === c[0]) + '" data-key="' + o.key + '" data-val="' + c[0] + '">' +
+            "<b>" + esc(c[1]) + "</b>" + (c[2] ? "<small>" + esc(c[2]) + "</small>" : "") + "</button>";
+        }).join("") + "</div></div>";
+    }).join("");
+  }
+  // 왼쪽 메뉴에는 지금 고른 것을 한 줄로 적어 둔다
+  function renderSetSummary() {
+    var th = THEMES[cfg.theme] || THEMES.london, sw = document.getElementById("cur-sw");
+    document.getElementById("cur-lib").textContent = th.name;
+    sw.style.setProperty("--t1", th.swatch[0]);
+    sw.style.setProperty("--t2", th.swatch[1]);
+    document.getElementById("cur-layout").textContent =
+      (cfg.mode === "2d" ? "한 줄 서가" : "걷는 열람실") + " · " + (GROUPS[cfg.group] || GROUPS.cat).label + "별";
+  }
+  // 고른 값 하나를 서가에 반영한다. 무거운 일(다시 세우기)은 필요한 설정에서만 한다.
+  function applySetting(key, val) {
+    if (cfg[key] === val) return;
+    cfg[key] = val; saveCfg();
     if (state.view !== "shelf") setView("shelf");
-    applyTheme(b.dataset.theme);
-    select(null); rebuild(); clampGoal();
-    renderThemes();
+    if (key === "theme") { applyTheme(val); select(null); rebuild(); clampGoal(); }
+    else if (key === "mode") setMode(val);
+    else if (key === "size") { applyShelfSize(val); select(null); rebuild(); resetView(); }
+    else if (key === "group" || key === "order") { select(null); state.cat = null; hereIdx = -1; rebuild(); resetView(); }
+    else if (key === "light") applyLights();
+    else if (key === "calm") reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches || val === "on";
+    renderLibs(); renderOpts(); renderSetSummary();
+  }
+  function setPage(p) {
+    setModal.querySelectorAll("[role=tab]").forEach(function (t) { t.setAttribute("aria-selected", String(t.dataset.page === p)); });
+    document.getElementById("page-design").hidden = p !== "design";
+    document.getElementById("page-layout").hidden = p !== "layout";
+  }
+  function openSet(page) {
+    renderLibs(); renderOpts(); setPage(page || "design");
+    setModal.hidden = false;
+    if (isPhone()) setMenu(false);
+  }
+  function closeSet() { setModal.hidden = true; }
+  document.querySelectorAll("[data-open-set]").forEach(function (b) {
+    b.addEventListener("click", function () { openSet(b.dataset.openSet); });
   });
-  renderThemes();
+  document.getElementById("settings-btn").addEventListener("click", function () { openSet("design"); });
+  document.getElementById("set-close").addEventListener("click", closeSet);
+  document.getElementById("set-done").addEventListener("click", closeSet);
+  setModal.addEventListener("click", function (ev) { if (ev.target === setModal) closeSet(); });
+  setModal.querySelectorAll("[role=tab]").forEach(function (t) {
+    t.addEventListener("click", function () { setPage(t.dataset.page); });
+  });
+  libsEl.addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-lib]");
+    if (b) applySetting("theme", b.dataset.lib);
+  });
+  optsEl.addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-key]");
+    if (b) applySetting(b.dataset.key, b.dataset.val);
+  });
+  document.getElementById("set-reset").addEventListener("click", function () {
+    Object.keys(SET_DEF).forEach(function (k) { applySetting(k, SET_DEF[k]); });
+  });
+
   roomsEl.addEventListener("click", function (ev) {
     var b = ev.target.closest("[data-cat]"); if (b) enterRoom(b.dataset.cat);
   });
@@ -1957,9 +2400,26 @@
   }
   function renderCount() {
     var b = state.books;
-    document.getElementById("count").textContent =
-      b.length + "권 · " + b.filter(function (x) { return x.s.indexOf("b") >= 0; }).length + "권 기록 · " +
-      b.filter(function (x) { return x.s.indexOf("p") >= 0; }).length + "권 실물";
+    var rec = b.filter(function (x) { return x.s.indexOf("b") >= 0; }).length;
+    var own = b.filter(function (x) { return x.s.indexOf("p") >= 0; }).length;
+    document.getElementById("count").textContent = b.length + "권 · " + rec + "권 기록 · " + own + "권 실물";
+    var years = b.map(function (x) { return x.y; }).filter(Boolean);
+    var ICONS = {
+      books: '<path d="M4 5h5v14H4zM11 5h4v14h-4zM17 6l3 13"/>',
+      pen: '<path d="M4 20h16M6 16l9-9 3 3-9 9H6z"/>',
+      home: '<path d="M4 11l8-6 8 6v8H4zM10 19v-5h4v5"/>',
+      cal: '<path d="M4 6h16v14H4zM4 10h16M9 4v4M15 4v4"/>'
+    };
+    document.getElementById("home-facts").innerHTML = [
+      ["books", "Volumes", b.length, "권", "장서"],
+      ["pen", "Reading notes", rec, "편", "독후감"],
+      ["home", "On the shelves at home", own, "권", "집 책장"],
+      ["cal", "Reading since", years.length ? Math.min.apply(null, years) : 2003, "", "기록 시작"]
+    ].map(function (f) {
+      return '<div><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">' +
+        ICONS[f[0]] + "</svg><dt>" + f[1] + "</dt><dd>" + f[2] + (f[3] ? "<i>" + f[3] + "</i>" : "") +
+        "<small>" + f[4] + "</small></dd></div>";
+    }).join("");
   }
 
   /* ---------------- 분류 뷰 ---------------- */
@@ -2067,6 +2527,49 @@
   }
   Object.keys(views).forEach(function (k) { views[k].addEventListener("click", function () { setView(k); }); });
 
+  /* ---------------- 첫 화면 ----------------
+     도서관 홈페이지처럼 인사말과 안내를 먼저 보여 주고, 들어가기를 누르면 열람실로 들어간다.
+     제목(나의 서재)을 누르면 다시 이 화면으로 나온다. */
+  var home = document.getElementById("home");
+  function homeOpen() { return !home.hidden; }
+  function showHome() {
+    renderHomeLibs();
+    home.hidden = false; home.classList.remove("leaving"); home.scrollTop = 0;
+    held = {};
+    hideTip();
+  }
+  function enterLibrary(view) {
+    if (!homeOpen()) { setView(view); return; }
+    setView(view);
+    if (reduceMotion) home.hidden = true;
+    else {
+      home.classList.add("leaving");
+      setTimeout(function () { home.hidden = true; home.classList.remove("leaving"); }, 300);
+    }
+    refit();
+  }
+  // 도서관 여섯 곳의 섬네일. 누르면 그 디자인으로 바꾸고 바로 들어간다.
+  var homeLibs = document.getElementById("home-libs");
+  function renderHomeLibs() {
+    homeLibs.innerHTML = Object.keys(THEMES).map(function (id) {
+      var th = THEMES[id];
+      return '<button class="lib-card" data-lib="' + id + '"' + (id === cfg.theme ? ' aria-current="true"' : "") +
+        '><img src="' + th.img + '" alt="" loading="lazy"><b>' + esc(th.name) + "</b><small>" + esc(th.country) +
+        "</small>" + (id === cfg.theme ? "<em>지금 이 모습</em>" : "") + "</button>";
+    }).join("");
+  }
+  homeLibs.addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-lib]");
+    if (!b) return;
+    applySetting("theme", b.dataset.lib);
+    renderHomeLibs();
+    enterLibrary("shelf");
+  });
+  renderHomeLibs();
+  document.getElementById("home-enter").addEventListener("click", function () { enterLibrary("shelf"); });
+  document.getElementById("home-list").addEventListener("click", function () { enterLibrary("list"); });
+  document.getElementById("brand-home").addEventListener("click", showHome);
+
   /* ---------------- 책 추가 ---------------- */
   var modal = document.getElementById("modal");
   var fTitle = document.getElementById("f-title"), fAuthor = document.getElementById("f-author");
@@ -2091,7 +2594,8 @@
   fTitle.addEventListener("keydown", function (ev) { if (ev.key === "Enter") document.getElementById("modal-save").click(); });
   document.addEventListener("keydown", function (ev) {
     if (ev.key !== "Escape") return;
-    if (!modal.hidden) closeModal(); else if (isPhone() && shell.classList.contains("menu-open")) setMenu(false); else select(null);
+    if (homeOpen()) return;
+    if (!setModal.hidden) closeSet(); else if (!modal.hidden) closeModal(); else if (isPhone() && shell.classList.contains("menu-open")) setMenu(false); else select(null);
   });
 
   /* ---------------- 루프 ---------------- */
@@ -2134,11 +2638,13 @@
 
   /* ---------------- 시작 ---------------- */
   function start() {
-    applyTheme(themeId());
+    applyShelfSize(cfg.size);
+    applyTheme(THEMES[cfg.theme] ? cfg.theme : "london");
     rebuild();
     applySceneColors();
     refit(true);
     setMode(state.mode);
+    renderSetSummary();
     tick();
     [0, 60, 250, 800].forEach(function (ms) { setTimeout(function () { refit(); }, ms); });
     addEventListener("load", function () { refit(); });

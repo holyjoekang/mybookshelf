@@ -25,6 +25,7 @@ MEMORY = Path("data/memory_books.json")  # 블로그 이전 학창 시절 독서
 # 새 책은 끝 번호를 받고, 빠진 책의 번호는 다시 쓰지 않는다. 제목을 고칠 때는 이 대장의 키도 함께 고친다.
 IDS = Path("data/book_ids.json")
 TEMPLATE = Path("app/index.template.html")
+IMG = Path("app/img")           # 첫 화면 그림(scripts/crop_home_images.py가 만든다)
 OUT = Path("app/index.html")
 
 
@@ -49,6 +50,25 @@ def book_info(title: str) -> dict:
             im.convert("RGB").save(buf, "JPEG", quality=72, optimize=True)
         entry["cv"] = "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
     return {k: v for k, v in entry.items() if v}
+
+
+def inline_images(html: str) -> tuple[str, int]:
+    """템플릿의 __IMG_이름__ 자리에 app/img/이름.webp를 data URI로 박는다.
+
+    표지와 같은 이유(아티팩트 CSP가 파일 읽기를 막는다)로 그림도 파일로 두지 않고 안에 넣는다.
+    """
+    used = 0
+    for path in sorted(IMG.glob("*.webp")):
+        token = "__IMG_" + path.stem.replace("-", "_") + "__"
+        if token not in html:
+            continue
+        uri = "data:image/webp;base64," + base64.b64encode(path.read_bytes()).decode("ascii")
+        html = html.replace(token, uri)
+        used += path.stat().st_size
+    left = re.search(r"__IMG_[a-z0-9_]+__", html)
+    if left:
+        raise SystemExit(f"그림을 찾지 못했습니다: {left.group(0)} (scripts/crop_home_images.py를 먼저 실행하세요)")
+    return html, used
 
 
 def assign_ids(books: list[dict], ids: dict[str, int]) -> list[str]:
@@ -140,6 +160,7 @@ def main() -> None:
 
     payload = json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__BOOKS__*/[]", payload)
+    html, img_bytes = inline_images(html)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(html, encoding="utf-8")
@@ -151,7 +172,7 @@ def main() -> None:
     print(f"표지 {with_cover}권 · 소개 {sum(1 for b in compact if b.get('ds'))}권 · 저자 미상 {no_author}권")
     if new_ids:
         print(f"새 id {len(new_ids)}개: {', '.join(new_ids[:8])}{' …' if len(new_ids) > 8 else ''}")
-    print(f"데이터 {len(payload) // 1024}KB / 전체 {OUT.stat().st_size // 1024}KB -> {OUT}")
+    print(f"데이터 {len(payload) // 1024}KB · 첫 화면 그림 {img_bytes // 1024}KB / 전체 {OUT.stat().st_size // 1024}KB -> {OUT}")
 
 
 if __name__ == "__main__":
