@@ -1,4 +1,7 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F1EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1D1B17" media="(prefers-color-scheme: dark)">
 <title>나의 서재</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -37,6 +40,7 @@
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
   html, body { height: 100%; }
+  body { height: 100dvh; }                  /* 휴대폰 주소창이 들어가고 나와도 화면에 꼭 맞게 */
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font-family: var(--font-body); font-size: 14px; line-height: 1.6;
@@ -99,15 +103,6 @@
   .tip b { font-weight: 500; }
   .tip span { display: block; opacity: .62; font-size: 11px; }
 
-  .legend {
-    position: absolute; left: 16px; top: 14px; z-index: 2; display: flex; flex-direction: column; gap: 5px;
-    padding: 10px 12px; background: color-mix(in srgb, var(--surface) 82%, transparent);
-    border: 1px solid var(--line); border-radius: 2px; backdrop-filter: blur(6px);
-  }
-  .legend b { font-size: 10px; letter-spacing: .14em; color: var(--muted); font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; }
-  .legend div { display: flex; align-items: center; gap: 7px; font-size: 12px; }
-  .legend i { width: 7px; height: 15px; flex: none; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); }
-
   .rail {
     position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; display: flex; gap: 4px;
     padding: 9px 16px; overflow-x: auto; scrollbar-width: thin;
@@ -119,7 +114,6 @@
   }
   .rail button:hover { color: var(--ink); border-color: var(--brass); }
   .rail button { font-family: var(--font-body); }
-  .legend .hint { margin: 4px 0 0; padding-top: 6px; border-top: 1px solid var(--line); font-size: 10.5px; line-height: 1.55; color: var(--muted); }
   .walk {
     position: absolute; right: 16px; bottom: 52px; z-index: 2; display: grid; grid-template-columns: repeat(4, 38px); gap: 4px;
     touch-action: none; user-select: none; -webkit-user-select: none;
@@ -131,39 +125,47 @@
   .walk button:active { background: var(--brass); color: #fff; }
   .rail .rail-label { flex: none; align-self: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); margin-right: 4px; }
   .rail button.here { background: var(--ink); color: var(--surface); border-color: var(--ink); }
-  .brand { cursor: pointer; }
-  .toggle.mode button { font-family: var(--font-mono); letter-spacing: .06em; }
-
-  /* ---------- 입구(로비) ---------- */
-  .lobby {
-    position: absolute; inset: 0; z-index: 7; display: grid; place-items: center; padding: 20px;
-    background: color-mix(in srgb, var(--bg) 70%, transparent); backdrop-filter: blur(5px); overflow-y: auto;
-  }
-  .lobby-box { width: min(720px, 100%); background: var(--surface); border: 1px solid var(--line); border-radius: 3px; box-shadow: var(--shadow); padding: 24px; }
-  .lobby-box h2 { margin: 0 0 6px; font-family: var(--font-display); font-size: 24px; font-weight: 700; }
-  .lobby-box .sub { margin: 0 0 18px; font-size: 12.5px; color: var(--muted); line-height: 1.65; }
-  .mode-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
-  .mode-pick button { text-align: left; padding: 12px 14px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); }
-  .mode-pick button b { display: block; font-size: 15px; font-weight: 700; }
-  .mode-pick button span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .mode-pick button[aria-pressed="true"] { border-color: var(--brass); box-shadow: inset 0 0 0 1px var(--brass); }
-  .pick-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); margin: 0 0 7px; }
-  .themes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 18px; }
-  .theme { text-align: left; padding: 0 0 9px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); overflow: hidden; }
-  .theme i { display: block; height: 34px; margin-bottom: 7px; background: linear-gradient(135deg, var(--t1) 0 55%, var(--t2) 55% 100%); }
-  .theme b { display: block; font-size: 12.5px; font-weight: 700; padding: 0 9px; }
-  .theme span { display: block; font-size: 10.5px; color: var(--muted); padding: 0 9px; line-height: 1.4; margin-top: 2px; }
-  .theme[aria-pressed="true"] { border-color: var(--brass); box-shadow: inset 0 0 0 1px var(--brass); }
-  @media (max-width: 760px) { .themes { grid-template-columns: repeat(2, 1fr); } }
-  .rooms { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
-  .room { text-align: left; padding: 11px 12px 11px 16px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); position: relative; }
-  .room::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--c1); }
-  .room b { display: block; font-family: var(--font-display); font-size: 15px; font-weight: 700; }
-  .room span { display: block; font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-top: 2px; }
-  .room:hover { border-color: var(--brass); }
-  .room.here { border-color: var(--ink); }
-  @media (max-width: 760px) { .mode-pick { grid-template-columns: 1fr; } }
   .rail button small { font-family: var(--font-mono); opacity: .6; margin-left: 2px; }
+  .icon-btn { flex: none; width: 32px; height: 32px; display: grid; place-content: center; border-radius: 2px; color: var(--ink); }
+  .icon-btn:hover { background: var(--surface-2); }
+  .icon-btn[aria-expanded="true"] { background: var(--surface-2); }
+  .search-toggle { display: none; }
+
+  /* ---------- 왼쪽 메뉴: 보는 방식 · 배경 · 서고 ---------- */
+  .shell { flex: 1; display: flex; min-height: 0; position: relative; }
+  .side {
+    flex: none; width: 236px; display: flex; flex-direction: column; gap: 18px;
+    padding: 16px 12px 20px; overflow-y: auto; overscroll-behavior: contain;
+    background: var(--surface); border-right: 1px solid var(--line); z-index: 6;
+  }
+  .shell:not(.menu-open) .side { display: none; }
+  .shell.menu-open .rail { display: none; }            /* 넓은 화면에선 왼쪽 메뉴가 서고 버튼을 대신한다 */
+  .shell.menu-open .walk { bottom: 16px; }
+  .scrim { display: none; }
+  .side-sec { display: flex; flex-direction: column; gap: 5px; }
+  .side-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); margin: 0 0 3px 4px; text-transform: uppercase; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+  .seg button { padding: 7px 6px; font-size: 12.5px; color: var(--muted); line-height: 1.3; }
+  .seg button b { display: block; font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: .06em; }
+  .seg button span { display: block; font-size: 10.5px; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+  .side-item {
+    display: flex; align-items: center; gap: 9px; width: 100%; text-align: left;
+    padding: 6px 8px; border-radius: 2px; border: 1px solid transparent; color: var(--ink);
+  }
+  .side-item:hover { background: var(--surface-2); }
+  .side-item[aria-pressed="true"], .side-item.here { background: var(--bg); border-color: var(--brass); }
+  .side-item .sw { flex: none; width: 18px; height: 18px; border-radius: 2px; border: 1px solid var(--line); background: linear-gradient(135deg, var(--t1) 0 55%, var(--t2) 55% 100%); }
+  .side-item .bar { flex: none; width: 4px; align-self: stretch; min-height: 18px; border-radius: 1px; background: var(--c1); }
+  .side-item .nm { flex: 1; min-width: 0; font-size: 13px; line-height: 1.35; }
+  .side-item .nm small { display: block; font-size: 10.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .side-item .ct { flex: none; font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); }
+  .rooms .nm { font-family: var(--font-display); font-weight: 700; font-size: 14px; }
+  .side-legend { gap: 4px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .side-legend div { display: flex; align-items: center; gap: 7px; font-size: 11.5px; color: var(--muted); padding-left: 4px; }
+  .side-legend i { width: 7px; height: 15px; flex: none; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); }
+  .side-legend .hint { margin: 6px 0 0 4px; font-size: 10.5px; line-height: 1.6; color: var(--muted); }
+  .side-add { display: none; }
 
   /* ---------- 상세 패널 ---------- */
   .panel {
@@ -254,13 +256,66 @@
   .modal-box p.sub { margin: 0 0 18px; font-size: 12.5px; color: var(--muted); line-height: 1.6; }
   .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 18px; }
 
+  /* ---------- 휴대폰 ---------- */
   @media (max-width: 760px) {
+    body { font-size: 15px; }
+    .topbar { gap: 6px; padding: 8px 10px; padding-top: max(8px, env(safe-area-inset-top)); flex-wrap: wrap; }
     .brand .count { display: none; }
-    .legend { display: none; }
-    .search input { width: 82px; }
-    .topbar { gap: 8px; padding: 9px 12px; }
     .brand h1 { font-size: 18px; }
     .btn.add-label { display: none; }
+    .search-toggle { display: grid; }
+    /* 검색은 돋보기를 누르면 바 아래 한 줄로 펼친다 */
+    .search { display: none; order: 10; flex-basis: 100%; padding: 7px 10px; }
+    .topbar.searching .search { display: flex; }
+    .search input { width: 100%; font-size: 16px; }   /* 16px 미만이면 iOS가 입력할 때 화면을 확대한다 */
+    .toggle button { padding: 7px 10px; font-size: 13px; }
+
+    /* 왼쪽 메뉴는 서랍으로: 메뉴 버튼을 누르면 밀려 나온다 */
+    .side {
+      position: absolute; left: 0; top: 0; bottom: 0; width: min(300px, 84vw); z-index: 9;
+      padding-bottom: max(20px, env(safe-area-inset-bottom)); box-shadow: var(--shadow);
+      transform: translateX(-101%); transition: transform .26s cubic-bezier(.4,0,.2,1);
+    }
+    .shell:not(.menu-open) .side { display: flex; }
+    .shell.menu-open .side { transform: none; }
+    .scrim { display: block; position: absolute; inset: 0; z-index: 8; background: rgba(12,11,9,.45); opacity: 0; pointer-events: none; transition: opacity .26s ease; }
+    .shell.menu-open .scrim { opacity: 1; pointer-events: auto; }
+    .shell.menu-open .rail { display: flex; }
+    .shell.menu-open .walk { bottom: 58px; }
+    .side-item { padding: 9px 10px; }
+    .side-item .nm { font-size: 14px; }
+    .seg button { padding: 10px 6px; }
+    .side-add { display: block; width: 100%; padding: 10px; font-size: 13.5px; }
+
+    .rail { padding: 8px 10px; padding-bottom: max(8px, env(safe-area-inset-bottom)); gap: 6px; scrollbar-width: none; }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail .rail-label { display: none; }
+    .rail button { padding: 7px 11px; font-size: 13px; }
+    .walk { right: 10px; bottom: 58px; grid-template-columns: repeat(4, 46px); gap: 5px; }
+    .walk button { height: 46px; font-size: 17px; }
+
+    /* 상세 패널은 아래에서 올라오는 시트로: 책은 화면 위쪽에 남는다 */
+    .panel {
+      top: auto; left: 0; width: auto; max-height: 58%; border-left: none; border-top: 1px solid var(--line);
+      border-radius: 10px 10px 0 0; padding: 20px 18px max(24px, env(safe-area-inset-bottom));
+      transform: translateY(101%);
+    }
+    .panel::before { content: ""; position: absolute; top: 7px; left: 50%; width: 36px; height: 4px; margin-left: -18px; border-radius: 2px; background: var(--line); }
+    .panel .panel-cover { float: right; width: 84px; margin: 4px 0 10px 14px; }
+    .panel h2 { font-size: 21px; padding-right: 0; }
+    .panel .close { top: 10px; right: 8px; width: 40px; height: 40px; }
+    .panel .eyebrow { padding-right: 36px; }
+    .meta { clear: both; }
+    .panel .btn, .modal .btn { padding: 9px 14px; font-size: 13.5px; }
+    .field input, .field select { font-size: 16px; padding: 9px 10px; }
+
+    .sheet { padding: 16px 12px max(40px, env(safe-area-inset-bottom)); }
+    .cards { grid-template-columns: 1fr; gap: 7px; }
+    .strip { gap: 9px; }
+    .tile, .cover { width: 100px; }
+    .cover { height: 148px; }
+    .modal { align-items: end; padding: 0; }
+    .modal-box { width: 100%; max-height: 88dvh; border-radius: 10px 10px 0 0; padding-bottom: max(22px, env(safe-area-inset-bottom)); }
   }
   @media (prefers-reduced-motion: reduce) {
     .panel, .cover { transition: none; }
@@ -268,22 +323,24 @@
   }
 </style>
 
-<header class="topbar">
-  <div class="brand" id="brand" role="button" tabindex="0" title="입구로 나가 서고 고르기">
+<header class="topbar" id="topbar">
+  <button class="icon-btn" id="menu-btn" aria-controls="side" aria-expanded="true" aria-label="메뉴 열고 닫기">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+  </button>
+  <div class="brand">
     <h1>나의 서재</h1>
     <span class="count" id="count"></span>
   </div>
   <div class="spacer"></div>
+  <button class="icon-btn search-toggle" id="search-btn" aria-expanded="false" aria-label="검색">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+  </button>
   <label class="search">
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
       <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
     </svg>
     <input id="q" type="search" placeholder="제목 · 저자 검색" autocomplete="off" aria-label="책 검색">
   </label>
-  <div class="toggle mode" role="group" aria-label="2D · 3D">
-    <button data-mode="2d" aria-pressed="false">2D</button>
-    <button data-mode="3d" aria-pressed="true">3D</button>
-  </div>
   <div class="toggle" role="group" aria-label="보기 전환">
     <button id="view-shelf" aria-pressed="true">서재</button>
     <button id="view-cat" aria-pressed="false">분류</button>
@@ -292,18 +349,38 @@
   <button class="btn add-label" id="add-open">책 추가</button>
 </header>
 
-<main class="stage">
-  <canvas id="scene" aria-label="3차원 도서관 열람실. 끌어서 둘러보고, 바닥을 누르거나 휠·방향키로 걷습니다."></canvas>
-
-  <div class="legend" aria-hidden="true">
-    <b>책갈피 색</b>
+<div class="shell menu-open" id="shell">
+<nav class="side" id="side" aria-label="서고 고르기">
+  <section class="side-sec">
+    <div class="side-label">보는 방식</div>
+    <div class="seg" role="group" aria-label="보는 방식">
+      <button data-mode="2d" aria-pressed="true"><b>2D</b><span>한 줄 서가</span></button>
+      <button data-mode="3d" aria-pressed="false"><b>3D</b><span>걷는 열람실</span></button>
+    </div>
+  </section>
+  <section class="side-sec">
+    <div class="side-label">서고</div>
+    <div class="side-sec rooms" id="rooms"></div>
+  </section>
+  <section class="side-sec">
+    <div class="side-label">배경</div>
+    <div class="side-sec" id="themes" role="group" aria-label="배경"></div>
+  </section>
+  <button class="btn side-add" id="side-add">학창 시절 책 추가</button>
+  <section class="side-sec side-legend" aria-label="책갈피 색">
+    <div class="side-label">책갈피 색</div>
     <div><i style="background:#8A3330"></i> 기록만 남음</div>
     <div><i style="background:#7E7A66"></i> 집에 실물이 있음</div>
     <div><i style="background:#C9A04A"></i> 둘 다 있음</div>
     <div><i style="background:#4A6B8A"></i> 기억으로 넣은 책</div>
     <div><i style="background:#4F7A55"></i> 텍스트로 추가한 책</div>
     <p class="hint" id="hint"></p>
-  </div>
+  </section>
+</nav>
+<div class="scrim" id="scrim"></div>
+
+<main class="stage">
+  <canvas id="scene" aria-label="도서관 서가. 끌어서 둘러보고, 표지를 눌러 책을 봅니다."></canvas>
 
   <div class="rail" id="rail" aria-label="서고 고르기"></div>
 
@@ -319,22 +396,6 @@
     <div>서가를 세우는 중</div>
   </div>
 
-  <div class="lobby" id="lobby">
-    <div class="lobby-box" role="dialog" aria-labelledby="lobby-title">
-      <div class="eyebrow">입구</div>
-      <h2 id="lobby-title">어느 서고로 들어갈까요?</h2>
-      <p class="sub">보는 방식과 배경을 고른 뒤 서고를 누르세요. 3D에서는 서고마다 방이 하나씩 있고 문간으로 모두 이어져 있어 걸어서 옆 서고로 갈 수 있습니다. 2D에서는 모든 서고가 한 줄로 이어진 긴 서가입니다. 위쪽 2D · 3D 버튼과 아래 서고 버튼으로 언제든 바꿀 수 있습니다.</p>
-      <div class="mode-pick" role="group" aria-label="보는 방식">
-        <button data-mode="3d" aria-pressed="true"><b>3D 열람실</b><span>이어진 서고들을 걸어 다니며 봅니다</span></button>
-        <button data-mode="2d" aria-pressed="false"><b>2D 서가</b><span>모든 서가를 한 줄로 쭉 넘겨 봅니다</span></button>
-      </div>
-      <div class="pick-label">배경</div>
-      <div class="themes" id="themes" role="group" aria-label="배경"></div>
-      <div class="pick-label">서고</div>
-      <div class="rooms" id="rooms"></div>
-    </div>
-  </div>
-
   <aside class="panel" id="panel" aria-live="polite">
     <button class="close" id="panel-close" aria-label="닫기">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"></path></svg>
@@ -345,6 +406,7 @@
   <section class="sheet" id="cat" hidden><div class="sheet-inner" id="cat-inner"></div></section>
   <section class="sheet" id="list" hidden><div class="sheet-inner" id="list-inner"></div></section>
 </main>
+</div>
 
 <div class="modal" id="modal" hidden>
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -489,12 +551,15 @@
   /* 책갈피 색: 이 책이 지금 어떤 상태로 남아 있는지를 나타낸다. */
   var RIBBON = { b: 0x8A3330, p: 0x7E7A66, bp: 0xC9A04A, m: 0x4A6B8A, i: 0x4F7A55 };
 
-  var state = { books: [], meshes: [], selected: null, query: "", view: "shelf", bounds: null, markers: [] };
+  // 처음 열면 늘 2D · 런던 도서관 · 소설·문학 서고에서 시작한다.
+  var state = { books: [], meshes: [], selected: null, query: "", view: "shelf", bounds: null, markers: [], mode: "2d", cat: "소설·문학" };
+  var phoneMQ = matchMedia("(max-width: 760px)");
+  function isPhone() { return phoneMQ.matches; }
 
   /* ---------------- Three.js: 서고 ---------------- */
   var canvas = document.getElementById("scene");
   var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(devicePixelRatio, isPhone() ? 1.5 : 2));   // 휴대폰은 화소를 줄여 발열 · 배터리를 아낀다
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(62, 1, 0.5, 1700);
   camera.rotation.order = "YXZ";
@@ -653,9 +718,7 @@
       light: { amb: [0xfff0e0, 0.45], hemi: [0xcfe0ff, 0x3a4a2a, 0.45], sun: [0xfff0d0, 0.7], key: [0xffe8c8, 0.15], lamp: [0xffc27a, 0.3, 0.2] }
     }
   };
-  var THEME_KEY = "naui-seojae-theme";
   var T = THEMES.london;
-  try { var savedTheme = localStorage.getItem(THEME_KEY); if (THEMES[savedTheme]) T = THEMES[savedTheme]; } catch (e) {}
   function repaint(tex, draw) {
     var c = tex.image, g = c.getContext("2d");
     g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, c.width, c.height);
@@ -742,7 +805,6 @@
   var lights = { amb: scene.children.filter(function (o) { return o.isAmbientLight; })[0], hemi: scene.children.filter(function (o) { return o.isHemisphereLight; })[0] };
   function applyTheme(id) {
     T = THEMES[id] || THEMES.london;
-    try { localStorage.setItem(THEME_KEY, themeId()); } catch (e) {}
     repaint(woodTex, function (g, w, h) {
       g.fillStyle = T.grain[0]; g.fillRect(0, 0, w, h);
       for (var i = 0; i < 180; i++) {
@@ -1388,14 +1450,20 @@
     return { w: vh * camera.aspect, h: vh };
   }
   var MID_Y = (G0 + FLOOR) / 2;                                // 서가 한가운데 높이
-  function fit2d() { return ((G0 - FLOOR) / 2 + 2) / Math.tan(FOV * Math.PI / 360); }
+  // 서가 높이가 다 들어오게 물러선다. 세로로 긴 휴대폰 화면에선 서가 한 칸의 너비도 다 들어오게 더 물러선다.
+  function fit2d() {
+    var t = Math.tan(FOV * Math.PI / 360);
+    return Math.max(((G0 - FLOOR) / 2 + 2) / t, (PITCH / 2 + 1.5) / (t * camera.aspect));
+  }
   function max2d() { return fit2d() * 1.3; }
   // 그 서고의 시작 자리. 3D는 방 입구 쪽에서 안쪽 벽을, 2D는 그 분류가 시작되는 곳을 본다.
   function startOf(cat) {
     var s = segOf(cat) || layout.segs[0];
     if (state.mode === "2d") {
-      var z = fit2d();
-      return { x: s.x0 + visible(z).w / 2 - 2, y: MID_Y, z: z, yaw: 0, pitch: 0, fov: FOV };
+      var z = fit2d(), w = visible(z).w;
+      // 표지판 기둥과 첫 칸이 함께 들어오지 않을 만큼 좁으면 첫 칸을 가운데에 둔다(칸 머리에도 분류명이 있다)
+      var x = w < PLAQUE + PITCH + 4 ? s.x0 + PLAQUE + POST + BAY_W / 2 : s.x0 + w / 2 - 2;
+      return { x: x, y: MID_Y, z: z, yaw: 0, pitch: 0, fov: FOV };
     }
     return { x: s.x, y: EYE, z: ROOM_D - 6, yaw: 0, pitch: 0.02, fov: FOV };
   }
@@ -1481,14 +1549,16 @@
       fading = false;
     }, 230);
   }
-  // 책 앞으로 간다. 넓은 화면에서는 오른쪽 상세 패널에 가리지 않게 책이 화면 왼쪽 가운데 오도록 비켜 선다.
+  // 책 앞으로 간다. 넓은 화면에서는 오른쪽 상세 패널에 가리지 않게 책이 화면 왼쪽 가운데 오도록 비켜 서고,
+  // 휴대폰에서는 아래에서 올라오는 시트에 가리지 않게 책이 화면 위쪽에 오도록 몸을 낮춘다.
   var NEAR = 14;
   function approach(b) {
     if (!b || b.wx === undefined) return;
     var dist = state.mode === "2d" ? 20 : NEAR;
     goal.x = b.wx; goal.y = b.wy; goal.z = b.wz + dist; goal.yaw = nearAngle(0); goal.pitch = 0; goal.fov = FOV;
     var cw = canvas.clientWidth;
-    if (cw > 640) goal.x += (Math.min(380, cw * 0.88) / 2) / cw * visible(dist).w;
+    if (isPhone()) goal.y -= visible(dist).h * 0.24;
+    else if (cw > 640) goal.x += (Math.min(380, cw * 0.88) / 2) / cw * visible(dist).w;
     if (state.mode === "2d") { var y = goal.y, x = goal.x; clampGoal(); goal.x = x; goal.y = y; travel(true); }   // 가장자리 책도 가운데로
     else travel();
   }
@@ -1506,11 +1576,19 @@
     var i = segAt(view.x);
     if (i !== hereIdx) {
       hereIdx = i; state.cat = layout.segs[i].cat;
-      rail.querySelectorAll("button").forEach(function (b, k) {
-        b.classList.toggle("here", k === i);
-        if (k === i) { b.setAttribute("aria-current", "true"); b.scrollIntoView({ block: "nearest", inline: "nearest" }); }
-        else b.removeAttribute("aria-current");
+      [rail.querySelectorAll("button"), roomsEl.querySelectorAll("button")].forEach(function (list) {
+        list.forEach(function (b, k) {
+          b.classList.toggle("here", k === i);
+          if (k === i) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
+        });
       });
+      // 레일만 옆으로 굴려 지금 서고가 보이게 한다(scrollIntoView는 페이지 전체를 끌어당길 수 있다)
+      var cur = rail.querySelectorAll("button")[i];
+      if (cur) {
+        var l = cur.offsetLeft, r = l + cur.offsetWidth;
+        if (l < rail.scrollLeft) rail.scrollLeft = l - 16;
+        else if (r > rail.scrollLeft + rail.clientWidth) rail.scrollLeft = r - rail.clientWidth + 16;
+      }
     }
     rooms.forEach(function (rm, k) { rm.group.visible = Math.abs(k - i) <= 2; });
   }
@@ -1628,7 +1706,7 @@
   var held = {};
   var KEYS = { ArrowUp: "fwd", KeyW: "fwd", ArrowDown: "back", KeyS: "back", ArrowLeft: "left", ArrowRight: "right", KeyA: "sl", KeyD: "sr", Equal: "zin", NumpadAdd: "zin", Minus: "zout", NumpadSubtract: "zout" };
   document.addEventListener("keydown", function (ev) {
-    if (/INPUT|SELECT|TEXTAREA/.test(ev.target.tagName) || state.view !== "shelf" || !lobby.hidden || !KEYS[ev.code]) return;
+    if (/INPUT|SELECT|TEXTAREA/.test(ev.target.tagName) || state.view !== "shelf" || !KEYS[ev.code]) return;
     held[KEYS[ev.code]] = true; ev.preventDefault();
   });
   document.addEventListener("keyup", function (ev) { if (KEYS[ev.code]) delete held[KEYS[ev.code]]; });
@@ -1653,19 +1731,32 @@
     if (markerT > 0) { markerT = Math.max(0, markerT - 0.025); marker.material.opacity = markerT * 0.9; marker.scale.setScalar(1 + (1 - markerT) * 1.2); }
   }
 
-  /* ---------------- 입구(로비) · 2D/3D · 서고 선택 ---------------- */
-  var lobby = document.getElementById("lobby");
+  /* ---------------- 왼쪽 메뉴: 2D/3D · 서고 · 배경 ---------------- */
+  var shell = document.getElementById("shell");
+  var menuBtn = document.getElementById("menu-btn");
   var roomsEl = document.getElementById("rooms");
-  var MODE_KEY = "naui-seojae-mode";
-  try { state.mode = localStorage.getItem(MODE_KEY) === "2d" ? "2d" : "3d"; } catch (e) { state.mode = "3d"; }
+  var coarse = matchMedia("(pointer: coarse)").matches;
+  // 넓은 화면은 메뉴를 펼쳐 두고, 휴대폰은 접어 두었다가 메뉴 버튼으로 서랍처럼 꺼낸다.
+  function setMenu(open) {
+    shell.classList.toggle("menu-open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+  }
+  setMenu(!isPhone());
+  menuBtn.addEventListener("click", function () { setMenu(!shell.classList.contains("menu-open")); });
+  document.getElementById("scrim").addEventListener("click", function () { setMenu(false); });
+  phoneMQ.addEventListener("change", function () { setMenu(!isPhone()); });
+
   function setMode(m, init) {
     var changed = m !== state.mode;
     state.mode = m;
-    try { localStorage.setItem(MODE_KEY, m); } catch (e) {}
     document.querySelectorAll("[data-mode]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.mode === m)); });
-    document.getElementById("hint").innerHTML = m === "2d"
-      ? "끌기 · 서가 밀기<br>휠 · ↑↓ · 확대 · 축소<br>←→ · 옆 서고로<br>표지 클릭 · 가까이 보기"
-      : "끌기 · 둘러보기<br>바닥 클릭 · 그곳으로 걷기<br>↑↓ · 걷기 · 휠 · 확대<br>문간을 지나 옆 서고로<br>표지 클릭 · 다가가기";
+    document.getElementById("hint").innerHTML = coarse
+      ? (m === "2d"
+        ? "끌기 · 서가 밀기<br>두 손가락 · 확대 · 축소<br>표지 누르기 · 가까이 보기"
+        : "끌기 · 둘러보기<br>바닥 누르기 · 그곳으로 걷기<br>두 손가락 · 확대<br>표지 누르기 · 다가가기")
+      : (m === "2d"
+        ? "끌기 · 서가 밀기<br>휠 · ↑↓ · 확대 · 축소<br>←→ · 옆 서고로<br>표지 클릭 · 가까이 보기"
+        : "끌기 · 둘러보기<br>바닥 클릭 · 그곳으로 걷기<br>↑↓ · 걷기 · 휠 · 확대<br>문간을 지나 옆 서고로<br>표지 클릭 · 다가가기");
     var wb = document.querySelectorAll("#walk button");
     var labels = m === "2d" ? ["◀", "＋", "－", "▶"] : ["↺", "▲", "▼", "↻"];
     var names = m === "2d" ? ["왼쪽으로", "확대", "축소", "오른쪽으로"] : ["왼쪽으로 돌기", "앞으로", "뒤로", "오른쪽으로 돌기"];
@@ -1678,48 +1769,48 @@
     resetView();
   }
   document.querySelectorAll("[data-mode]").forEach(function (b) {
-    b.addEventListener("click", function () { setMode(b.dataset.mode); });
+    b.addEventListener("click", function () { if (state.view !== "shelf") setView("shelf"); setMode(b.dataset.mode); });
   });
   // 서고로 간다: 3D는 그 방 입구 쪽으로(멀면 잠깐 어두워졌다 도착), 2D는 그 분류가 시작되는 곳으로
   function enterRoom(cat) {
-    lobby.hidden = true;
     if (state.view !== "shelf") setView("shelf");
+    if (isPhone()) setMenu(false);
+    select(null);
     var s = startOf(cat);
     state.cat = cat;
     Object.keys(s).forEach(function (k) { goal[k] = s[k]; });
     travel();
   }
-  function openLobby() { if (state.view !== "shelf") setView("shelf"); select(null); renderRooms(); lobby.hidden = false; }
   function renderRooms() {
-    roomsEl.innerHTML = state.markers.map(function (m) {
+    roomsEl.innerHTML = state.markers.map(function (m, k) {
       var col = CATS[m.label] || CATS["그 밖의 책"];
-      return '<button class="room' + (m.label === state.cat ? " here" : "") + '" data-cat="' + esc(m.label) + '" style="--c1:' + col[0] + '">' +
-        "<b>" + esc(m.label) + "</b><span>" + m.count + "권 · 서가 " + m.bays + "칸</span></button>";
+      return '<button class="side-item' + (k === hereIdx ? " here" : "") + '" data-cat="' + esc(m.label) + '" style="--c1:' + col[0] + '"' +
+        (k === hereIdx ? ' aria-current="true"' : "") + '><span class="bar"></span><span class="nm">' + esc(m.label) +
+        '</span><span class="ct">' + m.count + "</span></button>";
     }).join("");
   }
   var themesEl = document.getElementById("themes");
   function renderThemes() {
     var cur = themeId();
-    themesEl.innerHTML = Object.keys(THEMES).map(function (id, i) {
+    themesEl.innerHTML = Object.keys(THEMES).map(function (id) {
       var th = THEMES[id];
-      return '<button class="theme" data-theme="' + id + '" aria-pressed="' + (id === cur) + '" style="--t1:' + th.swatch[0] + ';--t2:' + th.swatch[1] + '">' +
-        '<i></i><b>' + (i + 1) + ". " + esc(th.name) + "</b><span>" + esc(th.desc) + "</span></button>";
+      return '<button class="side-item" data-theme="' + id + '" aria-pressed="' + (id === cur) + '" style="--t1:' + th.swatch[0] + ';--t2:' + th.swatch[1] + '">' +
+        '<span class="sw"></span><span class="nm">' + esc(th.name) + "<small>" + esc(th.desc) + "</small></span></button>";
     }).join("");
   }
-  // 배경을 누르면 바로 바뀐다(입구 뒤로 흐리게 미리 보인다)
+  // 배경을 누르면 지금 서 있는 자리에서 바로 바뀐다
   themesEl.addEventListener("click", function (ev) {
-    var b = ev.target.closest(".theme");
+    var b = ev.target.closest("[data-theme]");
     if (!b || b.dataset.theme === themeId()) return;
+    if (state.view !== "shelf") setView("shelf");
     applyTheme(b.dataset.theme);
     select(null); rebuild(); clampGoal();
     renderThemes();
   });
   renderThemes();
   roomsEl.addEventListener("click", function (ev) {
-    var b = ev.target.closest(".room"); if (b) enterRoom(b.dataset.cat);
+    var b = ev.target.closest("[data-cat]"); if (b) enterRoom(b.dataset.cat);
   });
-  document.getElementById("brand").addEventListener("click", openLobby);
-  document.getElementById("brand").addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); openLobby(); } });
 
   function showTip(ev, b) {
     if (!tip) { tip = document.createElement("div"); tip.className = "tip"; document.querySelector(".stage").appendChild(tip); }
@@ -1841,6 +1932,14 @@
   }
   var qInput = document.getElementById("q");
   qInput.addEventListener("input", function () { state.query = qInput.value.trim().toLowerCase(); applyQuery(); });
+  var topbar = document.getElementById("topbar"), searchBtn = document.getElementById("search-btn");
+  searchBtn.addEventListener("click", function () {
+    var on = !topbar.classList.contains("searching");
+    topbar.classList.toggle("searching", on);
+    searchBtn.setAttribute("aria-expanded", String(on));
+    if (on) qInput.focus();
+    else if (qInput.value) { qInput.value = ""; state.query = ""; applyQuery(); }
+  });
 
   /* ---------------- 서고 레일: 다른 서고로 옮겨 가는 유일한 길 ---------------- */
   var rail = document.getElementById("rail");
@@ -1939,7 +2038,6 @@
   function focusBook(id) {
     var b = findBook(id);
     if (!b) return;
-    lobby.hidden = true;
     setView("shelf");
     select(b);
     approach(b);
@@ -1962,7 +2060,7 @@
     document.getElementById("cat").hidden = v !== "cat";
     document.getElementById("list").hidden = v !== "list";
     Object.keys(views).forEach(function (k) { views[k].setAttribute("aria-pressed", String(k === v)); });
-    if (v !== "shelf") { select(null); lobby.hidden = true; }
+    if (v !== "shelf") select(null);
     renderSheets();
   }
   Object.keys(views).forEach(function (k) { views[k].addEventListener("click", function () { setView(k); }); });
@@ -1976,6 +2074,7 @@
   function openModal() { modal.hidden = false; fTitle.value = ""; fAuthor.value = ""; fTitle.focus(); }
   function closeModal() { modal.hidden = true; }
   document.getElementById("add-open").addEventListener("click", openModal);
+  document.getElementById("side-add").addEventListener("click", function () { setMenu(false); openModal(); });
   document.getElementById("modal-cancel").addEventListener("click", closeModal);
   modal.addEventListener("click", function (ev) { if (ev.target === modal) closeModal(); });
   document.getElementById("modal-save").addEventListener("click", function () {
@@ -1990,7 +2089,7 @@
   fTitle.addEventListener("keydown", function (ev) { if (ev.key === "Enter") document.getElementById("modal-save").click(); });
   document.addEventListener("keydown", function (ev) {
     if (ev.key !== "Escape") return;
-    if (!modal.hidden) closeModal(); else if (!lobby.hidden) enterRoom(state.cat); else select(null);
+    if (!modal.hidden) closeModal(); else if (isPhone() && shell.classList.contains("menu-open")) setMenu(false); else select(null);
   });
 
   /* ---------------- 루프 ---------------- */
