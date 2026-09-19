@@ -1,0 +1,3830 @@
+{
+  "books": [
+    {
+      "title": "협상의 법칙",
+      "author": "허브 코헨",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "120000447940",
+          "postTitle": "2003년 12월 15일 읽고있는 책은 협상의 법칙",
+          "date": "2003. 12. 16.",
+          "url": "https://blog.naver.com/joekang/120000447940",
+          "chars": 523
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2003. 12. 16.",
+      "needsReview": false
+    },
+    {
+      "title": "폰더씨의 위대한 하루",
+      "author": "앤디 앤드루스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "120000846534",
+          "postTitle": "[펌] 폰더씨의 위대한 하루",
+          "date": "2004. 2. 14.",
+          "url": "https://blog.naver.com/joekang/120000846534",
+          "chars": 2315
+        },
+        {
+          "logNo": "120000846528",
+          "postTitle": "[펌] 폰더씨의 위대한 하루",
+          "date": "2004. 2. 14.",
+          "url": "https://blog.naver.com/joekang/120000846528",
+          "chars": 349
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2004. 2. 14.",
+      "needsReview": false
+    },
+    {
+      "title": "백만불짜리 열정",
+      "author": "이채욱",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130007810965",
+          "postTitle": "Passion 백만불짜리 열정 - 이채욱",
+          "date": "2006. 8. 21.",
+          "url": "https://blog.naver.com/joekang/130007810965",
+          "chars": 528
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2006. 8. 21.",
+      "needsReview": false
+    },
+    {
+      "title": "세계는 평평하다",
+      "author": "토머스 프리드먼",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "130013272568",
+          "postTitle": "세계는 평평하다",
+          "date": "2007. 1. 11.",
+          "url": "https://blog.naver.com/joekang/130013272568",
+          "chars": 8127
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2007. 1. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "셈코 스토리",
+      "author": "리카르도 세믈러",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130013272455",
+          "postTitle": "셈코 스토리",
+          "date": "2007. 1. 11.",
+          "url": "https://blog.naver.com/joekang/130013272455",
+          "chars": 3875
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 1. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "두바이",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130013414091",
+          "postTitle": "두바이 (무한 상상력과 창조적 리더십) ",
+          "date": "2007. 1. 15.",
+          "url": "https://blog.naver.com/joekang/130013414091",
+          "chars": 2903
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 1. 15.",
+      "needsReview": false
+    },
+    {
+      "title": "돈은 아름다운 꽃이다",
+      "author": "박현주",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130022942748",
+          "postTitle": "돈은 아름다운 꽃이다. (박현주회장)",
+          "date": "2007. 10. 2.",
+          "url": "https://blog.naver.com/joekang/130022942748",
+          "chars": 6828
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 10. 2.",
+      "needsReview": false
+    },
+    {
+      "title": "등소평 전기",
+      "author": "Benjamin Yang",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130025540707",
+          "postTitle": "등소평 전기 - Benjamin Yang 지음",
+          "date": "2007. 12. 13.",
+          "url": "https://blog.naver.com/joekang/130025540707",
+          "chars": 1840
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 12. 13.",
+      "needsReview": false
+    },
+    {
+      "title": "세계가 배우는 한국기업의 희망 유한킴벌리",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130014867337",
+          "postTitle": "세계가 배우는 한국기업의 희망 - 유한킴벌리",
+          "date": "2007. 2. 22.",
+          "url": "https://blog.naver.com/joekang/130014867337",
+          "chars": 2337
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 2. 22.",
+      "needsReview": false
+    },
+    {
+      "title": "지속적 성장을 위한 1등기업의 법칙",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130014866889",
+          "postTitle": "지속적 성장을 위한 1등기업의 법칙",
+          "date": "2007. 2. 22.",
+          "url": "https://blog.naver.com/joekang/130014866889",
+          "chars": 2651
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 2. 22.",
+      "needsReview": false
+    },
+    {
+      "title": "육일약국 갑시다",
+      "author": "김성오",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130021729581",
+          "postTitle": "[공유] 육일약국 갑시다 / 김성오 / 21세기북스",
+          "date": "2007. 8. 27.",
+          "url": "https://blog.naver.com/joekang/130021729581",
+          "chars": 3027
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2007. 8. 27.",
+      "needsReview": false
+    },
+    {
+      "title": "하고 싶은 대로 해라",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130026468099",
+          "postTitle": "독서노트-하고 싶은 대로 해라",
+          "date": "2008. 1. 8.",
+          "url": "https://blog.naver.com/joekang/130026468099",
+          "chars": 2899
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2008. 1. 8.",
+      "needsReview": false
+    },
+    {
+      "title": "도전하라",
+      "author": "수잔 제퍼스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130032808406",
+          "postTitle": "도전하라 Feel the free and do it anyway 수잔 제퍼스",
+          "date": "2008. 6. 29.",
+          "url": "https://blog.naver.com/joekang/130032808406",
+          "chars": 1098
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2008. 6. 29.",
+      "needsReview": false
+    },
+    {
+      "title": "공병호의 1인 기업가",
+      "author": "공병호",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130032964525",
+          "postTitle": "공병호의 1인 기업가",
+          "date": "2008. 7. 4.",
+          "url": "https://blog.naver.com/joekang/130032964525",
+          "chars": 2452
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2008. 7. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "성공하는 사람들의 열정 포트폴리오",
+      "author": "제리 포라스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130032964234",
+          "postTitle": "성공하는 사람들의 열정 포트폴리오 - Success built to last by 제리 포라스 外",
+          "date": "2008. 7. 4.",
+          "url": "https://blog.naver.com/joekang/130032964234",
+          "chars": 5485
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2008. 7. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "화웨이 비상도",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130101113079",
+          "postTitle": "화웨이, Huawei, &#21326;&#20026;非常道 를 읽고",
+          "date": "2011. 1. 18.",
+          "url": "https://blog.naver.com/joekang/130101113079",
+          "chars": 1755
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2011. 1. 18.",
+      "needsReview": false
+    },
+    {
+      "title": "셜록 홈즈",
+      "author": "아서 코난 도일",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130102316378",
+          "postTitle": "30년전 읽던 셜록 홈즈",
+          "date": "2011. 2. 6.",
+          "url": "https://blog.naver.com/joekang/130102316378",
+          "chars": 787
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2011. 2. 6.",
+      "needsReview": false
+    },
+    {
+      "title": "삼략",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130138177828",
+          "postTitle": "중국고전 - 삼략 ",
+          "date": "2012. 5. 13.",
+          "url": "https://blog.naver.com/joekang/130138177828",
+          "chars": 849
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2012. 5. 13.",
+      "needsReview": false
+    },
+    {
+      "title": "육도",
+      "author": "여상",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130138177389",
+          "postTitle": "중국고전 육도 - 여상 지음",
+          "date": "2012. 5. 13.",
+          "url": "https://blog.naver.com/joekang/130138177389",
+          "chars": 737
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2012. 5. 13.",
+      "needsReview": false
+    },
+    {
+      "title": "삼국지",
+      "author": "이문열",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130137662415",
+          "postTitle": "이문열선생의 삼국지",
+          "date": "2012. 5. 6.",
+          "url": "https://blog.naver.com/joekang/130137662415",
+          "chars": 1073
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2012. 5. 6.",
+      "needsReview": false
+    },
+    {
+      "title": "제3인류",
+      "author": "베르나르 베르베르",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220002107219",
+          "postTitle": "베르나르 베르베르 - 제3인류",
+          "date": "2014. 5. 17.",
+          "url": "https://blog.naver.com/joekang/220002107219",
+          "chars": 700
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2014. 5. 17.",
+      "needsReview": false
+    },
+    {
+      "title": "신",
+      "author": "베르나르 베르베르",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130190478501",
+          "postTitle": "베르나르 베르베르의 신을 읽고..",
+          "date": "2014. 5. 3.",
+          "url": "https://blog.naver.com/joekang/130190478501",
+          "chars": 1543
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2014. 5. 3.",
+      "needsReview": false
+    },
+    {
+      "title": "2052",
+      "author": "요르겐 랜더스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "130190530533",
+          "postTitle": "더 나은 미래는 쉽게 오지 않는다 2052 : A Global Forecast for the Next Forty Years",
+          "date": "2014. 5. 4.",
+          "url": "https://blog.naver.com/joekang/130190530533",
+          "chars": 1457
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2014. 5. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "웃음",
+      "author": "베르나르 베르베르",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220570479354",
+          "postTitle": "웃음_베르나르 베르베르",
+          "date": "2015. 12. 16.",
+          "url": "https://blog.naver.com/joekang/220570479354",
+          "chars": 2113
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2015. 12. 16.",
+      "needsReview": false
+    },
+    {
+      "title": "다중지능",
+      "author": "하워드 가드너",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220571840969",
+          "postTitle": "하워드 가드너의 다중지능",
+          "date": "2015. 12. 18.",
+          "url": "https://blog.naver.com/joekang/220571840969",
+          "chars": 1344
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2015. 12. 18.",
+      "needsReview": false
+    },
+    {
+      "title": "공유경제",
+      "author": "로빈 체이스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220583704031",
+          "postTitle": "공유경제_Peers Inc. 로빈 체이스",
+          "date": "2015. 12. 31.",
+          "url": "https://blog.naver.com/joekang/220583704031",
+          "chars": 1811
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2015. 12. 31.",
+      "needsReview": false
+    },
+    {
+      "title": "7일 만에 끝내는 스피치",
+      "author": "이서영",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220883247300",
+          "postTitle": "[독서노트] 이서영 아나운서 7일만에 끝내는 스피치 &#8211; 2016.12월",
+          "date": "2016. 12. 11.",
+          "url": "https://blog.naver.com/joekang/220883247300",
+          "chars": 3152
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 12. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "마흔, 평생공부",
+      "author": "장계수",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220883081398",
+          "postTitle": "[독서노트] 마흔, 평생공부 &#8211; 2016.9월",
+          "date": "2016. 12. 11.",
+          "url": "https://blog.naver.com/joekang/220883081398",
+          "chars": 2641
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 12. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "오리지널스",
+      "author": "애덤 그랜트",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220680594510",
+          "postTitle": "오리지널스 Originals by 애덤 그랜트",
+          "date": "2016. 4. 11.",
+          "url": "https://blog.naver.com/joekang/220680594510",
+          "chars": 1040
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 4. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "더블린 사람들",
+      "author": "제임스 조이스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220691816785",
+          "postTitle": "마흔다섯의 제임스 조이스 읽기_더블린 사람들",
+          "date": "2016. 4. 24.",
+          "url": "https://blog.naver.com/joekang/220691816785",
+          "chars": 2581
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 4. 24.",
+      "needsReview": false
+    },
+    {
+      "title": "내 모습 그대로",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220698421617",
+          "postTitle": "어느 판사님의 평생일기_내모습 그대로1,2,3",
+          "date": "2016. 5. 1.",
+          "url": "https://blog.naver.com/joekang/220698421617",
+          "chars": 1890
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 5. 1.",
+      "needsReview": false
+    },
+    {
+      "title": "데이터 과학자",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220698249070",
+          "postTitle": "데이터 과학자 : 빅데이터 시대를 주도하는 사람들, 그들은 무엇을 배우고 어떻게 준비하는가?,",
+          "date": "2016. 5. 1.",
+          "url": "https://blog.naver.com/joekang/220698249070",
+          "chars": 1994
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 5. 1.",
+      "needsReview": false
+    },
+    {
+      "title": "생활을 변화시키는 사물인터넷 IoT",
+      "author": "마이클 밀러",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220698239932",
+          "postTitle": "생활을 변화시키는 사물인터넷 : IoT (by Michael Miller)",
+          "date": "2016. 5. 1.",
+          "url": "https://blog.naver.com/joekang/220698239932",
+          "chars": 2189
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 5. 1.",
+      "needsReview": false
+    },
+    {
+      "title": "2020 하류노인이 온다",
+      "author": "후지타 다카노리",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220710106342",
+          "postTitle": "[독서노트] 2020 하류노인이 온다_후지타 다카노리지음 | 홍성민옮김",
+          "date": "2016. 5. 15.",
+          "url": "https://blog.naver.com/joekang/220710106342",
+          "chars": 1375
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 5. 15.",
+      "needsReview": false
+    },
+    {
+      "title": "성공 비즈니스 이제는 뇌과학이다",
+      "author": "하기와라 잇페이",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220710103864",
+          "postTitle": "[독서노트] 성공 비즈니스 이제는 뇌과학이다_하기와라 잇페이 지음 | 황미숙 옮김",
+          "date": "2016. 5. 15.",
+          "url": "https://blog.naver.com/joekang/220710103864",
+          "chars": 2082
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 5. 15.",
+      "needsReview": false
+    },
+    {
+      "title": "볼드",
+      "author": "피터 디아만디스",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "220715628371",
+          "postTitle": "BOLD 볼드_피터 디아만디스 Peter Diamandis의 최신작 중 발췌",
+          "date": "2016. 5. 21.",
+          "url": "https://blog.naver.com/joekang/220715628371",
+          "chars": 2655
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2016. 5. 21.",
+      "needsReview": false
+    },
+    {
+      "title": "걸 온 더 트레인",
+      "author": "폴라 호킨스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220704332852",
+          "postTitle": "[독서노트] 폴라 호킨스 걸 온더 트레인_Paula Hawkins The Girl On The Train",
+          "date": "2016. 5. 8.",
+          "url": "https://blog.naver.com/joekang/220704332852",
+          "chars": 2081
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 5. 8.",
+      "needsReview": false
+    },
+    {
+      "title": "손정의의 참모",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220746631436",
+          "postTitle": "[독서노트] 손정의의 참모_참모의 눈으로 바라본 손정의 기업가정신",
+          "date": "2016. 6. 26.",
+          "url": "https://blog.naver.com/joekang/220746631436",
+          "chars": 1506
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 6. 26.",
+      "needsReview": false
+    },
+    {
+      "title": "통제 불능",
+      "author": "케빈 켈리",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220727587392",
+          "postTitle": "[독서노트] 통제불능 Out of Control by Kevin Kelly (1994)",
+          "date": "2016. 6. 4.",
+          "url": "https://blog.naver.com/joekang/220727587392",
+          "chars": 2892
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 6. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "중국의 슈퍼리치",
+      "author": "강효백",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220784627518",
+          "postTitle": "중국거상 마윈의 어록 40_출처 중국의 슈퍼리치 (강효백)",
+          "date": "2016. 8. 10.",
+          "url": "https://blog.naver.com/joekang/220784627518",
+          "chars": 2664
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 8. 10.",
+      "needsReview": false
+    },
+    {
+      "title": "증강현실",
+      "author": "브렛 킹",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220803981522",
+          "postTitle": "[독서노트] 증강현실 - 브렛 킹 Augmented : Life in the Smart Lane",
+          "date": "2016. 9. 3.",
+          "url": "https://blog.naver.com/joekang/220803981522",
+          "chars": 5380
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2016. 9. 3.",
+      "needsReview": false
+    },
+    {
+      "title": "기브앤테이크",
+      "author": "애덤 그랜트",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "220903784650",
+          "postTitle": "[독서노트] 애덤 그랜트의 기브앤테이크 Give and Take_추천!",
+          "date": "2017. 1. 5.",
+          "url": "https://blog.naver.com/joekang/220903784650",
+          "chars": 2222
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2017. 1. 5.",
+      "needsReview": false
+    },
+    {
+      "title": "나는 돈이 없어도 사업을 한다",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221125311348",
+          "postTitle": "[독서노트] 나는 돈이 없어도 사업을 한다",
+          "date": "2017. 10. 25.",
+          "url": "https://blog.naver.com/joekang/221125311348",
+          "chars": 1892
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 10. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "호모 데우스",
+      "author": "유발 하라리",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221138345981",
+          "postTitle": "[독서노트] 미래의 역사 - 호모데우스를 읽는 법",
+          "date": "2017. 11. 12.",
+          "url": "https://blog.naver.com/joekang/221138345981",
+          "chars": 2580
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 11. 12.",
+      "needsReview": false
+    },
+    {
+      "title": "축적의 길",
+      "author": "이정동",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221174420076",
+          "postTitle": "축적의 길 Made in Korea의 새로운 도전에 덧붙임",
+          "date": "2017. 12. 30.",
+          "url": "https://blog.naver.com/joekang/221174420076",
+          "chars": 2262
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 12. 30.",
+      "needsReview": false
+    },
+    {
+      "title": "너무 일찍 어른이 될 필요는 없어",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220939330499",
+          "postTitle": "[독서노트] 너무 일찍 어른이 될 필요는 없어 ! Penguins can&#39;t fly",
+          "date": "2017. 2. 19.",
+          "url": "https://blog.naver.com/joekang/220939330499",
+          "chars": 2678
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 2. 19.",
+      "needsReview": false
+    },
+    {
+      "title": "생각에 관한 생각",
+      "author": "대니얼 카너먼",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220929794117",
+          "postTitle": "[독서노트] 생각에 관한 생각 THINKING FAST AND SLOW &#8211; 2017.2.7",
+          "date": "2017. 2. 7.",
+          "url": "https://blog.naver.com/joekang/220929794117",
+          "chars": 2274
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 2. 7.",
+      "needsReview": false
+    },
+    {
+      "title": "아웃라이어",
+      "author": "말콤 글래드웰",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220989527519",
+          "postTitle": "[독서노트]아웃라이어_말콤 글래드웰의 철지난 베스트셀러",
+          "date": "2017. 4. 22.",
+          "url": "https://blog.naver.com/joekang/220989527519",
+          "chars": 2318
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 4. 22.",
+      "needsReview": false
+    },
+    {
+      "title": "행복한 목요일",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "220998462524",
+          "postTitle": "[독서노트] &quot;행복한 목요일&quot;과 &quot;자기만의 미래를 선택하라&quot;",
+          "date": "2017. 5. 4.",
+          "url": "https://blog.naver.com/joekang/220998462524",
+          "chars": 2557
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 5. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "밀리언 달러 티켓",
+      "author": "리처드 파크 코독",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221072964502",
+          "postTitle": "[독서노트] 밀리언달러 티켓 - 비행기에서 만난 백만장자 이야기",
+          "date": "2017. 8. 13.",
+          "url": "https://blog.naver.com/joekang/221072964502",
+          "chars": 2972
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 8. 13.",
+      "needsReview": false
+    },
+    {
+      "title": "레버리지",
+      "author": "롭 무어",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221073464378",
+          "postTitle": "[독서노트] 레버리지 Life leverage by Rob Moore",
+          "date": "2017. 8. 14.",
+          "url": "https://blog.naver.com/joekang/221073464378",
+          "chars": 3265
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2017. 8. 14.",
+      "needsReview": false
+    },
+    {
+      "title": "퇴사준비생의 도쿄",
+      "author": "트래블코드",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "221089420781",
+          "postTitle": "[독서노트] 퇴사준비생의 도쿄 - 트래블코드",
+          "date": "2017. 9. 4.",
+          "url": "https://blog.naver.com/joekang/221089420781",
+          "chars": 2901
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2017. 9. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "꾸뻬씨의 행복 여행",
+      "author": "프랑수아 를로르",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "221215500413",
+          "postTitle": "꾸뻬씨의 행복 여행 - 책장소개",
+          "date": "2018. 2. 24.",
+          "url": "https://blog.naver.com/joekang/221215500413",
+          "chars": 1824
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2018. 2. 24.",
+      "needsReview": false
+    },
+    {
+      "title": "언어의 온도",
+      "author": "이기주",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221336900456",
+          "postTitle": "[독서노트] 언어의 온도 - 이기주작가",
+          "date": "2018. 8. 11.",
+          "url": "https://blog.naver.com/joekang/221336900456",
+          "chars": 1524
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2018. 8. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "아주 작은 습관의 힘",
+      "author": "제임스 클리어",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "221522081680",
+          "postTitle": "2019.4월23일 [독서노트] 아주 작은 습관의 힘 #Atomic Habits",
+          "date": "2019. 4. 25.",
+          "url": "https://blog.naver.com/joekang/221522081680",
+          "chars": 3063
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2019. 4. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "페이크",
+      "author": "로버트 기요사키",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "221604942821",
+          "postTitle": "2019년 8월4일 FAKE 페이크-로버트 기요사키",
+          "date": "2019. 8. 4.",
+          "url": "https://blog.naver.com/joekang/221604942821",
+          "chars": 2048
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2019. 8. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "세상의 바보들에게 웃으면서 화내는 방법",
+      "author": "움베르토 에코",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "221608954573",
+          "postTitle": "2019년 8월7일 재산목록을 작성하는 방법 -지하철에서 에코를 읽다",
+          "date": "2019. 8. 7.",
+          "url": "https://blog.naver.com/joekang/221608954573",
+          "chars": 1517
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2019. 8. 7.",
+      "needsReview": false
+    },
+    {
+      "title": "어떤 죽음이 삶에게 말했다",
+      "author": "김범석",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222248672560",
+          "postTitle": "[독서노트] 어떤 죽음이 삶에게 말했다",
+          "date": "2021. 2. 19.",
+          "url": "https://blog.naver.com/joekang/222248672560",
+          "chars": 5149
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2021. 2. 19.",
+      "needsReview": false
+    },
+    {
+      "title": "나는 120살까지 살기로 했다",
+      "author": "이승헌",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222627584767",
+          "postTitle": "[독서노트] 나는 120살까지 살기로 했다 #인생후반 #퇴사준비",
+          "date": "2022. 1. 21.",
+          "url": "https://blog.naver.com/joekang/222627584767",
+          "chars": 3082
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 1. 21.",
+      "needsReview": false
+    },
+    {
+      "title": "10배의 법칙",
+      "author": "그랜트 카돈",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222730854060",
+          "postTitle": "10배의 법칙, 은퇴를 준비하는 독서 #10배의법칙 #은퇴준비",
+          "date": "2022. 5. 13.",
+          "url": "https://blog.naver.com/joekang/222730854060",
+          "chars": 5225
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 5. 13.",
+      "needsReview": false
+    },
+    {
+      "title": "변화와 생존",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222746018415",
+          "postTitle": "[독서노트] 변화와 생존 #독서노트 #은퇴준비",
+          "date": "2022. 5. 25.",
+          "url": "https://blog.naver.com/joekang/222746018415",
+          "chars": 4826
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 5. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "우리는 모두 각자의 별에서 빛난다",
+      "author": "이광형",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222746239108",
+          "postTitle": "[독서노트] 우리는 모두 각자의 별에서 빛난다 - KAIST 이광형총장 #독서노트",
+          "date": "2022. 5. 25.",
+          "url": "https://blog.naver.com/joekang/222746239108",
+          "chars": 3125
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 5. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "마음의 법칙",
+      "author": "폴커 키츠",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222747662389",
+          "postTitle": "[독서노트] 마음의 법칙 -폴커 키츠 #독서 #심리학",
+          "date": "2022. 5. 26.",
+          "url": "https://blog.naver.com/joekang/222747662389",
+          "chars": 4567
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 5. 26.",
+      "needsReview": false
+    },
+    {
+      "title": "불편한 편의점",
+      "author": "김호연",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222747530993",
+          "postTitle": "[독서노트] 불편한 편의점 #소설읽기 #독서",
+          "date": "2022. 5. 26.",
+          "url": "https://blog.naver.com/joekang/222747530993",
+          "chars": 3664
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 5. 26.",
+      "needsReview": false
+    },
+    {
+      "title": "뭘 해도 운이 따르는 사람들의 10가지 습관",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222748668369",
+          "postTitle": "[독서노트] 뭘 해도 운이 따르는 사람들의 10가지 습관",
+          "date": "2022. 5. 27.",
+          "url": "https://blog.naver.com/joekang/222748668369",
+          "chars": 3363
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 5. 27.",
+      "needsReview": false
+    },
+    {
+      "title": "나는 왜 네 말이 힘들까",
+      "author": "박재연",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222782180968",
+          "postTitle": "[독서노트]나는 왜 네 말이 힘들까 #대화 #책추천",
+          "date": "2022. 6. 21.",
+          "url": "https://blog.naver.com/joekang/222782180968",
+          "chars": 5810
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 6. 21.",
+      "needsReview": false
+    },
+    {
+      "title": "마지막 몰입",
+      "author": "짐 퀵",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222783872043",
+          "postTitle": "[독서노트]마지막 몰입:나를 넘어서는 힘 #독서",
+          "date": "2022. 6. 22.",
+          "url": "https://blog.naver.com/joekang/222783872043",
+          "chars": 7661
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 6. 22.",
+      "needsReview": false
+    },
+    {
+      "title": "김경일의 지혜로운 인간생활",
+      "author": "김경일",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222785682126",
+          "postTitle": "[독서노트] 김경일의 지혜로운 인간생활 #독서 #심리학",
+          "date": "2022. 6. 23.",
+          "url": "https://blog.naver.com/joekang/222785682126",
+          "chars": 2665
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 6. 23.",
+      "needsReview": false
+    },
+    {
+      "title": "원씽",
+      "author": "게리 켈러",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222788129129",
+          "postTitle": "[독서노트] 더원씽 - 뛰어난 성과를 내고자 한다면 한 가지 일에만 집중하라",
+          "date": "2022. 6. 25.",
+          "url": "https://blog.naver.com/joekang/222788129129",
+          "chars": 4305
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 6. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "내가 틀릴 수도 있습니다",
+      "author": "비욘 나티코 린데블라드",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222808322382",
+          "postTitle": "[독서노트] 내가 틀릴 수도 있습니다 - 비욘 나티코 린데블라드",
+          "date": "2022. 7. 12.",
+          "url": "https://blog.naver.com/joekang/222808322382",
+          "chars": 3303
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 12.",
+      "needsReview": false
+    },
+    {
+      "title": "나는 매주 시체를 보러 간다",
+      "author": "유성호",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222827848581",
+          "postTitle": "[독서노트] 나는 매주 시체를 보러 간다 - 유성호교수 #죽음",
+          "date": "2022. 7. 25.",
+          "url": "https://blog.naver.com/joekang/222827848581",
+          "chars": 4477
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "나를 내려놓으니 내가 좋아졌다",
+      "author": "네모토 히로유키",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222829394419",
+          "postTitle": "[독서노트] 나를 내려놓으니 내가 좋아졌다-네모토 히로유키",
+          "date": "2022. 7. 26.",
+          "url": "https://blog.naver.com/joekang/222829394419",
+          "chars": 2677
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 26.",
+      "needsReview": false
+    },
+    {
+      "title": "부의 본능",
+      "author": "우석",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222799814692",
+          "postTitle": "[독서노트] 부의본능 - 우석",
+          "date": "2022. 7. 4.",
+          "url": "https://blog.naver.com/joekang/222799814692",
+          "chars": 3588
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "이토록 멋진 오십이라면",
+      "author": "이주희",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222801071142",
+          "postTitle": "[독서노트]이토록 멋진 오십이라면 - 이주희 #독서노트 #오십",
+          "date": "2022. 7. 5.",
+          "url": "https://blog.naver.com/joekang/222801071142",
+          "chars": 2652
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 5.",
+      "needsReview": false
+    },
+    {
+      "title": "여전히 서툰 어른입니다",
+      "author": "사이토 다카시",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222802240382",
+          "postTitle": "[독서노트] 여전히 서툰 어른입니다. - 사이토 다카시",
+          "date": "2022. 7. 6.",
+          "url": "https://blog.naver.com/joekang/222802240382",
+          "chars": 3085
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 6.",
+      "needsReview": false
+    },
+    {
+      "title": "근성론",
+      "author": "김성모",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222803476256",
+          "postTitle": "[독서노트] 근성론 - 만화가 김성모 #웹툰 #김성모",
+          "date": "2022. 7. 7.",
+          "url": "https://blog.naver.com/joekang/222803476256",
+          "chars": 1900
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 7. 7.",
+      "needsReview": false
+    },
+    {
+      "title": "우리는 어디서 살아야 하는가",
+      "author": "김시덕",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222850825508",
+          "postTitle": "[독서노트] 우리는 어디서 살아야 하는가 / 김시덕",
+          "date": "2022. 8. 17.",
+          "url": "https://blog.naver.com/joekang/222850825508",
+          "chars": 2152
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 8. 17.",
+      "needsReview": false
+    },
+    {
+      "title": "유럽 도시 기행 1",
+      "author": "유시민",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222850971976",
+          "postTitle": "[독서노트] 유럽 도시 기행 1 - 유시민",
+          "date": "2022. 8. 17.",
+          "url": "https://blog.naver.com/joekang/222850971976",
+          "chars": 4371
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2022. 8. 17.",
+      "needsReview": false
+    },
+    {
+      "title": "데일리 크리에이티브",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222987324507",
+          "postTitle": "[독서노트]데일리 크리에이티브 #책읽기 #자기계발",
+          "date": "2023. 1. 17.",
+          "url": "https://blog.naver.com/joekang/222987324507",
+          "chars": 4308
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 17.",
+      "needsReview": false
+    },
+    {
+      "title": "만일 내가 인생을 다시 산다면",
+      "author": "김혜남",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222988296611",
+          "postTitle": "[독서노트]만일 내가 인생을 다시 산다면 #독서노트 #매일책읽기",
+          "date": "2023. 1. 18.",
+          "url": "https://blog.naver.com/joekang/222988296611",
+          "chars": 3051
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 18.",
+      "needsReview": false
+    },
+    {
+      "title": "가진 돈은 몽땅 써라",
+      "author": "호리에 다카후미",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222989958778",
+          "postTitle": "[독서노트]가진 돈은 몽땅 써라 #책읽기 #독서",
+          "date": "2023. 1. 20.",
+          "url": "https://blog.naver.com/joekang/222989958778",
+          "chars": 5788
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 20.",
+      "needsReview": false
+    },
+    {
+      "title": "불편한 편의점 2",
+      "author": "김호연",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222990389634",
+          "postTitle": "[독서노트] 불편한 편의점2 #편의점 #소설 #김호연",
+          "date": "2023. 1. 21.",
+          "url": "https://blog.naver.com/joekang/222990389634",
+          "chars": 5076
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 21.",
+      "needsReview": false
+    },
+    {
+      "title": "위대한 확언",
+      "author": "밥 프록터",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222992536747",
+          "postTitle": "밥 프록터의 위대한 확언 The ABCs of Success #시크릿",
+          "date": "2023. 1. 24.",
+          "url": "https://blog.naver.com/joekang/222992536747",
+          "chars": 6177
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 24.",
+      "needsReview": false
+    },
+    {
+      "title": "마케팅이다",
+      "author": "세스 고딘",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222993723960",
+          "postTitle": "마케팅이다_세스 고든 #세스고든 #마케팅 #독서노트",
+          "date": "2023. 1. 25.",
+          "url": "https://blog.naver.com/joekang/222993723960",
+          "chars": 3663
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "작은 꿈을 위한 방은 없다",
+      "author": "시몬 페레스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222993263031",
+          "postTitle": "작은 꿈을 위한 방은 없다_시몬 페레스 #이스라엘 #독서노트",
+          "date": "2023. 1. 25.",
+          "url": "https://blog.naver.com/joekang/222993263031",
+          "chars": 9165
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "프랙티스",
+      "author": "세스 고딘",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "222995342109",
+          "postTitle": "[독서노트] 프랙티스 세스고딘 #독서노트 #세스고딘",
+          "date": "2023. 1. 26.",
+          "url": "https://blog.naver.com/joekang/222995342109",
+          "chars": 3073
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 1. 26.",
+      "needsReview": false
+    },
+    {
+      "title": "라이프 트렌드 2024",
+      "author": "김용섭",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223265814364",
+          "postTitle": "김용섭소장 라이프트렌드 2024 책 소개 #저자강연",
+          "date": "2023. 11. 15.",
+          "url": "https://blog.naver.com/joekang/223265814364",
+          "chars": 6137
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 11. 15.",
+      "needsReview": false
+    },
+    {
+      "title": "챗GPT에게 묻는 인류의 미래",
+      "author": "김대식",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223025826176",
+          "postTitle": "[독서노트] 챗GPT에게 묻는 인류의 미래 #김대식교수 #공저",
+          "date": "2023. 2. 23.",
+          "url": "https://blog.naver.com/joekang/223025826176",
+          "chars": 4210
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 2. 23.",
+      "needsReview": false
+    },
+    {
+      "title": "중국은 어떻게 실패하는가",
+      "author": "마이클 베클리",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223026449492",
+          "postTitle": "[독서노트] 중국은 어떻게 실패하는가- 마이클 베클리 #베스트셀러",
+          "date": "2023. 2. 24.",
+          "url": "https://blog.naver.com/joekang/223026449492",
+          "chars": 5772
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 2. 24.",
+      "needsReview": false
+    },
+    {
+      "title": "이미 시작된 전쟁",
+      "author": "이철",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223079635969",
+          "postTitle": "[독서노트] 이미 시작된 전쟁, 이철 #중국 # 북한",
+          "date": "2023. 4. 19.",
+          "url": "https://blog.naver.com/joekang/223079635969",
+          "chars": 3686
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 4. 19.",
+      "needsReview": false
+    },
+    {
+      "title": "세컨드 브레인",
+      "author": "티아고 포르테",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223082763167",
+          "postTitle": "[독서노트] 세컨드 브레인_티아고 포르테 #교보문고",
+          "date": "2023. 4. 23.",
+          "url": "https://blog.naver.com/joekang/223082763167",
+          "chars": 6843
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 4. 23.",
+      "needsReview": false
+    },
+    {
+      "title": "세계화의 종말과 새로운 시작",
+      "author": "마크 레빈슨",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223088338557",
+          "postTitle": "[독서노트] 세계화의 종말과 새로운 시작 #마크레빈슨",
+          "date": "2023. 4. 29.",
+          "url": "https://blog.naver.com/joekang/223088338557",
+          "chars": 6460
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 4. 29.",
+      "needsReview": false
+    },
+    {
+      "title": "성공하는 사람들의 7가지 습관",
+      "author": "스티븐 코비",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223068184801",
+          "postTitle": "성공하는 사람들의 7가지 습관_스티븐 코비",
+          "date": "2023. 4. 7.",
+          "url": "https://blog.naver.com/joekang/223068184801",
+          "chars": 4076
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 4. 7.",
+      "needsReview": false
+    },
+    {
+      "title": "역행자",
+      "author": "자청",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223215147716",
+          "postTitle": "역행자_읽고 있는 중간에 #자청",
+          "date": "2023. 9. 18.",
+          "url": "https://blog.naver.com/joekang/223215147716",
+          "chars": 3633
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2023. 9. 18.",
+      "needsReview": false
+    },
+    {
+      "title": "전체 최적의 습관",
+      "author": "엔도 아유무",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223316730095",
+          "postTitle": "[독서노트]엔도 아유무의 &quot;전체 최적의 습관&quot;",
+          "date": "2024. 1. 9.",
+          "url": "https://blog.naver.com/joekang/223316730095",
+          "chars": 3094
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 1. 9.",
+      "needsReview": false
+    },
+    {
+      "title": "채식주의자",
+      "author": "한강",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223614662806",
+          "postTitle": "[독서노트] 한강_채식주의자 #노벨문학상 #대한민국 #줄거리",
+          "date": "2024. 10. 11.",
+          "url": "https://blog.naver.com/joekang/223614662806",
+          "chars": 6126
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 10. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "트렌드 코리아 2025",
+      "author": "김난도",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223644646920",
+          "postTitle": "김난도 교수가 들려주는 트렌드 코리아 2025 요약｜풀버전 #책소개",
+          "date": "2024. 11. 3.",
+          "url": "https://blog.naver.com/joekang/223644646920",
+          "chars": 8815
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 11. 3.",
+      "needsReview": false
+    },
+    {
+      "title": "늙는다는 착각",
+      "author": "엘렌 랭어",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223677677942",
+          "postTitle": "[독서노트] 늙는다는 착각, 노화의 심리학적 해석 나이는 숫자에 불과 #엘런랭어 #인지심리학",
+          "date": "2024. 11. 30.",
+          "url": "https://blog.naver.com/joekang/223677677942",
+          "chars": 2730
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 11. 30.",
+      "needsReview": false
+    },
+    {
+      "title": "예수님처럼",
+      "author": "맥스 루카도",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223366646528",
+          "postTitle": "따뜻한 여정: 맥스 루카도의 &quot;예수님처럼&quot;",
+          "date": "2024. 2. 27.",
+          "url": "https://blog.naver.com/joekang/223366646528",
+          "chars": 2048
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 2. 27.",
+      "needsReview": false
+    },
+    {
+      "title": "결코, 배불리 먹지 말 것",
+      "author": "미즈노 남보쿠",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223379544747",
+          "postTitle": "[독서노트] 결코, 배불리 먹지 말 것",
+          "date": "2024. 3. 11.",
+          "url": "https://blog.naver.com/joekang/223379544747",
+          "chars": 5740
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 3. 11.",
+      "needsReview": false
+    },
+    {
+      "title": "도쿄 트렌드 인사이드",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223380578546",
+          "postTitle": "[독서노트]도쿄, 트렌드 인사이드",
+          "date": "2024. 3. 12.",
+          "url": "https://blog.naver.com/joekang/223380578546",
+          "chars": 4218
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 3. 12.",
+      "needsReview": false
+    },
+    {
+      "title": "대한민국 행복지도 2023",
+      "author": "최인철",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223382921694",
+          "postTitle": "[독서노트] 대한민국 행복지도 2023",
+          "date": "2024. 3. 14.",
+          "url": "https://blog.naver.com/joekang/223382921694",
+          "chars": 5445
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 3. 14.",
+      "needsReview": false
+    },
+    {
+      "title": "초고령사회 일본이 사는 법",
+      "author": "김웅철",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223392611323",
+          "postTitle": "[독서노트] 초고령사회 일본이 사는법, 2부 유쾌한 시니어가 온다 #매일경제 #김웅철",
+          "date": "2024. 3. 23.",
+          "url": "https://blog.naver.com/joekang/223392611323",
+          "chars": 6148
+        },
+        {
+          "logNo": "223392567778",
+          "postTitle": "[독서노트] 초고령사회 일본이 사는법, 1부 초고령사회의 신풍경 #매일경제 #김웅철",
+          "date": "2024. 3. 23.",
+          "url": "https://blog.naver.com/joekang/223392567778",
+          "chars": 2973
+        },
+        {
+          "logNo": "223393335982",
+          "postTitle": "[독서노트] 초고령사회 일본이 사는법, 4부 시니어 비즈니스 본 막이 오르다 #매일경제 #김웅철",
+          "date": "2024. 3. 24.",
+          "url": "https://blog.naver.com/joekang/223393335982",
+          "chars": 5566
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 3. 23.",
+      "needsReview": false
+    },
+    {
+      "title": "한국 도시의 미래",
+      "author": "김시덕",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223373457037",
+          "postTitle": "[독서노트]김시덕교수의 신간, 한국 도시의 미래",
+          "date": "2024. 3. 5.",
+          "url": "https://blog.naver.com/joekang/223373457037",
+          "chars": 4263
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 3. 5.",
+      "needsReview": false
+    },
+    {
+      "title": "이 지랄맞음이 쌓여 축제가 되겠지",
+      "author": "조승리",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223421235413",
+          "postTitle": "[독서노트] 이 지랄맞음이 쌓여 축제가 되겠지 #조승리 에세이",
+          "date": "2024. 4. 20.",
+          "url": "https://blog.naver.com/joekang/223421235413",
+          "chars": 3746
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 4. 20.",
+      "needsReview": false
+    },
+    {
+      "title": "무엇이 나를 행복하게 만드는가",
+      "author": "리처드 라이더",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223429431958",
+          "postTitle": "[독서노트] 무엇이 나를 행복하게 만드는가 #리처드 J. 라이더",
+          "date": "2024. 4. 28.",
+          "url": "https://blog.naver.com/joekang/223429431958",
+          "chars": 4379
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 4. 28.",
+      "needsReview": false
+    },
+    {
+      "title": "생각이 너무 많은 어른들을 위한 심리학",
+      "author": "김혜남",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223435515021",
+          "postTitle": "[독서노트] 생각이 너무 많은 어른들을 위한 심리학 #김혜남 #정신분석",
+          "date": "2024. 5. 3.",
+          "url": "https://blog.naver.com/joekang/223435515021",
+          "chars": 2440
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 5. 3.",
+      "needsReview": false
+    },
+    {
+      "title": "인생 맛의 기억",
+      "author": "조광제",
+      "sources": [
+        "blog",
+        "photo"
+      ],
+      "reviews": [
+        {
+          "logNo": "223465672550",
+          "postTitle": "[독서노트] (나올 책) 인생 맛의 기억_조광제 #인생멘토 #소울푸드",
+          "date": "2024. 6. 1.",
+          "url": "https://blog.naver.com/joekang/223465672550",
+          "chars": 5982
+        },
+        {
+          "logNo": "223503122455",
+          "postTitle": "조광제 작가의 &quot;인생맛의 기억&quot; 출간 이후~ 영월글램핑에서 맛볼 7가지 인생 맛 #책소개 #미다스북스",
+          "date": "2024. 7. 6.",
+          "url": "https://blog.naver.com/joekang/223503122455",
+          "chars": 9547
+        }
+      ],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": "2024. 6. 1.",
+      "needsReview": false
+    },
+    {
+      "title": "일류의 조건",
+      "author": "사이토 다카시",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223523540370",
+          "postTitle": "[독서노트] 일류의 조건 - 사이토 다카시",
+          "date": "2024. 7. 24.",
+          "url": "https://blog.naver.com/joekang/223523540370",
+          "chars": 2354
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 7. 24.",
+      "needsReview": false
+    },
+    {
+      "title": "말하지 않으면 인생은 바뀌지 않는다",
+      "author": "최인아",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223553517525",
+          "postTitle": "[독서노트] 말하지 않으면 인생은 바뀌지 않는다 #최인아책방",
+          "date": "2024. 8. 19.",
+          "url": "https://blog.naver.com/joekang/223553517525",
+          "chars": 4510
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 8. 19.",
+      "needsReview": false
+    },
+    {
+      "title": "월가아재의 제2라운드 투자 수업",
+      "author": "최한철",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223563458662",
+          "postTitle": "[독서리뷰] &quot;월가아재의 제2라운드 투자 수업&quot; 최한철",
+          "date": "2024. 8. 28.",
+          "url": "https://blog.naver.com/joekang/223563458662",
+          "chars": 11801
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 8. 28.",
+      "needsReview": false
+    },
+    {
+      "title": "양수인간",
+      "author": "최설민",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223595588583",
+          "postTitle": "[독서노트] 양수인간: 삶의 격을 높이는 내면 변화 심리학 #최설민 #심리학",
+          "date": "2024. 9. 25.",
+          "url": "https://blog.naver.com/joekang/223595588583",
+          "chars": 2415
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2024. 9. 25.",
+      "needsReview": false
+    },
+    {
+      "title": "고전이 답했다 마땅히 살아야 할 삶에 대하여",
+      "author": "고명환",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223721026258",
+          "postTitle": "[독서노트] 고전이 답했다 마땅히 살아야 할 삶에 대하여, 고명환 #새해결심 #교보문고",
+          "date": "2025. 1. 10.",
+          "url": "https://blog.naver.com/joekang/223721026258",
+          "chars": 7467
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 1. 10.",
+      "needsReview": false
+    },
+    {
+      "title": "파친코",
+      "author": "이민진",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223742299495",
+          "postTitle": "[독서 노트] 『파친코』, 이민진, 신승미옮김 #소설",
+          "date": "2025. 1. 30.",
+          "url": "https://blog.naver.com/joekang/223742299495",
+          "chars": 2937
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 1. 30.",
+      "needsReview": false
+    },
+    {
+      "title": "저소비생활",
+      "author": "가제노타미",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224063834667",
+          "postTitle": "[독서노트] 저소비생활, 가제노타미 지음 #베스트셀러",
+          "date": "2025. 11. 4.",
+          "url": "https://blog.naver.com/joekang/224063834667",
+          "chars": 3992
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 11. 4.",
+      "needsReview": false
+    },
+    {
+      "title": "렛뎀 이론",
+      "author": "멜 로빈스",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224124652077",
+          "postTitle": "《렛뎀 이론》을 읽고5-4-3-2-1에서 “내버려두자”로, 인생은 그렇게 한 단계씩 가벼워졌다 #독서노트",
+          "date": "2025. 12. 27.",
+          "url": "https://blog.naver.com/joekang/224124652077",
+          "chars": 10254
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 12. 27.",
+      "needsReview": false
+    },
+    {
+      "title": "안녕이라 그랬어",
+      "author": "김애란",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224124073625",
+          "postTitle": "김애란 안녕이라 그랬어 , 그리고 양귀자 다시시작하는 아침 #베스트셀러 #단편소설",
+          "date": "2025. 12. 27.",
+          "url": "https://blog.naver.com/joekang/224124073625",
+          "chars": 3381
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 12. 27.",
+      "needsReview": false
+    },
+    {
+      "title": "넥서스",
+      "author": "유발 하라리",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223845306427",
+          "postTitle": "[독서노트] 유발 하라리 『넥서스』 – AI 시대를 살아가는 한국인을 위한 정보 네트워크의 통찰",
+          "date": "2025. 4. 24.",
+          "url": "https://blog.naver.com/joekang/223845306427",
+          "chars": 2368
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 4. 24.",
+      "needsReview": false
+    },
+    {
+      "title": "오십, 나는 재미있게 살기로 했다",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "223893503587",
+          "postTitle": "[독서노트] 오십, 나는 재미있게 살기로 했다",
+          "date": "2025. 6. 9.",
+          "url": "https://blog.naver.com/joekang/223893503587",
+          "chars": 2061
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 6. 9.",
+      "needsReview": false
+    },
+    {
+      "title": "새로운 질서",
+      "author": "헨리 키신저",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224010043488",
+          "postTitle": "[독서노트] 새로운질서 - AI, 녀석... 인간을 닮을까, 우리가 녀석을 닮을까? (feat. 키신저의 마지막 질문)",
+          "date": "2025. 9. 16.",
+          "url": "https://blog.naver.com/joekang/224010043488",
+          "chars": 10393
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 9. 16.",
+      "needsReview": false
+    },
+    {
+      "title": "긴키 지방의 어느 장소에 대하여",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224013309897",
+          "postTitle": "[독서노트] 긴키 지방의 어느 장소에 대하여 #단편소설 #베스트셀러",
+          "date": "2025. 9. 18.",
+          "url": "https://blog.naver.com/joekang/224013309897",
+          "chars": 1487
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2025. 9. 18.",
+      "needsReview": false
+    },
+    {
+      "title": "주역",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224185253018",
+          "postTitle": "주역(周易), 우주의 이치를 담은 동양 최고의 철학서",
+          "date": "2026. 2. 16.",
+          "url": "https://blog.naver.com/joekang/224185253018",
+          "chars": 4493
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2026. 2. 16.",
+      "needsReview": false
+    },
+    {
+      "title": "오십에 읽는 주역",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224175783385",
+          "postTitle": "&quot;오십에 읽는 주역&quot;을 읽은 오십이 갖는 주역이해",
+          "date": "2026. 2. 8.",
+          "url": "https://blog.naver.com/joekang/224175783385",
+          "chars": 3795
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2026. 2. 8.",
+      "needsReview": false
+    },
+    {
+      "title": "웰컴 홈, 우리집 학교",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224210508325",
+          "postTitle": "칠 남매를 키우며 쓴 책이 베스트셀러가 됐다고? 웰컴 홈, 우리집 학교",
+          "date": "2026. 3. 9.",
+          "url": "https://blog.naver.com/joekang/224210508325",
+          "chars": 2932
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2026. 3. 9.",
+      "needsReview": false
+    },
+    {
+      "title": "2008 글로벌 금융위기",
+      "author": "최혁",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "3% 시크릿",
+      "author": "제이슨 켈리",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "BTS를 철학하다",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "CFO 강의노트",
+      "author": "황이석",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "VALUE 밸류",
+      "author": "팀 콜러",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "가정 교육",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "low",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "구원론",
+      "author": "오정현",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "그때 그렇게 말해서 미안해",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "그릿",
+      "author": "앤절라 더크워스",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "기술경영과 혁신전략",
+      "author": "멜리사 실링",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "길",
+      "author": "옥한흠",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "꿈꾸는 엄마가 기적을 만든다",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "꿈은 스스로 길을 만든다",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "낭만적인 고고학 산책",
+      "author": "C.W. 세람",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "넛지",
+      "author": "리처드 탈러",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "low",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "다윗의 영광",
+      "author": "김서택",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "도전 무한지식",
+      "author": "정재승",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "리스크와 보험",
+      "author": "최정호",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063201",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "마음, 감성의 눈을 떠라",
+      "author": "최영희",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "마흔, 논어를 읽어야 할 시간",
+      "author": "신정근",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "만화로 읽는 천로역정",
+      "author": "존 번연",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "메시지",
+      "author": "유진 피터슨",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063241",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "모모",
+      "author": "미하엘 엔데",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "물류관리사 한권으로 끝장",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063201",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "미스비헤이빙",
+      "author": "리처드 탈러",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "미움받을 용기",
+      "author": "기시미 이치로",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "보살핌의 발견",
+      "author": "사사키 호노",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "불황의 경제학",
+      "author": "폴 크루그먼",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "비즈니스 블록체인",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "서비스 운영관리",
+      "author": "김수욱",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063209",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "성경의 탄생",
+      "author": "존 드레인",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "세계 교회사 걷기",
+      "author": "임경근",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "손에 잡히는 성경 이야기",
+      "author": "콜린 스미스",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "숫자로 경영하라 2",
+      "author": "최종학",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "숫자로 경영하라 3",
+      "author": "최종학",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "애플 인 차이나",
+      "author": "패트릭 맥기",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "앵무새 죽이기",
+      "author": "하퍼 리",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "어떤 사람이 최고의 자리에 오르는가",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "어떻게 원하는 것을 얻는가",
+      "author": "스튜어트 다이아몬드",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "연금술사",
+      "author": "파울로 코엘료",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "온전함을 사모합니다",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "우리는 주님의 몸 된 교회입니다",
+      "author": "오정현",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "원더풀 카운슬러",
+      "author": "한성렬",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "위대한 기업은 다 어디로 갔을까",
+      "author": "짐 콜린스",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "이만하면 괜찮은 부모",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "일터 신학",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "잘되는 나",
+      "author": "조엘 오스틴",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "장영희의 영미시 산책 생일",
+      "author": "장영희",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "정재승과 진중권의 크로스",
+      "author": "정재승",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "low",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "정재승의 과학 콘서트",
+      "author": "정재승",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "조직신학",
+      "author": "스탠리 그렌츠",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "죽음이란 무엇인가",
+      "author": "셸리 케이건",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "철학의 위안",
+      "author": "알랭 드 보통",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "켈로그 경영대학원 마케팅 바이블",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063231",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "콘텐츠 머니타이제이션",
+      "author": "김용환",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "투자에 대한 생각",
+      "author": "하워드 막스",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063235",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "트렌드 코리아 2014",
+      "author": "김난도",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "트렌드 코리아 2016",
+      "author": "김난도",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "팀 오브 팀스",
+      "author": "스탠리 맥크리스털",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "팀 켈러의 기도",
+      "author": "팀 켈러",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063317",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "팀 켈러의 인생 질문",
+      "author": "팀 켈러",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063158",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "퍼펙트 체인지",
+      "author": "송재용",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "플랫폼 레볼루션",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063216",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "피터 드러커의 마지막 통찰",
+      "author": "피터 드러커",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "하드씽",
+      "author": "벤 호로위츠",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "한수민의 커피 바이블",
+      "author": "한수민",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063249",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "해리포터와 불사조 기사단",
+      "author": "J.K. 롤링",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "해리포터와 저주받은 아이",
+      "author": "J.K. 롤링",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "해리포터와 혼혈 왕자",
+      "author": "J.K. 롤링",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063244",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "행복의 품격",
+      "author": "고영건",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063222",
+          "confidence": "high",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    },
+    {
+      "title": "헤밍웨이를 따라 파리를 걷다",
+      "author": null,
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063206",
+          "confidence": "medium",
+          "type": "book"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": true
+    },
+    {
+      "title": "현대투자론",
+      "author": "박정식",
+      "sources": [
+        "photo"
+      ],
+      "reviews": [],
+      "photos": [
+        {
+          "photo": "20260918_063226",
+          "confidence": "high",
+          "type": "textbook"
+        }
+      ],
+      "firstReadDate": null,
+      "needsReview": false
+    }
+  ],
+  "skipped": [
+    {
+      "title": "잠실나루역 서울책보고에서 우연히 만난 문형배 재판관 북콘서트, 그리고 쓸데없는 일의 가치",
+      "reason": "북콘서트 참관 후기"
+    },
+    {
+      "title": "[독서노트] 오십, 다시 사서삼경을 펼치며: 주역에서 찾는 인생의 지도",
+      "reason": "사서삼경 전반에 대한 단상"
+    },
+    {
+      "title": "12월26일 교보문고 베스트셀러를 둘러보다 #서점",
+      "reason": "교보문고 베스트셀러 구경 후기"
+    },
+    {
+      "title": "햄버거를 사랑하는 빌 게이츠, 그의 인생을 바꾼 책 3권은? #유퀴즈 #한국방문",
+      "reason": "빌 게이츠가 추천한 책 3권 소개"
+    },
+    {
+      "title": "한국은 정말 민주주의 국가인가? 삼프로TV #더피플",
+      "reason": "유튜브 대담 소개"
+    },
+    {
+      "title": "106세 철학자 김형석 교수님의 강연에서",
+      "reason": "김형석 교수 강연 후기"
+    },
+    {
+      "title": "베스트셀러는 어떻게 만들어 지는가? #교보문고 #주간베스트100 #베르나르",
+      "reason": "베스트셀러 집계 방식에 대한 글"
+    },
+    {
+      "title": "1년에 책 한권도 읽지 않는 당신에게... 교보문고가 박물관으로 탈바꿈",
+      "reason": "독서율 통계 뉴스"
+    },
+    {
+      "title": "개념의 반대편: N 잡러 vs. 원씽, 나는 무엇을 선택할 것인가?",
+      "reason": "N잡러와 원씽 개념 비교 에세이"
+    },
+    {
+      "title": "세계를 변화시킨 책들: 역사상 가장 많이 팔린 책 Top 10",
+      "reason": "역사상 많이 팔린 책 순위 소개"
+    },
+    {
+      "title": "인생에서 가장 중요한 질문, 마크 맨슨 #유투버 #한국여행기",
+      "reason": "마크 맨슨 아티클 번역 소개"
+    },
+    {
+      "title": "책읽기의 방식. 젊은이 vs 중장년",
+      "reason": "세대별 책읽기 방식에 대한 에세이"
+    },
+    {
+      "title": "‘하얀 전쟁’ 소설가 안정효작가님 별세 소식에...",
+      "reason": "안정효 작가 별세 소식"
+    },
+    {
+      "title": "빌게이츠 인생 책 다섯권 #빌게이츠 #책추천",
+      "reason": "빌 게이츠 추천 도서 5권 소개"
+    },
+    {
+      "title": "5060을 위한 책 추천에 대하여 #책추천 #5060",
+      "reason": "5060 세대 책 추천에 대한 단상"
+    },
+    {
+      "title": "50대가 준비하는 은퇴준비 - 1인기업가  #1인기업가 #은퇴준비",
+      "reason": "1인기업가 은퇴준비에 대한 에세이"
+    },
+    {
+      "title": "소통 왜 어려운가? 베르나르의 시도 #베르나르 #대화 #시도 #상상력사전",
+      "reason": "베르나르 작품을 인용한 소통 에세이"
+    },
+    {
+      "title": "2019년 7월21일 일요일 중고서점의 획득 - 움베르토 에코",
+      "reason": "중고서점 방문기"
+    },
+    {
+      "title": "[공유] 2019 서울국제도서전 민음사 부스, 129개의 페널에 담아 선보이는 아름다움의 비밀",
+      "reason": "서울국제도서전 민음사 부스 공유글"
+    },
+    {
+      "title": "아들과 함께한 7월의 국립중앙도서관 - 다섯권의 책",
+      "reason": "도서관에서 읽은 다섯 권 소개 — 복수 도서"
+    },
+    {
+      "title": "2016년 읽은 책 목록 - 국립중앙도서관에서",
+      "reason": "2016년 읽은 책 목록 — 복수 도서"
+    },
+    {
+      "title": "[독서노트] 생명과학 관련 몇권의 책_손에잡히는 바이오토크, 렉처 사이언스 - KAOS 기원 등",
+      "reason": "생명과학 관련 여러 권 소개 — 복수 도서"
+    },
+    {
+      "title": "북경대 총장의 10가지 조언_인생가이드",
+      "reason": "북경대 총장 어록 소개"
+    },
+    {
+      "title": "한국생활 적응기_교보문고(광화문)",
+      "reason": "교보문고 방문기"
+    },
+    {
+      "title": "인당 100권씩, 우리가족 400권 책 읽기",
+      "reason": "가족 독서 목표에 대한 글"
+    },
+    {
+      "title": "베르나르 베르베르를 또 ! 읽으며 시작하는 2014년 ",
+      "reason": "베르나르 베르베르 작품 전반에 대한 글"
+    },
+    {
+      "title": "북경대학광화관리학원 - EMBA 공개강의 경청 (2012.6.10)",
+      "reason": "북경대 EMBA 공개강의 참관기"
+    },
+    {
+      "title": "중국전문가란 어떤 의미인가?",
+      "reason": "중국전문가의 의미에 대한 단상"
+    },
+    {
+      "title": "Three snapshots of Chinese innovation",
+      "reason": "맥킨지 영문 아티클 스크랩"
+    },
+    {
+      "title": "A CEO’s guide to innovation in China ",
+      "reason": "맥킨지 영문 아티클 스크랩"
+    },
+    {
+      "title": "긍정적사고와 부정적사고의 힘",
+      "reason": "긍정적 사고 실험 소개"
+    },
+    {
+      "title": "정치사에 남을 명연설’ 찬사 쏟아진 오바마 필라델피아 연설 全文 ",
+      "reason": "오바마 연설 전문 스크랩"
+    },
+    {
+      "title": "[명연설] Martin Luther King - I have a dream",
+      "reason": "마틴 루터 킹 연설 스크랩"
+    },
+    {
+      "title": "부모가 영어책 읽어주니 학원보다 ‘Goo~d’",
+      "reason": "영어교육 관련 기사 스크랩"
+    },
+    {
+      "title": "2008년 새해를 맞이하며",
+      "reason": "새해 다짐 글"
+    },
+    {
+      "title": "LG CNS - 신재생에너지 사업 성장동력",
+      "reason": "기업 뉴스 스크랩"
+    },
+    {
+      "title": "세계를 홀린 해리포터 마법 10년 ",
+      "reason": "해리포터 관련 신문기사 스크랩"
+    },
+    {
+      "title": "MIT Open Course Ware ★",
+      "reason": "MIT 공개강의 사이트 소개"
+    },
+    {
+      "title": "보돌이의 책 - 숲",
+      "reason": "자녀가 직접 만든 그림책 소개"
+    },
+    {
+      "title": "[보돌출판] 고사성어 - 작심삼일",
+      "reason": "자녀가 직접 만든 고사성어 책 소개"
+    }
+  ]
+}
