@@ -62,6 +62,44 @@
     .home { background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(16px) saturate(.85); }
   }
   .home.leaving { opacity: 0; }
+  /* 첫 화면 위쪽은 창: 뒤에서 세워지는 실제 서가(고른 도서관 디자인)가 그대로 보인다 */
+  .home.has-window { background: transparent; backdrop-filter: none; overflow-x: hidden; }
+  .home.has-window .home-inner { background: var(--bg); box-shadow: 0 -18px 40px rgba(0,0,0,.25); border-radius: 6px 6px 0 0; }
+  .home-window { position: relative; height: min(52vh, 460px); display: flex; align-items: flex-end; gap: 16px; max-width: 1040px; margin: 0 auto; padding: 0 24px 22px; }
+  .home-window::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); z-index: -1; pointer-events: none; background: linear-gradient(180deg, transparent 35%, rgba(12, 8, 4, .7)); }
+  .home-window .cap { margin: 0; color: #f4ead6; text-shadow: 0 1px 12px rgba(0,0,0,.7); }
+  .home-window .cap small { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; opacity: .85; }
+  .home-window .cap b { display: block; font-family: var(--font-display); font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin: 6px 0 4px; }
+  .home-window .cap span { font-size: 13px; opacity: .9; }
+  .home-window .win-btns { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  .home-window .win-btns button { font: 700 13px var(--font-display); padding: 9px 14px; border-radius: 2px; border: 1px solid rgba(244,234,214,.6); background: rgba(20,14,10,.5); color: #f4ead6; cursor: pointer; }
+  .home-window .win-btns button:hover { background: rgba(20,14,10,.75); }
+  /* 첫 화면에서는 머리띠와 왼쪽 메뉴를 걷어 서가가 창 가득 보이게 한다 */
+  body.at-home .topbar, body.at-home .side { display: none !important; }
+  body.at-home .rail, body.at-home .walk { visibility: hidden; }
+
+  /* 도서관 조망도: 서고(방) 배치를 위에서 내려다본 평면. 누르면 그 서고 앞으로 간다 */
+  .home-plan { margin: 4px 0 30px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .plan-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; margin-bottom: 12px; }
+  .plan-head h2 { margin: 0; font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+  .plan-head h2 span { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; margin-left: 6px; }
+  .plan-head p { margin: 0; font-size: 12px; color: var(--muted); }
+  .plan-wrap { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 10px; }
+  #home-plan { display: block; width: 100%; height: auto; }
+  #home-plan .wall { fill: none; stroke: var(--ink); stroke-width: 6; stroke-linejoin: round; }
+  #home-plan .floor { fill: var(--surface-2); }
+  #home-plan .grid { stroke: var(--line); stroke-width: 1; }
+  #home-plan .lbl { font-family: var(--font-display); font-weight: 700; fill: var(--ink); text-anchor: middle; pointer-events: none; }
+  #home-plan .sub { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; fill: var(--muted); text-anchor: middle; pointer-events: none; }
+  #home-plan .plan-room, #home-plan .plan-hall { cursor: pointer; outline: none; }
+  #home-plan .plan-room .rm { stroke-width: 2; transition: fill-opacity .2s, stroke-width .2s; }
+  #home-plan .plan-room:hover .rm, #home-plan .plan-room:focus-visible .rm { fill-opacity: .62; stroke-width: 4; }
+  #home-plan .plan-hall .rot { fill: var(--surface); stroke: var(--brass); stroke-width: 3; transition: fill .2s; }
+  #home-plan .plan-hall:hover .rot, #home-plan .plan-hall:focus-visible .rot { fill: color-mix(in srgb, var(--brass) 18%, var(--surface)); }
+  .plan-list { display: none; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .plan-list button { display: inline-flex; align-items: center; gap: 6px; font: 13px var(--font-body); padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); cursor: pointer; }
+  .plan-list button i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .plan-list button small { color: var(--muted); }
   .home-inner { max-width: 1040px; margin: 0 auto; padding: 34px 24px 44px; }
 
   /* 인사말: 왼쪽 그림, 오른쪽 글 */
@@ -414,6 +452,10 @@
 
     .home-inner { padding: 20px 16px max(30px, env(safe-area-inset-bottom)); }
     .home-hero { grid-template-columns: 1fr; gap: 18px; }
+    .home-window { height: 40vh; padding: 0 16px 16px; flex-wrap: wrap; align-content: flex-end; gap: 10px; }
+    .home-window .win-btns { margin-left: 0; justify-content: flex-start; }
+    #home-plan .plan-room .lbl, #home-plan .plan-room .sub, #home-plan .plan-room .tag { display: none; }
+    .plan-list { display: flex; }
     .home-art { max-width: 300px; margin: 0 auto; }
     .home-facts { grid-template-columns: 1fr 1fr; gap: 16px 0; padding: 16px 0; }
     .home-facts div:nth-child(odd) { border-left: none; }
@@ -441,7 +483,29 @@
   }
 </style>
 
-<section class="home" id="home" aria-labelledby="home-title">
+<!-- Joyhouse 돌아가기 띠: 휴대폰에서 화면 맨 위에 늘 붙어 있다 -->
+<style>
+#jh-bar { display: none; }
+@media (max-width: 760px) {
+  :root { --jh: 40px; }
+  #jh-bar { display: flex; align-items: center; gap: 10px; position: fixed; top: 0; left: 0; right: 0; z-index: 2147483000; box-sizing: content-box; height: 40px; padding: env(safe-area-inset-top, 0px) 14px 0; background: #14213d; color: #f4ead6; font: 600 13.5px/1 "Noto Sans KR", system-ui, -apple-system, sans-serif; box-shadow: 0 2px 10px rgba(0, 0, 0, .22); }
+  #jh-bar a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; padding: 10px 0; }
+  #jh-bar span { margin-left: auto; font-weight: 400; font-size: 12px; color: #c9b88f; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  body { padding-top: calc(var(--jh) + env(safe-area-inset-top, 0px)); }
+  body { box-sizing: border-box; }
+  .home { top: calc(var(--jh) + env(safe-area-inset-top, 0px)); }
+  .topbar { padding-top: 8px; }
+}
+</style>
+<nav id="jh-bar" aria-label="Joyhouse로 돌아가기"><a href="https://holyjoekang.github.io/joyhouse/"><svg width="18" height="18" viewBox="0 0 40 40" aria-hidden="true"><path d="M3 17 Q20 4 37 17 Q30 15 20 9 Q10 15 3 17Z" fill="#e6cf9f"/><rect x="8" y="17" width="24" height="17" rx="1" fill="none" stroke="#e6cf9f" stroke-width="2.5"/></svg>← Joyhouse</a><span>나의 서재</span></nav>
+<section class="home has-window" id="home" aria-labelledby="home-title">
+  <div class="home-window">
+    <p class="cap"><small>지금 열람실 · Now open</small><b id="win-name">런던 도서관</b><span id="win-desc"></span></p>
+    <div class="win-btns">
+      <button id="win-enter">이 모습 그대로 들어가기</button>
+      <button id="win-next">다른 디자인 보기 ›</button>
+    </div>
+  </div>
   <div class="home-inner">
     <div class="home-hero">
       <figure class="home-art">
@@ -462,6 +526,15 @@
     </div>
 
     <dl class="home-facts" id="home-facts"></dl>
+
+    <section class="home-plan" aria-labelledby="plan-title">
+      <div class="plan-head">
+        <h2 id="plan-title">도서관 조망도 <span>Floor Plan</span></h2>
+        <p id="plan-note">서고를 누르면 그 서고 앞으로 바로 갑니다. 가운데 열람실을 누르면 처음부터 둘러봅니다.</p>
+      </div>
+      <div class="plan-wrap"><svg id="home-plan" viewBox="0 0 1000 600" role="group" aria-label="도서관 조망도 — 서고를 누르면 그 서고로 이동"></svg></div>
+      <div class="plan-list" id="plan-list"></div>
+    </section>
 
     <div class="home-cols">
       <section>
@@ -1775,6 +1848,7 @@
     renderRail();
     renderRooms();
     renderCount();
+    if (planEl && home && !home.hidden) renderPlan();
     applyQuery();
     var sel = state.selected && books.filter(function (b) { return b.id === state.selected.id; })[0];
     state.selected = sel || null;
@@ -2531,9 +2605,12 @@
      도서관 홈페이지처럼 인사말과 안내를 먼저 보여 주고, 들어가기를 누르면 열람실로 들어간다.
      제목(나의 서재)을 누르면 다시 이 화면으로 나온다. */
   var home = document.getElementById("home");
+  if (!home.hidden) document.body.classList.add("at-home");
   function homeOpen() { return !home.hidden; }
   function showHome() {
     renderHomeLibs();
+    renderPlan();
+    document.body.classList.add("at-home");
     home.hidden = false; home.classList.remove("leaving"); home.scrollTop = 0;
     held = {};
     hideTip();
@@ -2541,6 +2618,7 @@
   function enterLibrary(view) {
     if (!homeOpen()) { setView(view); return; }
     setView(view);
+    document.body.classList.remove("at-home");
     if (reduceMotion) home.hidden = true;
     else {
       home.classList.add("leaving");
@@ -2551,6 +2629,9 @@
   // 도서관 여섯 곳의 섬네일. 누르면 그 디자인으로 바꾸고 바로 들어간다.
   var homeLibs = document.getElementById("home-libs");
   function renderHomeLibs() {
+    var cur = THEMES[cfg.theme] || THEMES.london;
+    document.getElementById("win-name").textContent = cur.name + " · " + cur.country;
+    document.getElementById("win-desc").textContent = cur.desc;
     homeLibs.innerHTML = Object.keys(THEMES).map(function (id) {
       var th = THEMES[id];
       return '<button class="lib-card" data-lib="' + id + '"' + (id === cfg.theme ? ' aria-current="true"' : "") +
@@ -2566,6 +2647,74 @@
     enterLibrary("shelf");
   });
   renderHomeLibs();
+  document.getElementById("win-enter").addEventListener("click", function () { enterLibrary("shelf"); });
+  document.getElementById("win-next").addEventListener("click", function () {
+    var ids = Object.keys(THEMES), i = ids.indexOf(cfg.theme);
+    applySetting("theme", ids[(i + 1) % ids.length]);
+    renderHomeLibs();
+  });
+
+  // 도서관 조망도: 양 옆 날개와 위쪽 줄에 서고를 시계 방향으로 두르고, 가운데에 둥근 열람실, 아래에 입구.
+  var planEl = document.getElementById("home-plan"), planList = document.getElementById("plan-list");
+  function renderPlan() {
+    var ms = state.markers || [];
+    if (!planEl || !ms.length) return;
+    var n = ms.length, side = n >= 4 ? Math.floor(n / 3) : 0, top = n - side * 2;
+    var X0 = 60, X1 = 940, Y0 = 60, TOPH = 140, WING = 175, GAP = 14, YB = 520;
+    var left = [], upper = [], right = [];
+    var tw = (X1 - X0 - GAP * (top - 1)) / top;
+    for (var i = 0; i < top; i++) upper.push({ x: X0 + i * (tw + GAP), y: Y0, w: tw, h: TOPH, v: false });
+    var y1 = Y0 + TOPH + GAP, sh = side ? (YB - y1 - GAP * (side - 1)) / side : 0;
+    for (var k = 0; k < side; k++) left.push({ x: X0, y: YB - (k + 1) * sh - k * GAP, w: WING, h: sh, v: true });
+    for (var j = 0; j < side; j++) right.push({ x: X1 - WING, y: y1 + j * (sh + GAP), w: WING, h: sh, v: true });
+    var cells = left.concat(upper, right);
+    var h = '<rect class="floor" x="40" y="40" width="920" height="500" rx="4"/>';
+    for (var gx = 80; gx < 960; gx += 40) h += '<path class="grid" d="M' + gx + ' 40V540"/>';
+    ms.forEach(function (m, idx) {
+      var c = cells[idx], col = m.col || "#8F6B26";
+      var shelves = Math.max(2, Math.min(7, m.bays || 3)), lines = "";
+      for (var s = 1; s <= shelves; s++) {
+        if (c.v) { var lx = c.x + c.w * s / (shelves + 1); lines += "M" + lx.toFixed(1) + " " + (c.y + 12) + "V" + (c.y + c.h - 12); }
+        else { var ly = c.y + c.h * s / (shelves + 1); lines += "M" + (c.x + 12) + " " + ly.toFixed(1) + "H" + (c.x + c.w - 12); }
+      }
+      var fs = Math.max(11, Math.min(19, (c.w - 22) / Math.max(2, m.label.length) * 1.1));
+      var tagW = Math.min(c.w - 10, fs * m.label.length * 0.95 + 18), cx = c.x + c.w / 2, cy = c.y + c.h / 2;
+      h += '<g class="plan-room" role="button" tabindex="0" data-cat="' + esc(m.label) + '" aria-label="' + esc(m.label) + " 서고, " + m.count + '권">' +
+        "<title>" + esc(m.label) + " · " + m.count + "권</title>" +
+        '<rect class="rm" x="' + c.x.toFixed(1) + '" y="' + c.y.toFixed(1) + '" width="' + c.w.toFixed(1) + '" height="' + c.h.toFixed(1) + '" fill="' + col + '" fill-opacity=".32" stroke="' + col + '"/>' +
+        '<path d="' + lines + '" stroke="' + col + '" stroke-width="5" stroke-linecap="round" opacity=".55"/>' +
+        '<rect class="tag" x="' + (cx - tagW / 2).toFixed(1) + '" y="' + (cy - fs - 4).toFixed(1) + '" width="' + tagW.toFixed(1) + '" height="' + (fs + 26).toFixed(1) + '" rx="3" fill="var(--surface)" opacity=".9"/>' +
+        '<text class="lbl" x="' + cx.toFixed(1) + '" y="' + (cy + 1).toFixed(1) + '" font-size="' + fs.toFixed(1) + '">' + esc(m.label) + "</text>" +
+        '<text class="sub" x="' + cx.toFixed(1) + '" y="' + (cy + 17).toFixed(1) + '">' + m.count + " VOL</text></g>";
+    });
+    h += '<g class="plan-hall" role="button" tabindex="0" aria-label="열람실에서 처음부터 둘러보기"><title>열람실 · 처음부터 둘러보기</title>' +
+      '<circle class="rot" cx="500" cy="372" r="118"/><circle cx="500" cy="372" r="74" fill="none" stroke="var(--brass)" stroke-width="10" opacity=".45"/>' +
+      '<circle cx="500" cy="372" r="34" fill="var(--brass)" opacity=".22"/>' +
+      '<text class="lbl" x="500" y="368" font-size="20">열람실</text><text class="sub" x="500" y="388">READING ROOM</text></g>';
+    h += '<path class="wall" d="M460 540H40V40H960V540H540"/>' +
+      '<path d="M470 540v26h60v-26" fill="none" stroke="var(--brass)" stroke-width="3"/>' +
+      '<text class="sub" x="500" y="588">입구 · ENTRANCE</text>' +
+      '<path d="M500 536v-44" stroke="var(--brass)" stroke-width="2" stroke-dasharray="6 6"/>';
+    planEl.innerHTML = h;
+    var grp = OPTIONS.filter(function (o) { return o.key === "group"; })[0].opts.filter(function (o) { return o[0] === cfg.group; })[0];
+    document.getElementById("plan-note").textContent = "지금은 '" + (grp ? grp[1] : "분류") + "' 기준으로 서고 " + n + "곳. 서고를 누르면 그 서고 앞으로 바로 갑니다.";
+    planList.innerHTML = ms.map(function (m) {
+      return '<button data-cat="' + esc(m.label) + '" style="--c:' + (m.col || "#8F6B26") + '"><i></i>' + esc(m.label) + " <small>" + m.count + "</small></button>";
+    }).join("");
+  }
+  function planHit(ev) {
+    var room = ev.target.closest("[data-cat]");
+    if (!room && !ev.target.closest(".plan-hall")) return;
+    enterLibrary("shelf");
+    if (room) enterRoom(room.dataset.cat);
+  }
+  planEl.addEventListener("click", planHit);
+  planList.addEventListener("click", planHit);
+  planEl.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    ev.preventDefault(); planHit(ev);
+  });
+  renderPlan();
   document.getElementById("home-enter").addEventListener("click", function () { enterLibrary("shelf"); });
   document.getElementById("home-list").addEventListener("click", function () { enterLibrary("list"); });
   document.getElementById("brand-home").addEventListener("click", showHome);
