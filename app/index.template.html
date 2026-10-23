@@ -867,8 +867,10 @@
   var STATES = {
     b: ["기록만 남은 책", "#8A3330"], p: ["집에 있는 책", "#7E7A66"], bp: ["기록과 실물 둘 다", "#C9A04A"],
     m: ["기억으로 넣은 책", "#4A6B8A"], i: ["직접 추가한 책", "#4F7A55"],
-    e: ["전자책으로 읽은 책", "#3E6E8E"], be: ["기록과 전자책", "#6E4F8A"], ep: ["전자책과 실물", "#5B7F86"], bep: ["기록과 실물 둘 다", "#C9A04A"]
+    r: ["읽은 책", "#3E6E8E"]
   };
+  // 전자책(e)은 화면에 따로 드러내지 않는다: 남은 방식은 e 를 빼고 고르고, 전자책만 있으면 '읽은 책'
+  function stateOf(s) { return s.replace("e", "") || "r"; }
   var STATE_ORDER = Object.keys(STATES).map(function (s) { return STATES[s][0]; });
   var ERA_COLS = ["#6B4A2F", "#4E5F6B", "#5F4D76", "#42624F", "#8C5C2C", "#33586B", "#7E2F3C", "#585B52"];
   var GROUPS = {
@@ -883,7 +885,7 @@
       color: function (k) { return ERA_COLS[Math.floor(hash(k) * ERA_COLS.length)]; }
     },
     state: {
-      label: "남은 방식", of: function (b) { return (STATES[b.s] || STATES.b)[0]; },
+      label: "남은 방식", of: function (b) { return (STATES[stateOf(b.s)] || STATES.b)[0]; },
       sort: function (keys) { return keys.sort(function (a, b) { return STATE_ORDER.indexOf(a) - STATE_ORDER.indexOf(b); }); },
       color: function (k) {
         var s = Object.keys(STATES).filter(function (x) { return STATES[x][0] === k; })[0];
@@ -2393,10 +2395,10 @@
       h += "</ul>";
     }
     var note = b.mine ? "기억을 되짚어 꽂아 넣은 책입니다."
-      : b.s === "bp" ? "독후감도 남아 있고 실물도 집 책장에 있는 책입니다."
-      : b.s === "i" ? "텍스트로 직접 추가한 책입니다."
-      : b.s === "b" ? "블로그에 기록만 남아 있습니다. 실물은 더 이상 갖고 있지 않습니다."
-      : b.s === "e" ? "교보문고 전자도서관에서 빌려 읽은 " + (b.eb ? b.eb.k : "전자책") + "입니다." + (b.eb ? " 마지막 대출 " + b.eb.d + "." : "")
+      : stateOf(b.s) === "bp" ? "독후감도 남아 있고 실물도 집 책장에 있는 책입니다."
+      : stateOf(b.s) === "i" ? "텍스트로 직접 추가한 책입니다."
+      : stateOf(b.s) === "b" ? "블로그에 기록만 남아 있습니다. 실물은 더 이상 갖고 있지 않습니다."
+      : b.s === "e" ? "읽은 책입니다." + (b.eb ? " 마지막으로 읽은 때 " + b.eb.d + "." : "")
       : "집 책장 사진에서 찾은 책입니다. 아직 독후감은 없습니다.";
     if (b.memo) note += " " + b.memo + (/[.다]$/.test(b.memo) ? "" : ".");
     if (b.n) note += b.kind === "author" ? " 저자만 기억나고 어떤 책이었는지는 아직 모릅니다. 떠오르면 제목을 고쳐 주세요."
@@ -2539,7 +2541,7 @@
     html += rowHTML("학창 시절", "시기 없음", mine.filter(function (b) { return PERIODS.indexOf(b.period) < 0; }));
     var longest = books.filter(function (b) { return b.chars; }).slice().sort(function (a, b) { return b.chars - a.chars; }).slice(0, 24);
     html += rowHTML("길게 쓴 독후감", "", longest);
-    var both = books.filter(function (b) { return b.s === "bp"; });
+    var both = books.filter(function (b) { return stateOf(b.s) === "bp"; });
     html += rowHTML("독후감도 실물도 남은 책", "", both);
     var warn = books.filter(function (b) { return b.n; });
     html += rowHTML("확인이 필요한 책", "사진에서 읽어낸 제목 · 저자나 분야만 기억나는 책", warn);
@@ -2568,7 +2570,7 @@
         var col = CATS[b.c] || CATS["그 밖의 책"];
         html += '<button class="card" data-id="' + b.id + '"><span class="stripe" style="background:' + col[0] + '"></span>' +
           '<span><span class="t">' + esc(b.t) + '</span><span class="a">' + esc(b.a || "저자 미상") + "</span>" +
-          '<span class="y">' + esc(b.c) + " · " + (b.mine ? "직접 넣음" : b.s === "bp" ? "독후감 + 실물" : b.s === "b" ? "독후감" : b.s.indexOf("e") >= 0 ? "전자책" : "집 책장") +
+          '<span class="y">' + esc(b.c) + " · " + (b.mine ? "직접 넣음" : stateOf(b.s) === "bp" ? "독후감 + 실물" : stateOf(b.s) === "b" ? "독후감" : b.s === "e" ? "읽은 책" : "집 책장") +
           "</span></span></button>";
       });
       html += "</div></section>";
