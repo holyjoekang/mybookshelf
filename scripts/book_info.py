@@ -21,7 +21,10 @@ MEMORY = Path("data/memory_books.json")
 
 
 def parse_line(line: str) -> tuple[str, str | None] | None:
-    title, _, author = line.lstrip("\ufeff").partition("/")  # 메모장·PowerShell이 붙이는 BOM 제거
+    line = line.lstrip("\ufeff")  # 메모장·PowerShell이 붙이는 BOM 제거
+    # '제목 / 저자'. 『12 1/2 …』처럼 제목 안의 빗금(뒤가 숫자)은 나누지 않는다
+    m = re.search(r"\s+/\s+", line) or re.search(r"/(?!\d)", line)
+    title, author = (line[:m.start()], line[m.end():]) if m else (line, "")
     title, author = title.strip(), author.strip() or None
     return (title, author) if title else None
 
