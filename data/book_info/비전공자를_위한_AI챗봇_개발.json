@@ -1,0 +1,15 @@
+{
+  "query": "비전공자를 위한 AI챗봇 개발",
+  "title": "비전공자를 위한 AI챗봇 개발",
+  "authors": [
+    "문세환"
+  ],
+  "translators": [],
+  "publisher": "작가와",
+  "pubdate": "2025-02-10",
+  "isbn": "9791142114465",
+  "contents": "AI와 Python을 처음 접하는 분들도 부담 없이 따라 하며 챗봇을 만들 수 있도록 쉽게 구성하였습니다. Python 기초부터 Google Colab 활용법, 기본 챗봇 제작, Gradio UI를 이용한 웹 배포까지 단계별로 설명하며, 코딩의 즐거움을 느낄 수 있도록 했습니다.",
+  "thumbnail": "https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F6839473%3Ftimestamp%3D20250221152856",
+  "url": "https://search.daum.net/search?w=bookpage&bookId=6839473&q=%EB%B9%84%EC%A0%84%EA%B3%B5%EC%9E%90%EB%A5%BC+%EC%9C%84%ED%95%9C+AI%EC%B1%97%EB%B4%87+%EA%B0%9C%EB%B0%9C",
+  "cover": "비전공자를_위한_AI챗봇_개발.jpg"
+}
