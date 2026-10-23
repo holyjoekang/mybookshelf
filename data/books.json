@@ -2384,6 +2384,44 @@
       "needsReview": false
     },
     {
+      "title": "빨강의 자서전",
+      "author": "앤 카슨",
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224449411293",
+          "postTitle": "[독서노트]노벨문학상이 다시 궁금해졌다, 앤 카슨의 『빨강의 자서전』 #독서노트 #노벨문학상",
+          "date": "2026. 10. 21.",
+          "url": "https://blog.naver.com/joekang/224449411293",
+          "chars": 3447
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2026. 10. 21.",
+      "needsReview": false
+    },
+    {
+      "title": "미라클 모닝 After 50",
+      "author": null,
+      "sources": [
+        "blog"
+      ],
+      "reviews": [
+        {
+          "logNo": "224435939040",
+          "postTitle": "[독서노트] 미라클 모닝 After 50 #자기계발 #50플러스",
+          "date": "2026. 10. 9.",
+          "url": "https://blog.naver.com/joekang/224435939040",
+          "chars": 4772
+        }
+      ],
+      "photos": [],
+      "firstReadDate": "2026. 10. 9.",
+      "needsReview": false
+    },
+    {
       "title": "주역",
       "author": null,
       "sources": [

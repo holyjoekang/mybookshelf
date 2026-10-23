@@ -1,13 +1,12 @@
-"""data/books.json을 앱에 넣을 수 있게 압축해 index.html을 만든다.
+"""data/books.json을 앱이 읽는 파일로 만든다(동적 사이트).
 
-app/index.template.html 안의 /*__BOOKS__*/ 자리에 책 데이터를 끼워 넣는다.
-데이터를 파일로 따로 두면 아티팩트 CSP가 fetch를 막아 읽지 못하므로 인라인으로 박는다.
+앱(app/index.html)은 시작할 때 data/library.json 을 fetch 하고, 표지는 covers/<id>.jpg, 그림은 img/*.webp 를 읽는다.
 
-사용법: python scripts/build_app.py
-결과: app/index.html
+사용법: python scripts/build_app.py   (보통은 scripts/update_site.py 가 부른다)
+결과: app/index.html · app/data/library.json · app/covers/*.jpg
 """
 
-import base64
+import hashlib
 import io
 import json
 import re
@@ -27,6 +26,8 @@ IDS = Path("data/book_ids.json")
 TEMPLATE = Path("app/index.template.html")
 IMG = Path("app/img")           # 첫 화면 그림(scripts/crop_home_images.py가 만든다)
 OUT = Path("app/index.html")
+LIBRARY = Path("app/data/library.json")
+COVERS = Path("app/covers")
 
 
 def year_of(date: str | None) -> int | None:
@@ -37,7 +38,7 @@ def year_of(date: str | None) -> int | None:
 
 
 def book_info(title: str) -> dict:
-    """scripts/book_info.py가 받아 둔 표지·소개. 표지는 CSP 때문에 data URI로 박는다."""
+    """scripts/book_info.py가 받아 둔 표지·소개. 표지는 id가 정해진 뒤 covers/<id>.jpg 로 쓴다."""
     path = INFO / f"{slug(title)}.json"
     if not path.exists():
         return {}
@@ -45,25 +46,18 @@ def book_info(title: str) -> dict:
     entry = {"pb": info["publisher"] or None, "ds": info["contents"] or None,
              "au": (info["authors"] or [None])[0]}
     if info.get("cover") and (INFO / info["cover"]).exists():
-        with Image.open(INFO / info["cover"]) as im:
-            buf = io.BytesIO()
-            im.convert("RGB").save(buf, "JPEG", quality=72, optimize=True)
-        entry["cv"] = "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
+        entry["cvsrc"] = str(INFO / info["cover"])
     return {k: v for k, v in entry.items() if v}
 
 
 def inline_images(html: str) -> tuple[str, int]:
-    """템플릿의 __IMG_이름__ 자리에 app/img/이름.webp를 data URI로 박는다.
-
-    표지와 같은 이유(아티팩트 CSP가 파일 읽기를 막는다)로 그림도 파일로 두지 않고 안에 넣는다.
-    """
+    """템플릿의 __IMG_이름__ 자리를 app/img/이름.webp 를 가리키는 상대 경로로 바꾼다."""
     used = 0
     for path in sorted(IMG.glob("*.webp")):
         token = "__IMG_" + path.stem.replace("-", "_") + "__"
         if token not in html:
             continue
-        uri = "data:image/webp;base64," + base64.b64encode(path.read_bytes()).decode("ascii")
-        html = html.replace(token, uri)
+        html = html.replace(token, f"img/{path.name}")
         used += path.stat().st_size
     left = re.search(r"__IMG_[a-z0-9_]+__", html)
     if left:
@@ -158,8 +152,30 @@ def main() -> None:
     new_ids = assign_ids(compact, ids)
     IDS.write_text(json.dumps(ids, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    # 표지: covers/<id>.jpg. 빠진 책의 옛 표지는 지운다.
+    COVERS.mkdir(parents=True, exist_ok=True)
+    keep = set()
+    for b in compact:
+        src = b.pop("cvsrc", None)
+        if not src:
+            continue
+        dst = COVERS / f"{b['i']}.jpg"
+        buf = io.BytesIO()
+        with Image.open(src) as im:
+            im.convert("RGB").save(buf, "JPEG", quality=72, optimize=True)
+        if not dst.exists() or dst.read_bytes() != buf.getvalue():
+            dst.write_bytes(buf.getvalue())
+        b["cv"] = f"covers/{dst.name}?v={hashlib.md5(buf.getvalue()).hexdigest()[:8]}"
+        keep.add(dst.name)
+    for old in COVERS.glob("*.jpg"):
+        if old.name not in keep:
+            old.unlink()
+
     payload = json.dumps(compact, ensure_ascii=False, separators=(",", ":"))
-    html = TEMPLATE.read_text(encoding="utf-8").replace("/*__BOOKS__*/[]", payload)
+    LIBRARY.parent.mkdir(parents=True, exist_ok=True)
+    LIBRARY.write_text(payload, encoding="utf-8")
+    ver = hashlib.md5(payload.encode()).hexdigest()[:10]
+    html = TEMPLATE.read_text(encoding="utf-8").replace("__VER__", ver)
     html, img_bytes = inline_images(html)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -172,7 +188,7 @@ def main() -> None:
     print(f"표지 {with_cover}권 · 소개 {sum(1 for b in compact if b.get('ds'))}권 · 저자 미상 {no_author}권")
     if new_ids:
         print(f"새 id {len(new_ids)}개: {', '.join(new_ids[:8])}{' …' if len(new_ids) > 8 else ''}")
-    print(f"데이터 {len(payload) // 1024}KB · 첫 화면 그림 {img_bytes // 1024}KB / 전체 {OUT.stat().st_size // 1024}KB -> {OUT}")
+    print(f"데이터 {len(payload) // 1024}KB -> {LIBRARY} · 표지 {len(keep)}장 -> {COVERS}/ · 앱 {OUT.stat().st_size // 1024}KB -> {OUT}")
 
 
 if __name__ == "__main__":

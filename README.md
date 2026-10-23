@@ -26,7 +26,9 @@ three.js로 만든 도서관 안에 꽂아 둡니다.
 ```
 app/
   index.template.html   앱 원본 (HTML·CSS·JS 한 파일)
-  index.html            빌드 결과 — 책 데이터와 그림을 안에 박은 파일
+  index.html            빌드 결과 — 시작할 때 data/library.json 을 읽는 동적 앱
+  data/library.json     빌드 결과 — 앱이 읽는 책 데이터
+  covers/               빌드 결과 — 책 표지(<책 id>.jpg)
   img/                  첫 화면·도서관 그림
 data/
   blog_posts.json       블로그 '독서,책' 카테고리 글 목록 (168편)
@@ -49,11 +51,16 @@ scripts/                수집·가공·빌드 스크립트
 pip install pillow
 ```
 
-앱 빌드 (`data/`의 책 데이터와 `app/img/` 그림을 `app/index.html` 안에 넣습니다):
+사이트 전체 업데이트 (블로그 새 글 → 책 판정 → 서재 데이터 → 카카오 표지·소개 → 앱 파일):
 
 ```bash
-python scripts/build_app.py
+KAKAO_REST_API_KEY=... python scripts/update_site.py          # 블로그부터 다시 받기
+python scripts/update_site.py --no-fetch                         # 받은 데이터로 다시 빌드만
+python scripts/update_site.py --covers                           # 표지 없는 책도 다시 찾기
 ```
+
+새 글은 제목으로 판정합니다(『책 제목』 또는 `[독서노트] 제목`). 틀리면 `data/extracted/batch_auto.json`을 고치고 다시 돌리세요.
+`.github/workflows/update.yml`이 매주 월요일 아침 자동으로 돌립니다(저장소 Secrets에 `KAKAO_REST_API_KEY` 필요).
 
 로컬에서 열기:
 
@@ -74,7 +81,8 @@ python -m http.server 8777 --directory app
 | 5 | `merge_extracted.py` | 블로그와 사진에서 나온 책을 합쳐 `books.json` 생성 |
 | 6 | `book_info.py --all` | 카카오 책 검색으로 표지·소개글 받기 |
 | 7 | `crop_home_images.py` | 첫 화면 그림 잘라 `app/img/`에 저장 |
-| 8 | `build_app.py` | `app/index.html` 빌드 |
+| 8 | `build_app.py` | `app/index.html` · `app/data/library.json` · `app/covers/` 빌드 |
+| ★ | `update_site.py` | 1·2·자동 판정·5(새 독후감만 덧붙임)·6·8을 한 번에 |
 
 ### 책 추가하기
 
@@ -98,7 +106,7 @@ python scripts/test_book_info.py
 
 - `app/index.html`은 빌드 결과물입니다. 수정은 `app/index.template.html`에 하고 다시 빌드하세요.
 - 앱은 사용자가 고친 내용을 책 id(`b0`, `b1` …)에 저장합니다. 책 제목을 바로잡을 때는 `data/book_ids.json`의 키도 함께 바꿔야 수정 기록이 따라갑니다.
-- 데이터와 그림을 파일로 따로 두지 않고 `index.html` 안에 넣는 이유는 아티팩트 CSP가 외부 요청과 외부 이미지를 막기 때문입니다.
+- 앱은 동적입니다: `index.html`은 화면만 담고, 책 데이터는 `data/library.json`, 표지는 `covers/`, 그림은 `img/`에서 읽습니다. 그래서 `app/` 폴더를 통째로 정적 호스팅(Vercel 등)해야 합니다. (예전 아티팩트 배포처럼 파일 하나로는 동작하지 않습니다.)
 
 ## 앞으로
 
