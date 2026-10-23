@@ -96,6 +96,16 @@ python scripts/book_info.py "제목 / 저자"
 
 > 알라딘 OpenAPI(2026-10-30 정지)와 네이버 책 검색 API(2026-07-31 종료)는 더 이상 쓸 수 없어 카카오 책 검색을 씁니다.
 
+### 전자책 대출 이력
+
+교보문고 전자도서관의 대출 목록을 `data/ebooks_kyobo.tsv`에 한 줄씩 붙여 넣고 돌립니다(제목|저자출판사|마지막 대출일|횟수|e·a|분류).
+
+```bash
+python scripts/import_ebooks.py && python scripts/update_site.py --no-fetch
+```
+
+이미 있는 책에는 '전자책' 출처만 덧붙고, 없는 책은 새로 꽂힙니다. 표지·저자·소개는 다음 자동 업데이트(카카오)가 채웁니다.
+
 ### 테스트
 
 ```bash

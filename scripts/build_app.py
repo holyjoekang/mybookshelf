@@ -111,9 +111,11 @@ def main() -> None:
                 "a": author,
                 "y": year,
                 "c": cats.get(b["title"], "그 밖의 책"),
-                "s": "".join(sorted(s[0] for s in b["sources"])),  # b / p / bp / i(텍스트로 추가)
+                "s": "".join(sorted(s[0] for s in b["sources"])),  # b / p / bp / i(텍스트로 추가) / e(전자책)
                 "r": reviews,
                 "n": 1 if b["needsReview"] else 0,
+                # 전자도서관 대출 기록: 마지막 대출일 · 횟수 · 전자책/오디오북
+                **({"e": {"d": b["ebook"]["last"], "n": b["ebook"]["loans"], "k": b["ebook"]["kind"]}} if b.get("ebook") else {}),
             }
         )
 
