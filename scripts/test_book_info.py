@@ -85,7 +85,7 @@ class Offline(Temp):
     def test_build_reads_cover_and_contents(self, _):
         bi.add("데미안 / 헤세", "k")
         e = build_app.book_info("데미안")
-        self.assertTrue(e["cv"].startswith("data:image/jpeg;base64,"))
+        self.assertTrue(e["cvsrc"].endswith(".jpg"))   # 표지는 빌드 때 covers/<id>.jpg 로 복사된다
         self.assertEqual((e["pb"], e["ds"]), ("민음사", "싱클레어의 성장기"))
         self.assertEqual(build_app.book_info("없는 책"), {})
 
@@ -111,6 +111,7 @@ class Ids(unittest.TestCase):
             build_app.assign_ids([{"t": "가"}, {"t": "가"}], {})
 
 
+@unittest.skipUnless(os.environ.get("KAKAO_REST_API_KEY"), "KAKAO_REST_API_KEY 없음")
 class Live(Temp):
     def test_real_book(self):
         print("\n  " + bi.add("협상의 법칙 / 허브 코헨", os.environ["KAKAO_REST_API_KEY"]))
