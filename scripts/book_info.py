@@ -93,9 +93,12 @@ def _fetch(title: str, author: str | None, key: str) -> str:
         return f"못 찾음 {title}"
     OUT.mkdir(parents=True, exist_ok=True)
     if info["thumbnail"]:
-        img = path.with_suffix(".jpg")
-        img.write_bytes(requests.get(info["thumbnail"], timeout=30).content)
-        info["cover"] = img.name
+        raw = requests.get(info["thumbnail"], timeout=30).content
+        # 그림 파일일 때만 표지로 쓴다(서버가 오류 페이지를 돌려주는 때가 있다)
+        if raw[:3] == b"\xff\xd8\xff" or raw[:8] == b"\x89PNG\r\n\x1a\n" or raw[:4] == b"GIF8" or raw[8:12] == b"WEBP":
+            img = path.with_suffix(".jpg")
+            img.write_bytes(raw)
+            info["cover"] = img.name
     path.write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     return f"저장 {title}"
 

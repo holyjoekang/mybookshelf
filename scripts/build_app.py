@@ -163,8 +163,12 @@ def main() -> None:
             continue
         dst = COVERS / f"{b['i']}.jpg"
         buf = io.BytesIO()
-        with Image.open(src) as im:
-            im.convert("RGB").save(buf, "JPEG", quality=72, optimize=True)
+        try:
+            with Image.open(src) as im:
+                im.convert("RGB").save(buf, "JPEG", quality=72, optimize=True)
+        except OSError:
+            print(f"경고: 표지를 열 수 없어 건너뜀 {src}")
+            continue
         if not dst.exists() or dst.read_bytes() != buf.getvalue():
             dst.write_bytes(buf.getvalue())
         b["cv"] = f"covers/{dst.name}?v={hashlib.md5(buf.getvalue()).hexdigest()[:8]}"
