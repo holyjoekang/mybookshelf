@@ -74,7 +74,17 @@ def search(title: str, author: str | None, key: str) -> dict | None:
 
 
 def fetch(title: str, author: str | None, key: str) -> str:
-    """책 정보를 받아 json·표지로 저장한다."""
+    """책 정보를 받아 json·표지로 저장한다. 연결이 끊기면 두 번 더 해 보고, 그래도 안 되면 이 책만 건너뛴다."""
+    for wait in (2, 5, None):
+        try:
+            return _fetch(title, author, key)
+        except requests.RequestException as e:
+            if wait is None:
+                return f"건너뜀 {title} ({type(e).__name__})"
+            time.sleep(wait)
+
+
+def _fetch(title: str, author: str | None, key: str) -> str:
     path = OUT / f"{slug(title)}.json"
     if path.exists():
         return f"있음 {title}"
