@@ -120,13 +120,37 @@ def update_covers(all_missing_covers: bool) -> None:
     run("scripts/book_info.py", *[f"{b['title']} / {b['author']}" if b["author"] else b["title"] for b in need])
 
 
+def update_memory_covers(all_missing_covers: bool) -> None:
+    """기억 서가(제목까지 기억나는 책)의 표지·소개. 서재 목록(books.json)에는 넣지 않고 정보만 받는다."""
+    import time
+    from book_info import fetch
+    mem = json.loads(Path("data/memory_books.json").read_text(encoding="utf-8"))["books"]
+    need = []
+    for m in mem:
+        if m["kind"] != "title":
+            continue
+        p = INFO / f"{slug(m['t'])}.json"
+        if not p.exists():
+            need.append(m)
+        elif all_missing_covers and not json.loads(p.read_text(encoding="utf-8")).get("cover"):
+            p.unlink(); need.append(m)
+    if not need:
+        print("  기억 서가 표지·소개: 모두 있음"); return
+    key = os.environ.get("KAKAO_REST_API_KEY")
+    if not key:
+        print(f"  KAKAO_REST_API_KEY 가 없어 기억 서가 {len(need)}권의 표지·소개를 받지 못함"); return
+    for n, m in enumerate(need, 1):
+        print(f"  [{n}/{len(need)}] {fetch(m['t'], m.get('a'), key)}")
+        time.sleep(0.1)
+
+
 def main() -> None:
     if "--no-fetch" not in sys.argv:
         run("scripts/fetch_blog_posts.py")
         run("scripts/fetch_blog_bodies.py")
     print("새 글 판정:"); new = judge_new_posts()
     print("서재 데이터:"); created = add_reviews()
-    print("표지·소개:"); update_covers("--covers" in sys.argv)
+    print("표지·소개:"); update_covers("--covers" in sys.argv); update_memory_covers("--covers" in sys.argv)
     run("scripts/build_app.py")
     print(f"새 글 {len(new)}편 · 새 책 {len(created)}권{': ' + ', '.join(created) if created else ''}")
 
